@@ -1,0 +1,126 @@
+\hypertarget{class_zumo32_u4_encoders}{}\doxysection{Zumo32\+U4\+Encoders Class Reference}
+\label{class_zumo32_u4_encoders}\index{Zumo32U4Encoders@{Zumo32U4Encoders}}
+
+
+Reads counts from the encoders on the Zumo 32U4.  
+
+
+
+
+{\ttfamily \#include $<$Zumo32\+U4\+Encoders.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_zumo32_u4_encoders_afa1199db1c88dce2e42a461dc45df560}{init}} ()
+\item 
+static int16\+\_\+t \mbox{\hyperlink{class_zumo32_u4_encoders_a142d33610a12b209e257c1635b2daae6}{get\+Counts\+Left}} ()
+\item 
+static int16\+\_\+t \mbox{\hyperlink{class_zumo32_u4_encoders_ad570df0c84cbb719dc975233b4f65756}{get\+Counts\+Right}} ()
+\item 
+static int16\+\_\+t \mbox{\hyperlink{class_zumo32_u4_encoders_a9b212103e652d1edb9d622381c303497}{get\+Counts\+And\+Reset\+Left}} ()
+\item 
+static int16\+\_\+t \mbox{\hyperlink{class_zumo32_u4_encoders_a613358c24dbc997cb9fee36d66bbf2ba}{get\+Counts\+And\+Reset\+Right}} ()
+\item 
+static bool \mbox{\hyperlink{class_zumo32_u4_encoders_ad20765947ef87f562a4a19975a7fb9ca}{check\+Error\+Left}} ()
+\item 
+static bool \mbox{\hyperlink{class_zumo32_u4_encoders_a9d7de11def7409becbe870056ef2d719}{check\+Error\+Right}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads counts from the encoders on the Zumo 32U4. 
+
+This class allows you to read counts from the encoders on the Zumo 32U4, which lets you tell how much each motor has turned and in what direction.
+
+The encoders are monitored in the background using interrupts, so your code can perform other tasks without missing encoder counts.
+
+To read the left encoder, this class uses an interrupt service routine (ISR) for PCINT0\+\_\+vect, so there will be a compile-\/time conflict with any other code that defines a pin-\/change ISR.
+
+To read the right encoder, this class calls \href{http://arduino.cc/en/Reference/attachInterrupt}{\texttt{ attach\+Interrupt()}}, so there will be a compile-\/time conflict with any other code that defines an ISR for an external interrupt directly instead of using attach\+Interrupt(). 
+
+Definition at line 25 of file Zumo32\+U4\+Encoders.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_zumo32_u4_encoders_ad20765947ef87f562a4a19975a7fb9ca}\label{class_zumo32_u4_encoders_ad20765947ef87f562a4a19975a7fb9ca}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!checkErrorLeft@{checkErrorLeft}}
+\index{checkErrorLeft@{checkErrorLeft}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{checkErrorLeft()}{checkErrorLeft()}}
+{\footnotesize\ttfamily bool Zumo32\+U4\+Encoders\+::check\+Error\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This function returns true if an error was detected on the left-\/side encoder. It resets the error flag automatically, so it will only return true if an error was detected since the last time \mbox{\hyperlink{class_zumo32_u4_encoders_ad20765947ef87f562a4a19975a7fb9ca}{check\+Error\+Left()}} was called.
+
+If an error happens, it means that both of the encoder outputs changed at the same time from the perspective of the ISR, so the ISR was unable to tell what direction the motor was moving, and the encoder count could be inaccurate. The most likely cause for an error is that the interrupt service routine for the encoders could not be started soon enough. If you get encoder errors, make sure you are not disabling interrupts for extended periods of time in your code. 
+
+Definition at line 133 of file Zumo32\+U4\+Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_encoders_a9d7de11def7409becbe870056ef2d719}\label{class_zumo32_u4_encoders_a9d7de11def7409becbe870056ef2d719}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!checkErrorRight@{checkErrorRight}}
+\index{checkErrorRight@{checkErrorRight}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{checkErrorRight()}{checkErrorRight()}}
+{\footnotesize\ttfamily bool Zumo32\+U4\+Encoders\+::check\+Error\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This function is just like \mbox{\hyperlink{class_zumo32_u4_encoders_ad20765947ef87f562a4a19975a7fb9ca}{check\+Error\+Left()}} except it applies to the right-\/side encoder. 
+
+Definition at line 142 of file Zumo32\+U4\+Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_encoders_a9b212103e652d1edb9d622381c303497}\label{class_zumo32_u4_encoders_a9b212103e652d1edb9d622381c303497}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!getCountsAndResetLeft@{getCountsAndResetLeft}}
+\index{getCountsAndResetLeft@{getCountsAndResetLeft}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{getCountsAndResetLeft()}{getCountsAndResetLeft()}}
+{\footnotesize\ttfamily int16\+\_\+t Zumo32\+U4\+Encoders\+::get\+Counts\+And\+Reset\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This function is just like \mbox{\hyperlink{class_zumo32_u4_encoders_a142d33610a12b209e257c1635b2daae6}{get\+Counts\+Left()}} except it also clears the counts before returning. If you call this frequently enough, you will not have to worry about the count overflowing. 
+
+Definition at line 111 of file Zumo32\+U4\+Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_encoders_a613358c24dbc997cb9fee36d66bbf2ba}\label{class_zumo32_u4_encoders_a613358c24dbc997cb9fee36d66bbf2ba}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!getCountsAndResetRight@{getCountsAndResetRight}}
+\index{getCountsAndResetRight@{getCountsAndResetRight}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{getCountsAndResetRight()}{getCountsAndResetRight()}}
+{\footnotesize\ttfamily int16\+\_\+t Zumo32\+U4\+Encoders\+::get\+Counts\+And\+Reset\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This function is just like \mbox{\hyperlink{class_zumo32_u4_encoders_a9b212103e652d1edb9d622381c303497}{get\+Counts\+And\+Reset\+Left()}} except it applies to the right-\/side encoder. 
+
+Definition at line 122 of file Zumo32\+U4\+Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_encoders_a142d33610a12b209e257c1635b2daae6}\label{class_zumo32_u4_encoders_a142d33610a12b209e257c1635b2daae6}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!getCountsLeft@{getCountsLeft}}
+\index{getCountsLeft@{getCountsLeft}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{getCountsLeft()}{getCountsLeft()}}
+{\footnotesize\ttfamily int16\+\_\+t Zumo32\+U4\+Encoders\+::get\+Counts\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the number of counts that have been detected from the left-\/side encoder. These counts start at 0. Positive counts correspond to forward movement of the left side of the Zumo, while negative counts correspond to backwards movement.
+
+The count is returned as a signed 16-\/bit integer. When the count goes over 32767, it will overflow down to -\/32768. When the count goes below -\/32768, it will overflow up to 32767. 
+
+Definition at line 91 of file Zumo32\+U4\+Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_encoders_ad570df0c84cbb719dc975233b4f65756}\label{class_zumo32_u4_encoders_ad570df0c84cbb719dc975233b4f65756}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!getCountsRight@{getCountsRight}}
+\index{getCountsRight@{getCountsRight}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{getCountsRight()}{getCountsRight()}}
+{\footnotesize\ttfamily int16\+\_\+t Zumo32\+U4\+Encoders\+::get\+Counts\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This function is just like \mbox{\hyperlink{class_zumo32_u4_encoders_a142d33610a12b209e257c1635b2daae6}{get\+Counts\+Left()}} except it applies to the right-\/side encoder. 
+
+Definition at line 101 of file Zumo32\+U4\+Encoders.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_encoders_afa1199db1c88dce2e42a461dc45df560}\label{class_zumo32_u4_encoders_afa1199db1c88dce2e42a461dc45df560}} 
+\index{Zumo32U4Encoders@{Zumo32U4Encoders}!init@{init}}
+\index{init@{init}!Zumo32U4Encoders@{Zumo32U4Encoders}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static void Zumo32\+U4\+Encoders\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This function initializes the encoders if they have not been initialized already and starts listening for counts. This function is called automatically whenever you call any other function in this class, so you should not normally need to call it in your code. 
+
+Definition at line 34 of file Zumo32\+U4\+Encoders.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_zumo32_u4_encoders_8h}{Zumo32\+U4\+Encoders.\+h}}\item 
+Zumo32\+U4\+Encoders.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{class_zumo32_u4_button_a}{}\doxysection{Zumo32\+U4\+ButtonA Class Reference}
+\label{class_zumo32_u4_button_a}\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+
+
+Interfaces with button A on the Zumo 32U4.  
+
+
+
+
+{\ttfamily \#include $<$Zumo32\+U4\+Buttons.\+h$>$}
+
+Inheritance diagram for Zumo32\+U4\+ButtonA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_zumo32_u4_button_a}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}{is\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em indicates whether button is currently pressed without any debouncing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press}} ()
+\begin{DoxyCompactList}\small\item\em Waits until the button is pressed and takes care of debouncing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release}} ()
+\begin{DoxyCompactList}\small\item\em Waits until the button is released and takes care of debouncing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{wait\+For\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Waits until the button is pressed and then waits until the button is released, taking care of debouncing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press}} ()
+\begin{DoxyCompactList}\small\item\em Uses a state machine to return true once after each time it detects the button moving from the released state to the pressed state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release}} ()
+\begin{DoxyCompactList}\small\item\em Uses a state machine to return true once after each time it detects the button moving from the pressed state to the released state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaces with button A on the Zumo 32U4. 
+
+Definition at line 24 of file Zumo32\+U4\+Buttons.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}\label{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}} 
+\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}!getSingleDebouncedPress@{getSingleDebouncedPress}}
+\index{getSingleDebouncedPress@{getSingleDebouncedPress}!Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+\doxysubsubsection{\texorpdfstring{getSingleDebouncedPress()}{getSingleDebouncedPress()}}
+{\footnotesize\ttfamily bool Pushbutton\+Base\+::get\+Single\+Debounced\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Uses a state machine to return true once after each time it detects the button moving from the released state to the pressed state. 
+
+This is a non-\/blocking function that is meant to be called repeatedly in a loop. Each time it is called, it updates a state machine that monitors the state of the button. When it detects the button changing from the released state to the pressed state, with debouncing, it returns true. 
+
+Definition at line 110 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}\label{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}} 
+\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}!getSingleDebouncedRelease@{getSingleDebouncedRelease}}
+\index{getSingleDebouncedRelease@{getSingleDebouncedRelease}!Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+\doxysubsubsection{\texorpdfstring{getSingleDebouncedRelease()}{getSingleDebouncedRelease()}}
+{\footnotesize\ttfamily bool Pushbutton\+Base\+::get\+Single\+Debounced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Uses a state machine to return true once after each time it detects the button moving from the pressed state to the released state. 
+
+This is just like \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()}} except it has a separate state machine and it watches for when the button goes from the pressed state to the released state.
+
+There is no strict guarantee that every debounced button press event returned by \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()}} will have a corresponding button release event returned by \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release()}}; the two functions use independent state machines and sample the button at different times. 
+
+Definition at line 115 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}\label{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}} 
+\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}!isPressed@{isPressed}}
+\index{isPressed@{isPressed}!Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+\doxysubsubsection{\texorpdfstring{isPressed()}{isPressed()}}
+{\footnotesize\ttfamily bool Pushbutton\+::is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+indicates whether button is currently pressed without any debouncing. 
+
+\begin{DoxyReturn}{Returns}
+1 if the button is pressed right now, 0 if it is not.
+\end{DoxyReturn}
+This function must be implemented in a subclass of \mbox{\hyperlink{class_pushbutton_base}{Pushbutton\+Base}}, such as \mbox{\hyperlink{class_pushbutton}{Pushbutton}}. 
+
+Implements \mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{Pushbutton\+Base}}.
+
+
+
+Definition at line 142 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_pushbutton_base_ab755065c930be0649597220316213e8a}\label{class_pushbutton_base_ab755065c930be0649597220316213e8a}} 
+\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}!waitForButton@{waitForButton}}
+\index{waitForButton@{waitForButton}!Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+\doxysubsubsection{\texorpdfstring{waitForButton()}{waitForButton()}}
+{\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Waits until the button is pressed and then waits until the button is released, taking care of debouncing. 
+
+This is equivalent to calling \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press()}} and then \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release()}}. 
+
+Definition at line 104 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}\label{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}} 
+\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}!waitForPress@{waitForPress}}
+\index{waitForPress@{waitForPress}!Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+\doxysubsubsection{\texorpdfstring{waitForPress()}{waitForPress()}}
+{\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Waits until the button is pressed and takes care of debouncing. 
+
+This function waits until the button is in the pressed state and then returns. Note that if the button is already pressed when you call this function, it will return quickly (in 10 ms). 
+
+Definition at line 84 of file Pushbutton.\+cpp.
+
+\mbox{\Hypertarget{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}\label{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}} 
+\index{Zumo32U4ButtonA@{Zumo32U4ButtonA}!waitForRelease@{waitForRelease}}
+\index{waitForRelease@{waitForRelease}!Zumo32U4ButtonA@{Zumo32U4ButtonA}}
+\doxysubsubsection{\texorpdfstring{waitForRelease()}{waitForRelease()}}
+{\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Waits until the button is released and takes care of debouncing. 
+
+This function waits until the button is in the released state and then returns. Note that if the button is already released when you call this function, it will return quickly (in 10 ms). 
+
+Definition at line 94 of file Pushbutton.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_zumo32_u4_buttons_8h}{Zumo32\+U4\+Buttons.\+h}}\end{DoxyCompactItemize}

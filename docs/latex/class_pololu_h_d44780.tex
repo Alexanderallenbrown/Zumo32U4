@@ -1,0 +1,528 @@
+\hypertarget{class_pololu_h_d44780}{}\doxysection{Pololu\+HD44780 Class Reference}
+\label{class_pololu_h_d44780}\index{PololuHD44780@{PololuHD44780}}
+
+
+Main class for interfacing with the HD44780 LCDs.  
+
+
+
+
+{\ttfamily \#include $<$Pololu\+HD44780.\+h$>$}
+
+Inheritance diagram for Pololu\+HD44780\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pololu_h_d44780}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pololu_h_d44780_aa435495f74686245db4f89a4d434b3ee}{Pololu\+HD44780}} (uint8\+\_\+t rs, uint8\+\_\+t e, uint8\+\_\+t db4, uint8\+\_\+t db5, uint8\+\_\+t db6, uint8\+\_\+t db7)
+\item 
+virtual void \mbox{\hyperlink{class_pololu_h_d44780_a876723b26f2dc081bf7f29019079489b}{init\+Pins}} ()
+\item 
+virtual void \mbox{\hyperlink{class_pololu_h_d44780_a8da2db526de9f1e2314cb02c3ba6121a}{send}} (uint8\+\_\+t data, bool rs\+Value, bool only4bits)
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a1c2a3edc8cfecde7e6fd2a83c17c0e23}{init}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a10c1c42406708172fc38b718790ba881}{reinitialize}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a4d35e9a47ceef1a7582e180165e0eae1}{clear}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a73d331af44ec2e624aa0468ce13f64e4}{load\+Custom\+Character}} (const uint8\+\_\+t $\ast$picture, uint8\+\_\+t number)
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a4f22d613433fce0e0c661a237ade9aeb}{load\+Custom\+Character}} (const char $\ast$picture, uint8\+\_\+t number)
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a72674b5466690b49b639ae2ec3e4983f}{load\+Custom\+Character\+From\+Ram}} (const uint8\+\_\+t $\ast$picture, uint8\+\_\+t number)
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_afd802cdc57783830acfe2415355d9f09}{create\+Char}} (uint8\+\_\+t number, uint8\+\_\+t picture\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a4886df8c888669cf71675072689ace9b}{goto\+XY}} (uint8\+\_\+t x, uint8\+\_\+t y)
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_aeb3377822dc672398a991f06a00312c0}{set\+Cursor}} (uint8\+\_\+t col, uint8\+\_\+t row)
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_abc2d4e126017565c2a0cf2aac67870a0}{no\+Display}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_af5dd1e137bfe9310a418924b7483fcdf}{display}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_ab40886cf0b563a1806bc9391d00b032d}{no\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a4fd53028d74561be579103d674aa8eab}{cursor}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a301afc921881052b166e11cd45ad9696}{no\+Blink}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_ac6e255adf32d5c70c0163422b1ae8e0c}{blink}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a6a4d8e79beda9f7c81659a8e13c8c338}{cursor\+Solid}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a6a53a6cffbb77953b5a2c4ae49e288de}{cursor\+Blinking}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a1db083d254d251c479a577f29bcdcec8}{hide\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_aada34a47663585f60b70e1d6f936f6d3}{scroll\+Display\+Left}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a411512707f303af75de3c5aea313bf48}{scroll\+Display\+Right}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_ab2d24add3c6da0328055bceb38a6d42c}{home}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_ada551bdb01681eb57bec325778eb38a6}{left\+To\+Right}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_aa3f8d4ba18feb9aa0f0a2fef3c6c2b37}{right\+To\+Left}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_ad5104d9651fd95704d1ae192073b0d61}{autoscroll}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_aee80e23d270913dd2c353e7bd5408249}{no\+Autoscroll}} ()
+\item 
+void \mbox{\hyperlink{class_pololu_h_d44780_base_a449ad8d9ff7afb90667da0003a39af3b}{command}} (uint8\+\_\+t cmd)
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_pololu_h_d44780_base_a1aad3b3ce5820dc910174b3c91a5d65e}{write}} (uint8\+\_\+t c)
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_pololu_h_d44780_base_a965028ffd2313e9eaa968348effcab81}{write}} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main class for interfacing with the HD44780 LCDs. 
+
+This class is suitable for controlling an HD44780 LCD assuming that the LCD\textquotesingle{}s RS, E, DB4, DB5, DB6, and DB7 pins are each connected to a pin on the microcontroller, each of those six microcontroller pins is supported by the Arduino\textquotesingle{}s {\ttfamily pin\+Mode} and {\ttfamily digital\+Write} functions, and those pins are not being used for any other purpose that conflicts with the LCD.
+
+This class sets the E pin to be an output driving low the first time you use the LCD, and it assumes that no other code will change that pin. You cannot use E for any other purposes because if the LCD sees a pulse on the E pin then it might consider that to be a command or data, and the LCD state will become corrupted.
+
+For the other pins (RS, DB4, DB5, and DB6), this library reconfigures them each time they are used, so it is OK if you have other code that uses those pins for other purposes. Before writing to the LCD, you just need to disable any peripherals (such as UARTs) that override the output values of those pins.
+
+If you cannot meet these conditions, you might be able to control your LCD using a custom subclass of \mbox{\hyperlink{class_pololu_h_d44780_base}{Pololu\+HD44780\+Base}}. You can use this class as a reference for how to do that. 
+
+Definition at line 360 of file Pololu\+HD44780.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pololu_h_d44780_aa435495f74686245db4f89a4d434b3ee}\label{class_pololu_h_d44780_aa435495f74686245db4f89a4d434b3ee}} 
+\index{PololuHD44780@{PololuHD44780}!PololuHD44780@{PololuHD44780}}
+\index{PololuHD44780@{PololuHD44780}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{PololuHD44780()}{PololuHD44780()}}
+{\footnotesize\ttfamily Pololu\+HD44780\+::\+Pololu\+HD44780 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rs,  }\item[{uint8\+\_\+t}]{e,  }\item[{uint8\+\_\+t}]{db4,  }\item[{uint8\+\_\+t}]{db5,  }\item[{uint8\+\_\+t}]{db6,  }\item[{uint8\+\_\+t}]{db7 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new instance of \mbox{\hyperlink{class_pololu_h_d44780}{Pololu\+HD44780}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rs} & The pin number for the microcontroller pin that is connected to the RS pin of the LCD. \\
+\hline
+{\em e} & The pin number for the microcontroller pin that is connected to the E pin of the LCD. \\
+\hline
+{\em db4} & The pin number for the microcontroller pin that is connected to the DB4 pin of the LCD. \\
+\hline
+{\em db5} & The pin number for the microcontroller pin that is connected to the DB5 pin of the LCD. \\
+\hline
+{\em db6} & The pin number for the microcontroller pin that is connected to the DB6 pin of the LCD. \\
+\hline
+{\em db7} & The pin number for the microcontroller pin that is connected to the DB7 pin of the LCD. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 378 of file Pololu\+HD44780.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pololu_h_d44780_base_ad5104d9651fd95704d1ae192073b0d61}\label{class_pololu_h_d44780_base_ad5104d9651fd95704d1ae192073b0d61}} 
+\index{PololuHD44780@{PololuHD44780}!autoscroll@{autoscroll}}
+\index{autoscroll@{autoscroll}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{autoscroll()}{autoscroll()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::autoscroll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Turns on auto-\/scrolling.
+
+When auto-\/scrolling is enabled, every time a character is written, the screen will automatically scroll by one column in the appropriate direction. 
+
+Definition at line 214 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_ac6e255adf32d5c70c0163422b1ae8e0c}\label{class_pololu_h_d44780_base_ac6e255adf32d5c70c0163422b1ae8e0c}} 
+\index{PololuHD44780@{PololuHD44780}!blink@{blink}}
+\index{blink@{blink}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{blink()}{blink()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::blink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Shows the blinking cursor.
+
+This function sets the LCD\textquotesingle{}s \char`\"{}\+B\char`\"{} configuration bit without changing the other bits.
+
+The cursor will normally be a blinking rectangle, but there could also be a row of solid black pixels at the bottom if previous commands have enabled the solid cursor. For this reason, it is usually better to call \mbox{\hyperlink{class_pololu_h_d44780_base_a6a4d8e79beda9f7c81659a8e13c8c338}{cursor\+Solid()}} or \mbox{\hyperlink{class_pololu_h_d44780_base_a6a53a6cffbb77953b5a2c4ae49e288de}{cursor\+Blinking()}} instead. This function is only provided for compatibilty with the Liquid\+Crystal library. 
+
+Definition at line 177 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a4d35e9a47ceef1a7582e180165e0eae1}\label{class_pololu_h_d44780_base_a4d35e9a47ceef1a7582e180165e0eae1}} 
+\index{PololuHD44780@{PololuHD44780}!clear@{clear}}
+\index{clear@{clear}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Clear the contents of the LCDs, resets the cursor position to the upper left, and resets the scroll position. 
+
+Definition at line 78 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a449ad8d9ff7afb90667da0003a39af3b}\label{class_pololu_h_d44780_base_a449ad8d9ff7afb90667da0003a39af3b}} 
+\index{PololuHD44780@{PololuHD44780}!command@{command}}
+\index{command@{command}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{command()}{command()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+Send an arbitrary command to the LCD. This is here for compatibility with the Liquid\+Crystal library. 
+
+Definition at line 294 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_afd802cdc57783830acfe2415355d9f09}\label{class_pololu_h_d44780_base_afd802cdc57783830acfe2415355d9f09}} 
+\index{PololuHD44780@{PololuHD44780}!createChar@{createChar}}
+\index{createChar@{createChar}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{createChar()}{createChar()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::create\+Char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{number,  }\item[{uint8\+\_\+t}]{picture\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+Defines a custom character. This is provided for compatibility with the Liquid\+Crystal library. 
+
+Definition at line 152 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a4fd53028d74561be579103d674aa8eab}\label{class_pololu_h_d44780_base_a4fd53028d74561be579103d674aa8eab}} 
+\index{PololuHD44780@{PololuHD44780}!cursor@{cursor}}
+\index{cursor@{cursor}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{cursor()}{cursor()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Shows the solid cursor.
+
+This function sets the LCD\textquotesingle{}s \char`\"{}\+C\char`\"{} configuration bit without changing the other bits.
+
+The cursor will normally be a solid line in the bottom row, but there could be a blinking rectangle superimposed on it if previous commands have enabled the blinking cursor. For this reason, it is usually better to call \mbox{\hyperlink{class_pololu_h_d44780_base_a6a4d8e79beda9f7c81659a8e13c8c338}{cursor\+Solid()}} or \mbox{\hyperlink{class_pololu_h_d44780_base_a6a53a6cffbb77953b5a2c4ae49e288de}{cursor\+Blinking()}} instead. This function is only provided for compatibility with the Liquid\+Crystal library. 
+
+Definition at line 167 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a6a53a6cffbb77953b5a2c4ae49e288de}\label{class_pololu_h_d44780_base_a6a53a6cffbb77953b5a2c4ae49e288de}} 
+\index{PololuHD44780@{PololuHD44780}!cursorBlinking@{cursorBlinking}}
+\index{cursorBlinking@{cursorBlinking}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{cursorBlinking()}{cursorBlinking()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::cursor\+Blinking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Enables a cursor that appears as a blinking black rectangle.
+
+This sets the LCD\textquotesingle{}s \char`\"{}\+C\char`\"{} and \char`\"{}\+B\char`\"{} configuration bits.
+
+Note that the cursor will not be shown if the display is currently off (due to a call to \mbox{\hyperlink{class_pololu_h_d44780_base_abc2d4e126017565c2a0cf2aac67870a0}{no\+Display()}}), or if the cursor position is not within the bounds of the screen. 
+
+Definition at line 142 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a6a4d8e79beda9f7c81659a8e13c8c338}\label{class_pololu_h_d44780_base_a6a4d8e79beda9f7c81659a8e13c8c338}} 
+\index{PololuHD44780@{PololuHD44780}!cursorSolid@{cursorSolid}}
+\index{cursorSolid@{cursorSolid}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{cursorSolid()}{cursorSolid()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::cursor\+Solid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Enables a cursor that appears as a solid line in the bottom row.
+
+This sets the LCD\textquotesingle{}s \char`\"{}\+C\char`\"{} configuration bit and clears its \char`\"{}\+B\char`\"{} bit.
+
+Note that the cursor will not be shown if the display is currently off (due to a call to \mbox{\hyperlink{class_pololu_h_d44780_base_abc2d4e126017565c2a0cf2aac67870a0}{no\+Display()}}), or if the cursor position is not within the bounds of the screen. 
+
+Definition at line 137 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_af5dd1e137bfe9310a418924b7483fcdf}\label{class_pololu_h_d44780_base_af5dd1e137bfe9310a418924b7483fcdf}} 
+\index{PololuHD44780@{PololuHD44780}!display@{display}}
+\index{display@{display}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Turns the display on. This should only be needed if \mbox{\hyperlink{class_pololu_h_d44780_base_abc2d4e126017565c2a0cf2aac67870a0}{no\+Display()}} was previously called. 
+
+Definition at line 157 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a4886df8c888669cf71675072689ace9b}\label{class_pololu_h_d44780_base_a4886df8c888669cf71675072689ace9b}} 
+\index{PololuHD44780@{PololuHD44780}!gotoXY@{gotoXY}}
+\index{gotoXY@{gotoXY}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{gotoXY()}{gotoXY()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::goto\+XY (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x,  }\item[{uint8\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Change the location of the cursor. The cursor (whether visible or invisible), is the place where the next character written to the LCD will be displayed.
+
+Note that the scrolling features of the LCD change the correspondence between the {\ttfamily x} parameter and the physical column that the data is displayed on. See the \char`\"{}\+LCD scrolling\char`\"{} section above for more information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The number of the column to go to, with 0 being the leftmost column. \\
+\hline
+{\em y} & The number of the row to go to, with 0 being the top row. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a1db083d254d251c479a577f29bcdcec8}\label{class_pololu_h_d44780_base_a1db083d254d251c479a577f29bcdcec8}} 
+\index{PololuHD44780@{PololuHD44780}!hideCursor@{hideCursor}}
+\index{hideCursor@{hideCursor}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{hideCursor()}{hideCursor()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::hide\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Hides the solid and blinking cursors.
+
+This clears the LCD\textquotesingle{}s \char`\"{}\+C\char`\"{} and \char`\"{}\+B\char`\"{} configuration bits. 
+
+Definition at line 147 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_ab2d24add3c6da0328055bceb38a6d42c}\label{class_pololu_h_d44780_base_ab2d24add3c6da0328055bceb38a6d42c}} 
+\index{PololuHD44780@{PololuHD44780}!home@{home}}
+\index{home@{home}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{home()}{home()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Resets the screen scrolling position back to the default and moves the cursor to the upper left corner of the screen.
+
+This command takes about 1600 microseconds, so it would be faster to instead call \mbox{\hyperlink{class_pololu_h_d44780_base_aada34a47663585f60b70e1d6f936f6d3}{scroll\+Display\+Left()}} or \mbox{\hyperlink{class_pololu_h_d44780_base_a411512707f303af75de3c5aea313bf48}{scroll\+Display\+Right()}} the appropriate number of times and then call goto\+XY(0, 0). 
+
+Definition at line 192 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a1c2a3edc8cfecde7e6fd2a83c17c0e23}\label{class_pololu_h_d44780_base_a1c2a3edc8cfecde7e6fd2a83c17c0e23}} 
+\index{PololuHD44780@{PololuHD44780}!init@{init}}
+\index{init@{init}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+Initialize the LCD if it has not already been initialized. 
+
+Definition at line 67 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_a876723b26f2dc081bf7f29019079489b}\label{class_pololu_h_d44780_a876723b26f2dc081bf7f29019079489b}} 
+\index{PololuHD44780@{PololuHD44780}!initPins@{initPins}}
+\index{initPins@{initPins}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{initPins()}{initPins()}}
+{\footnotesize\ttfamily virtual void Pololu\+HD44780\+::init\+Pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Initializes the pins so that the \mbox{\hyperlink{class_pololu_h_d44780_a8da2db526de9f1e2314cb02c3ba6121a}{send()}} function can be called successfully. This is the first step of initializing the LCD. 
+
+Implements \mbox{\hyperlink{class_pololu_h_d44780_base_a9c2a2e0dfb089a6c21aa12a6a5299750}{Pololu\+HD44780\+Base}}.
+
+
+
+Definition at line 389 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_ada551bdb01681eb57bec325778eb38a6}\label{class_pololu_h_d44780_base_ada551bdb01681eb57bec325778eb38a6}} 
+\index{PololuHD44780@{PololuHD44780}!leftToRight@{leftToRight}}
+\index{leftToRight@{leftToRight}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{leftToRight()}{leftToRight()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::left\+To\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Puts the LCD into left-\/to-\/right mode\+: the cursor will shift to the right after any character is written. This is the default behavior. 
+
+Definition at line 204 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a4f22d613433fce0e0c661a237ade9aeb}\label{class_pololu_h_d44780_base_a4f22d613433fce0e0c661a237ade9aeb}} 
+\index{PololuHD44780@{PololuHD44780}!loadCustomCharacter@{loadCustomCharacter}}
+\index{loadCustomCharacter@{loadCustomCharacter}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{loadCustomCharacter()}{loadCustomCharacter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::load\+Custom\+Character (\begin{DoxyParamCaption}\item[{const char $\ast$}]{picture,  }\item[{uint8\+\_\+t}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+This overload of load\+Custom\+Character is only provided for compatibility with Orangutan\+LCD; a lot of Orangutan code defines an array of chars for custom character pictures. 
+
+Definition at line 145 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a73d331af44ec2e624aa0468ce13f64e4}\label{class_pololu_h_d44780_base_a73d331af44ec2e624aa0468ce13f64e4}} 
+\index{PololuHD44780@{PololuHD44780}!loadCustomCharacter@{loadCustomCharacter}}
+\index{loadCustomCharacter@{loadCustomCharacter}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{loadCustomCharacter()}{loadCustomCharacter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::load\+Custom\+Character (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{picture,  }\item[{uint8\+\_\+t}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Defines a custom character. 
+\begin{DoxyParams}{Parameters}
+{\em picture} & A pointer to the character dot pattern, in program space. \\
+\hline
+{\em number} & A number between 0 and 7. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a72674b5466690b49b639ae2ec3e4983f}\label{class_pololu_h_d44780_base_a72674b5466690b49b639ae2ec3e4983f}} 
+\index{PololuHD44780@{PololuHD44780}!loadCustomCharacterFromRam@{loadCustomCharacterFromRam}}
+\index{loadCustomCharacterFromRam@{loadCustomCharacterFromRam}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{loadCustomCharacterFromRam()}{loadCustomCharacterFromRam()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::load\+Custom\+Character\+From\+Ram (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{picture,  }\item[{uint8\+\_\+t}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Defines a custom character from RAM. 
+\begin{DoxyParams}{Parameters}
+{\em picture} & A pointer to the character dot pattern, in RAM. \\
+\hline
+{\em number} & A number between 0 and 7. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 117 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_aee80e23d270913dd2c353e7bd5408249}\label{class_pololu_h_d44780_base_aee80e23d270913dd2c353e7bd5408249}} 
+\index{PololuHD44780@{PololuHD44780}!noAutoscroll@{noAutoscroll}}
+\index{noAutoscroll@{noAutoscroll}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{noAutoscroll()}{noAutoscroll()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::no\+Autoscroll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Turns off auto-\/scrolling. Auto-\/scrolling is off by default. 
+
+Definition at line 219 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a301afc921881052b166e11cd45ad9696}\label{class_pololu_h_d44780_base_a301afc921881052b166e11cd45ad9696}} 
+\index{PololuHD44780@{PololuHD44780}!noBlink@{noBlink}}
+\index{noBlink@{noBlink}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{noBlink()}{noBlink()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::no\+Blink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Hides the blinking cursor.
+
+This functions clears the LCD\textquotesingle{}s \char`\"{}\+B\char`\"{} configuration bit without changing the other bits.
+
+Calling this function does not enable or disable the solid cursor (a solid line in the bottom row) so it is usually better to call \mbox{\hyperlink{class_pololu_h_d44780_base_a1db083d254d251c479a577f29bcdcec8}{hide\+Cursor()}} or \mbox{\hyperlink{class_pololu_h_d44780_base_a6a4d8e79beda9f7c81659a8e13c8c338}{cursor\+Solid()}} instead. This function is only provided for compatibilty with the Liquid\+Crystal library. 
+
+Definition at line 172 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_ab40886cf0b563a1806bc9391d00b032d}\label{class_pololu_h_d44780_base_ab40886cf0b563a1806bc9391d00b032d}} 
+\index{PololuHD44780@{PololuHD44780}!noCursor@{noCursor}}
+\index{noCursor@{noCursor}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{noCursor()}{noCursor()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::no\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Hides the solid cursor.
+
+This function clears the LCD\textquotesingle{}s \char`\"{}\+C\char`\"{} configuration bit without changing the other bits.
+
+If the \char`\"{}\+B\char`\"{} bit is set to 1, a blinking cursor will still be displayed even after calling this function. For that reason, it is usually better to call \mbox{\hyperlink{class_pololu_h_d44780_base_a1db083d254d251c479a577f29bcdcec8}{hide\+Cursor()}} instead. This function is only provided for compatibility with the Liquid\+Crystal library. 
+
+Definition at line 162 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_abc2d4e126017565c2a0cf2aac67870a0}\label{class_pololu_h_d44780_base_abc2d4e126017565c2a0cf2aac67870a0}} 
+\index{PololuHD44780@{PololuHD44780}!noDisplay@{noDisplay}}
+\index{noDisplay@{noDisplay}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{noDisplay()}{noDisplay()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::no\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Turns off the display while preserving its state.
+
+You can turn the display on again by calling \mbox{\hyperlink{class_pololu_h_d44780_base_af5dd1e137bfe9310a418924b7483fcdf}{display()}}. 
+
+Definition at line 152 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a10c1c42406708172fc38b718790ba881}\label{class_pololu_h_d44780_base_a10c1c42406708172fc38b718790ba881}} 
+\index{PololuHD44780@{PololuHD44780}!reinitialize@{reinitialize}}
+\index{reinitialize@{reinitialize}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{reinitialize()}{reinitialize()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::reinitialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+Reinitialize the LCD. This performs the same initialization that is done automatically the first time any function is called that writes to the LCD. This is useful if you want to get it back to a totally clean state. 
+
+Definition at line 80 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_aa3f8d4ba18feb9aa0f0a2fef3c6c2b37}\label{class_pololu_h_d44780_base_aa3f8d4ba18feb9aa0f0a2fef3c6c2b37}} 
+\index{PololuHD44780@{PololuHD44780}!rightToLeft@{rightToLeft}}
+\index{rightToLeft@{rightToLeft}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{rightToLeft()}{rightToLeft()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::right\+To\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Puts the LCD into right-\/to-\/left mode\+: the cursor will shift to the left after any character is written. 
+
+Definition at line 209 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_aada34a47663585f60b70e1d6f936f6d3}\label{class_pololu_h_d44780_base_aada34a47663585f60b70e1d6f936f6d3}} 
+\index{PololuHD44780@{PololuHD44780}!scrollDisplayLeft@{scrollDisplayLeft}}
+\index{scrollDisplayLeft@{scrollDisplayLeft}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{scrollDisplayLeft()}{scrollDisplayLeft()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::scroll\+Display\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Scrolls everything on the screen one position to the left.
+
+This command takes about 37 microseconds. 
+
+Definition at line 182 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a411512707f303af75de3c5aea313bf48}\label{class_pololu_h_d44780_base_a411512707f303af75de3c5aea313bf48}} 
+\index{PololuHD44780@{PololuHD44780}!scrollDisplayRight@{scrollDisplayRight}}
+\index{scrollDisplayRight@{scrollDisplayRight}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{scrollDisplayRight()}{scrollDisplayRight()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::scroll\+Display\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Scrolls everything on the screen one position to the right.
+
+This command takes about 37 microseconds. 
+
+Definition at line 187 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_a8da2db526de9f1e2314cb02c3ba6121a}\label{class_pololu_h_d44780_a8da2db526de9f1e2314cb02c3ba6121a}} 
+\index{PololuHD44780@{PololuHD44780}!send@{send}}
+\index{send@{send}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily virtual void Pololu\+HD44780\+::send (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data,  }\item[{bool}]{rs\+Value,  }\item[{bool}]{only4bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Sends data or commands to the LCD.
+
+The \mbox{\hyperlink{class_pololu_h_d44780_a876723b26f2dc081bf7f29019079489b}{init\+Pins()}} function will always be called before the first time this function is called. This function does not need to worry about the delays necessary to make sure the previous command has finished; that is taken care of by \mbox{\hyperlink{class_pololu_h_d44780_base}{Pololu\+HD44780\+Base}}.
+
+This function, along with \mbox{\hyperlink{class_pololu_h_d44780_a876723b26f2dc081bf7f29019079489b}{init\+Pins()}}, comprise the hardware abstraction layer for the LCD, and must be defined in a subclass of \mbox{\hyperlink{class_pololu_h_d44780_base}{Pololu\+HD44780\+Base}}. All other functions use these two functions to communicate with the LCD.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to send to the LCD. \\
+\hline
+{\em rs\+Value} & True to drive the RS pin high, false to drive it low. \\
+\hline
+{\em only4bits} & If true, and the LCD is using a 4-\/bit interface, only sends the lower 4 bits of the data. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_pololu_h_d44780_base_a004d5adb9e7c3cc546c6b0ed427dec7b}{Pololu\+HD44780\+Base}}.
+
+
+
+Definition at line 395 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_aeb3377822dc672398a991f06a00312c0}\label{class_pololu_h_d44780_base_aeb3377822dc672398a991f06a00312c0}} 
+\index{PololuHD44780@{PololuHD44780}!setCursor@{setCursor}}
+\index{setCursor@{setCursor}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{setCursor()}{setCursor()}}
+{\footnotesize\ttfamily void Pololu\+HD44780\+Base\+::set\+Cursor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{col,  }\item[{uint8\+\_\+t}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+Changes the location of the cursor. This is just a wrapper around goto\+XY provided for compaitibility with the Liquid\+Crystal library. 
+
+Definition at line 170 of file Pololu\+HD44780.\+h.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a965028ffd2313e9eaa968348effcab81}\label{class_pololu_h_d44780_base_a965028ffd2313e9eaa968348effcab81}} 
+\index{PololuHD44780@{PololuHD44780}!write@{write}}
+\index{write@{write}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Pololu\+HD44780\+Base\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+Writes multiple characters to the LCD.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to a string of characters in RAM, not necessarily null-\/terminated. \\
+\hline
+{\em size} & The number of characters to write to the LCD, excluding any null termination character. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file Pololu\+HD44780.\+cpp.
+
+\mbox{\Hypertarget{class_pololu_h_d44780_base_a1aad3b3ce5820dc910174b3c91a5d65e}\label{class_pololu_h_d44780_base_a1aad3b3ce5820dc910174b3c91a5d65e}} 
+\index{PololuHD44780@{PololuHD44780}!write@{write}}
+\index{write@{write}!PololuHD44780@{PololuHD44780}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t Pololu\+HD44780\+Base\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+Writes a single character to the LCD. 
+
+Definition at line 62 of file Pololu\+HD44780.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_pololu_h_d44780_8h}{Pololu\+HD44780.\+h}}\end{DoxyCompactItemize}

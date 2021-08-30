@@ -1,0 +1,199 @@
+\hypertarget{class_zumo32_u4_line_sensors}{}\doxysection{Zumo32\+U4\+Line\+Sensors Class Reference}
+\label{class_zumo32_u4_line_sensors}\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+
+
+Gets readings from the five down-\/facing line sensors on the front sensor array.  
+
+
+
+
+{\ttfamily \#include $<$Zumo32\+U4\+Line\+Sensors.\+h$>$}
+
+Inheritance diagram for Zumo32\+U4\+Line\+Sensors\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_zumo32_u4_line_sensors}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zumo32_u4_line_sensors_af1e61e6f4e14544054712689d23a974d}{Zumo32\+U4\+Line\+Sensors}} ()
+\begin{DoxyCompactList}\small\item\em Minimal constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zumo32_u4_line_sensors_a59ecf283662fbcb2993d74fd436b0e53}{Zumo32\+U4\+Line\+Sensors}} (uint8\+\_\+t $\ast$pins, uint8\+\_\+t num\+Sensors, uint8\+\_\+t emitter\+Pin=\mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}})
+\begin{DoxyCompactList}\small\item\em Constructor that takes pin arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_line_sensors_a880737a0df457e9acf3277b2342e4087}{init\+Three\+Sensors}} (uint8\+\_\+t emitter\+Pin=\mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}})
+\begin{DoxyCompactList}\small\item\em Configures this object to use just three line sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_line_sensors_a3873997ed35fbc1c6c57411f6cee1f2d}{init\+Five\+Sensors}} (uint8\+\_\+t emitter\+Pin=\mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}})
+\begin{DoxyCompactList}\small\item\em Configures this object to use all five line sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_line_sensors_aa8656b7a8c3d27302d76431acb93c2ac}{init}} (uint8\+\_\+t $\ast$pins, uint8\+\_\+t num\+Sensors, uint16\+\_\+t timeout=2000, uint8\+\_\+t emitter\+Pin=\mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}})
+\begin{DoxyCompactList}\small\item\em Configures this object to use a custom set of pins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_r_c_a354e7064c224b6fb363405016cdf73fa}\label{class_q_t_r_sensors_r_c_a354e7064c224b6fb363405016cdf73fa}} 
+void {\bfseries init} (unsigned char $\ast$pins, unsigned char num\+Sensors, unsigned int timeout=2000, unsigned char emitter\+Pin=QTR\+\_\+\+NO\+\_\+\+EMITTER\+\_\+\+PIN)
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}\label{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}} 
+void {\bfseries read} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}\label{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}} 
+void {\bfseries emitters\+Off} ()
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}\label{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}} 
+void {\bfseries emitters\+On} ()
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}\label{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}} 
+void {\bfseries calibrate} (unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}\label{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}} 
+void {\bfseries reset\+Calibration} ()
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}\label{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}} 
+void {\bfseries read\+Calibrated} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}\label{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}} 
+int {\bfseries read\+Line} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON, unsigned char white\+\_\+line=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}\label{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}} 
+unsigned int $\ast$ {\bfseries calibrated\+Minimum\+On}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}\label{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}} 
+unsigned int $\ast$ {\bfseries calibrated\+Maximum\+On}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}\label{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}} 
+unsigned int $\ast$ {\bfseries calibrated\+Minimum\+Off}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}\label{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}} 
+unsigned int $\ast$ {\bfseries calibrated\+Maximum\+Off}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}\label{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}} 
+void {\bfseries init} (unsigned char $\ast$pins, unsigned char num\+Sensors, unsigned char emitter\+Pin)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}\label{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}} 
+unsigned char $\ast$ {\bfseries \+\_\+pins}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}\label{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}} 
+unsigned char {\bfseries \+\_\+num\+Sensors}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a116880e22fe5e5c474e021b91e04e2ac}\label{class_q_t_r_sensors_a116880e22fe5e5c474e021b91e04e2ac}} 
+unsigned char {\bfseries \+\_\+emitter\+Pin}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}\label{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}} 
+unsigned int {\bfseries \+\_\+max\+Value}
+\item 
+\mbox{\Hypertarget{class_q_t_r_sensors_a9c3c8b7ac645020c77ff8198145b46b6}\label{class_q_t_r_sensors_a9c3c8b7ac645020c77ff8198145b46b6}} 
+int {\bfseries \+\_\+last\+Value}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gets readings from the five down-\/facing line sensors on the front sensor array. 
+
+The functions that this class inherits from \mbox{\hyperlink{class_q_t_r_sensors_r_c}{QTRSensors\+RC}}, such as read() and calibrate(), are documented in the \href{https://www.pololu.com/docs/0J19}{\texttt{ user\textquotesingle{}s guide for the QTRSensors library}}. QTRSensors is a separate Arduino library with a \href{https://github.com/pololu/qtr-sensors-arduino}{\texttt{ separate Git\+Hub repository}}, but we include a copy of it in the Zumo32\+U4 library since it is needed for the \mbox{\hyperlink{class_zumo32_u4_line_sensors}{Zumo32\+U4\+Line\+Sensors}} class. 
+
+Definition at line 43 of file Zumo32\+U4\+Line\+Sensors.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_zumo32_u4_line_sensors_af1e61e6f4e14544054712689d23a974d}\label{class_zumo32_u4_line_sensors_af1e61e6f4e14544054712689d23a974d}} 
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\doxysubsubsection{\texorpdfstring{Zumo32U4LineSensors()}{Zumo32U4LineSensors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Zumo32\+U4\+Line\+Sensors\+::\+Zumo32\+U4\+Line\+Sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Minimal constructor. 
+
+If you use this (i.\+e. by not providing any arguments when you create the \mbox{\hyperlink{class_zumo32_u4_proximity_sensors}{Zumo32\+U4\+Proximity\+Sensors}} object), then you will have to call \mbox{\hyperlink{class_zumo32_u4_line_sensors_a880737a0df457e9acf3277b2342e4087}{init\+Three\+Sensors()}}, \mbox{\hyperlink{class_zumo32_u4_line_sensors_a3873997ed35fbc1c6c57411f6cee1f2d}{init\+Five\+Sensors()}}, or \mbox{\hyperlink{class_zumo32_u4_line_sensors_aa8656b7a8c3d27302d76431acb93c2ac}{init()}} before using the functions in this class. 
+
+Definition at line 53 of file Zumo32\+U4\+Line\+Sensors.\+h.
+
+\mbox{\Hypertarget{class_zumo32_u4_line_sensors_a59ecf283662fbcb2993d74fd436b0e53}\label{class_zumo32_u4_line_sensors_a59ecf283662fbcb2993d74fd436b0e53}} 
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\doxysubsubsection{\texorpdfstring{Zumo32U4LineSensors()}{Zumo32U4LineSensors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Zumo32\+U4\+Line\+Sensors\+::\+Zumo32\+U4\+Line\+Sensors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pins,  }\item[{uint8\+\_\+t}]{num\+Sensors,  }\item[{uint8\+\_\+t}]{emitter\+Pin = {\ttfamily \mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that takes pin arguments. 
+
+This constructor calls \mbox{\hyperlink{class_zumo32_u4_line_sensors_aa8656b7a8c3d27302d76431acb93c2ac}{init()}} with the specified arguments. 
+
+Definition at line 58 of file Zumo32\+U4\+Line\+Sensors.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_zumo32_u4_line_sensors_aa8656b7a8c3d27302d76431acb93c2ac}\label{class_zumo32_u4_line_sensors_aa8656b7a8c3d27302d76431acb93c2ac}} 
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!init@{init}}
+\index{init@{init}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Line\+Sensors\+::init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pins,  }\item[{uint8\+\_\+t}]{num\+Sensors,  }\item[{uint16\+\_\+t}]{timeout = {\ttfamily 2000},  }\item[{uint8\+\_\+t}]{emitter\+Pin = {\ttfamily \mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures this object to use a custom set of pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pins} & A pointer to an array with the pin numbers for the sensors. \\
+\hline
+{\em num\+Sensors} & The number of sensors. \\
+\hline
+{\em timeout} & Specifies the length of time in microseconds beyond which you consider the sensor reading completely black. \\
+\hline
+{\em emitter\+Pin} & The number of the pin that controls the emitters for the line sensors. You can specify a value of QTR\+\_\+\+NO\+\_\+\+EMITTER\+\_\+\+PIN for this parameter if you want this object to not do anything to the emitters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file Zumo32\+U4\+Line\+Sensors.\+h.
+
+\mbox{\Hypertarget{class_zumo32_u4_line_sensors_a3873997ed35fbc1c6c57411f6cee1f2d}\label{class_zumo32_u4_line_sensors_a3873997ed35fbc1c6c57411f6cee1f2d}} 
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!initFiveSensors@{initFiveSensors}}
+\index{initFiveSensors@{initFiveSensors}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\doxysubsubsection{\texorpdfstring{initFiveSensors()}{initFiveSensors()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Line\+Sensors\+::init\+Five\+Sensors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{emitter\+Pin = {\ttfamily \mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures this object to use all five line sensors. 
+
+This function configures this object to use all five line sensors.
+
+For this configuration to work, jumpers on the front sensor array must be installed in order to connect pin 20 to DN2 and connect pin 4 to DN4. 
+
+Definition at line 80 of file Zumo32\+U4\+Line\+Sensors.\+h.
+
+\mbox{\Hypertarget{class_zumo32_u4_line_sensors_a880737a0df457e9acf3277b2342e4087}\label{class_zumo32_u4_line_sensors_a880737a0df457e9acf3277b2342e4087}} 
+\index{Zumo32U4LineSensors@{Zumo32U4LineSensors}!initThreeSensors@{initThreeSensors}}
+\index{initThreeSensors@{initThreeSensors}!Zumo32U4LineSensors@{Zumo32U4LineSensors}}
+\doxysubsubsection{\texorpdfstring{initThreeSensors()}{initThreeSensors()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Line\+Sensors\+::init\+Three\+Sensors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{emitter\+Pin = {\ttfamily \mbox{\hyperlink{_zumo32_u4_line_sensors_8h_a661904c7fa6e0b2cb9645e2ef272cfcd}{SENSOR\+\_\+\+LEDON}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures this object to use just three line sensors. 
+
+This function configures this object to just use line sensors 1, 3, and
+\begin{DoxyEnumerate}
+\item 
+\end{DoxyEnumerate}
+
+Definition at line 68 of file Zumo32\+U4\+Line\+Sensors.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_zumo32_u4_line_sensors_8h}{Zumo32\+U4\+Line\+Sensors.\+h}}\end{DoxyCompactItemize}

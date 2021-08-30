@@ -1,0 +1,89 @@
+\hypertarget{_pololu_buzzer_8h}{}\doxysection{Pololu\+Buzzer.\+h File Reference}
+\label{_pololu_buzzer_8h}\index{PololuBuzzer.h@{PololuBuzzer.h}}
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pololu_buzzer}{Pololu\+Buzzer}}
+\begin{DoxyCompactList}\small\item\em Play beeps and music with the buzzer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}\label{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}} 
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}{PLAY\+\_\+\+AUTOMATIC}}~0
+\begin{DoxyCompactList}\small\item\em Specifies that the sequence of notes will play with no further action required by the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}\label{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}} 
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}{PLAY\+\_\+\+CHECK}}~1
+\begin{DoxyCompactList}\small\item\em Specified that the user will need to call {\ttfamily play\+Check()} regularly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Note Macros}\par
+{\em \label{_pololu_buzzer_8h_note_macros}%
+\Hypertarget{_pololu_buzzer_8h_note_macros}%
+
+
+{\itshape x} specifies the octave of the note }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}\label{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}} 
+\#define {\bfseries NOTE\+\_\+C}(x)~( 0 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}\label{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}} 
+\#define {\bfseries NOTE\+\_\+\+C\+\_\+\+SHARP}(x)~( 1 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}\label{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}} 
+\#define {\bfseries NOTE\+\_\+\+D\+\_\+\+FLAT}(x)~( 1 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}\label{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}} 
+\#define {\bfseries NOTE\+\_\+D}(x)~( 2 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}\label{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}} 
+\#define {\bfseries NOTE\+\_\+\+D\+\_\+\+SHARP}(x)~( 3 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}\label{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}} 
+\#define {\bfseries NOTE\+\_\+\+E\+\_\+\+FLAT}(x)~( 3 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}\label{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}} 
+\#define {\bfseries NOTE\+\_\+E}(x)~( 4 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}\label{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}} 
+\#define {\bfseries NOTE\+\_\+F}(x)~( 5 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}\label{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}} 
+\#define {\bfseries NOTE\+\_\+\+F\+\_\+\+SHARP}(x)~( 6 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}\label{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}} 
+\#define {\bfseries NOTE\+\_\+\+G\+\_\+\+FLAT}(x)~( 6 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}\label{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}} 
+\#define {\bfseries NOTE\+\_\+G}(x)~( 7 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}\label{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}} 
+\#define {\bfseries NOTE\+\_\+\+G\+\_\+\+SHARP}(x)~( 8 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}\label{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}} 
+\#define {\bfseries NOTE\+\_\+\+A\+\_\+\+FLAT}(x)~( 8 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}\label{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}} 
+\#define {\bfseries NOTE\+\_\+A}(x)~( 9 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}\label{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}} 
+\#define {\bfseries NOTE\+\_\+\+A\+\_\+\+SHARP}(x)~(10 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}\label{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}} 
+\#define {\bfseries NOTE\+\_\+\+B\+\_\+\+FLAT}(x)~(10 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}\label{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}} 
+\#define {\bfseries NOTE\+\_\+B}(x)~(11 + (x)$\ast$12)
+\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}\label{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}} 
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}{SILENT\+\_\+\+NOTE}}~0x\+FF
+\begin{DoxyCompactList}\small\item\em silences buzzer for the note duration \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}\label{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}} 
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}{DIV\+\_\+\+BY\+\_\+10}}~(1 $<$$<$ 15)
+\begin{DoxyCompactList}\small\item\em frequency bit that indicates Hz/10~\newline
+ e.\+g. {\itshape frequency} = {\ttfamily (445 $\vert$ DIV\+\_\+\+BY\+\_\+10)} gives a frequency of 44.\+5 Hz \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+See the \mbox{\hyperlink{class_pololu_buzzer}{Pololu\+Buzzer}} class reference for more information about this library.
+
+The main repository for this library is \href{https://github.com/pololu/pololu-buzzer-arduino}{\texttt{ https\+://github.\+com/pololu/pololu-\/buzzer-\/arduino}}, though copies of this library also exist in other repositories. 

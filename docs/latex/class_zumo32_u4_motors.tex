@@ -1,0 +1,143 @@
+\hypertarget{class_zumo32_u4_motors}{}\doxysection{Zumo32\+U4\+Motors Class Reference}
+\label{class_zumo32_u4_motors}\index{Zumo32U4Motors@{Zumo32U4Motors}}
+
+
+Controls motor speed and direction on the Zumo 32U4.  
+
+
+
+
+{\ttfamily \#include $<$Zumo32\+U4\+Motors.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_zumo32_u4_motors_a18cbe58293cdc075528414861d614931}{flip\+Left\+Motor}} (bool flip)
+\begin{DoxyCompactList}\small\item\em Flips the direction of the left motor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_zumo32_u4_motors_a4e37f55575f2e468d50de17c369ad54d}{flip\+Right\+Motor}} (bool flip)
+\begin{DoxyCompactList}\small\item\em Flips the direction of the right motor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_zumo32_u4_motors_a59cb85c91d0425ae1a8116d4e6dab969}{set\+Left\+Speed}} (int16\+\_\+t speed)
+\begin{DoxyCompactList}\small\item\em Sets the speed for the left motor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_zumo32_u4_motors_a453fe0d34efe64fc44b7021878730534}{set\+Right\+Speed}} (int16\+\_\+t speed)
+\begin{DoxyCompactList}\small\item\em Sets the speed for the right motor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_zumo32_u4_motors_afdc238f045d9c919afd01f143f2fdbbb}{set\+Speeds}} (int16\+\_\+t left\+Speed, int16\+\_\+t right\+Speed)
+\begin{DoxyCompactList}\small\item\em Sets the speeds for both motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls motor speed and direction on the Zumo 32U4. 
+
+This library uses Timer 1, so it will conflict with any other libraries using that timer. 
+
+Definition at line 13 of file Zumo32\+U4\+Motors.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_zumo32_u4_motors_a18cbe58293cdc075528414861d614931}\label{class_zumo32_u4_motors_a18cbe58293cdc075528414861d614931}} 
+\index{Zumo32U4Motors@{Zumo32U4Motors}!flipLeftMotor@{flipLeftMotor}}
+\index{flipLeftMotor@{flipLeftMotor}!Zumo32U4Motors@{Zumo32U4Motors}}
+\doxysubsubsection{\texorpdfstring{flipLeftMotor()}{flipLeftMotor()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Motors\+::flip\+Left\+Motor (\begin{DoxyParamCaption}\item[{bool}]{flip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Flips the direction of the left motor. 
+
+You can call this function with an argument of {\ttfamily true} if the left motor of your Zumo was not installed in the standard way and you want a positive speed argument to correspond to forward movement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flip} & If true, then positive motor speeds will correspond to the direction pin being high. If false, then positive motor speeds will correspond to the direction pin being low. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file Zumo32\+U4\+Motors.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_motors_a4e37f55575f2e468d50de17c369ad54d}\label{class_zumo32_u4_motors_a4e37f55575f2e468d50de17c369ad54d}} 
+\index{Zumo32U4Motors@{Zumo32U4Motors}!flipRightMotor@{flipRightMotor}}
+\index{flipRightMotor@{flipRightMotor}!Zumo32U4Motors@{Zumo32U4Motors}}
+\doxysubsubsection{\texorpdfstring{flipRightMotor()}{flipRightMotor()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Motors\+::flip\+Right\+Motor (\begin{DoxyParamCaption}\item[{bool}]{flip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Flips the direction of the right motor. 
+
+You can call this function with an argument of {\ttfamily true} if the right motor of your Zumo was not installed in the standard way and you want a positive speed argument to correspond to forward movement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flip} & If true, then positive motor speeds will correspond to the direction pin being high. If false, then positive motor speeds will correspond to the direction pin being low. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Zumo32\+U4\+Motors.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_motors_a59cb85c91d0425ae1a8116d4e6dab969}\label{class_zumo32_u4_motors_a59cb85c91d0425ae1a8116d4e6dab969}} 
+\index{Zumo32U4Motors@{Zumo32U4Motors}!setLeftSpeed@{setLeftSpeed}}
+\index{setLeftSpeed@{setLeftSpeed}!Zumo32U4Motors@{Zumo32U4Motors}}
+\doxysubsubsection{\texorpdfstring{setLeftSpeed()}{setLeftSpeed()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Motors\+::set\+Left\+Speed (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the speed for the left motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A number from -\/400 to 400 representing the speed and direction of the left motor. Values of -\/400 or less result in full speed reverse, and values of 400 or more result in full speed forward. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Zumo32\+U4\+Motors.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_motors_a453fe0d34efe64fc44b7021878730534}\label{class_zumo32_u4_motors_a453fe0d34efe64fc44b7021878730534}} 
+\index{Zumo32U4Motors@{Zumo32U4Motors}!setRightSpeed@{setRightSpeed}}
+\index{setRightSpeed@{setRightSpeed}!Zumo32U4Motors@{Zumo32U4Motors}}
+\doxysubsubsection{\texorpdfstring{setRightSpeed()}{setRightSpeed()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Motors\+::set\+Right\+Speed (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the speed for the right motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & A number from -\/400 to 400 representing the speed and direction of the right motor. Values of -\/400 or less result in full speed reverse, and values of 400 or more result in full speed forward. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file Zumo32\+U4\+Motors.\+cpp.
+
+\mbox{\Hypertarget{class_zumo32_u4_motors_afdc238f045d9c919afd01f143f2fdbbb}\label{class_zumo32_u4_motors_afdc238f045d9c919afd01f143f2fdbbb}} 
+\index{Zumo32U4Motors@{Zumo32U4Motors}!setSpeeds@{setSpeeds}}
+\index{setSpeeds@{setSpeeds}!Zumo32U4Motors@{Zumo32U4Motors}}
+\doxysubsubsection{\texorpdfstring{setSpeeds()}{setSpeeds()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+Motors\+::set\+Speeds (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{left\+Speed,  }\item[{int16\+\_\+t}]{right\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the speeds for both motors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Speed} & A number from -\/400 to 400 representing the speed and direction of the right motor. Values of -\/400 or less result in full speed reverse, and values of 400 or more result in full speed forward. \\
+\hline
+{\em right\+Speed} & A number from -\/400 to 400 representing the speed and direction of the right motor. Values of -\/400 or less result in full speed reverse, and values of 400 or more result in full speed forward. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 95 of file Zumo32\+U4\+Motors.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_zumo32_u4_motors_8h}{Zumo32\+U4\+Motors.\+h}}\item 
+Zumo32\+U4\+Motors.\+cpp\end{DoxyCompactItemize}
