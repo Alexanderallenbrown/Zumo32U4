@@ -91,37 +91,3 @@ inline uint16_t readBatteryMillivolts()
     return ((uint32_t)sum * 625 + correction) / (64 * sampleCount);
 }
 
-/**
-
-\class LSM303
-\brief Interfaces with the accelerometer (deprecated).
-
-\deprecated 1.2.0 This class is included for backward compatibility with older
-versions of the Zumo32U4 library, but as of version 1.2.0, we recommend using
-the Zumo32U4IMU class to interface with the inertial sensors instead.
-
-For complete documentation of the this class, see
-https://github.com/pololu/lsm303-arduino
-
-
-\class L3G
-\brief Interfaces with the gyro (deprecated).
-
-\deprecated This class is included for backward compatibility with older
-versions of the Zumo32U4 library, but as of version 1.2.0, we recommend using
-the Zumo32U4IMU class to interface with the inertial sensors instead.
-
-For complete documentation of this class, see
-https://github.com/pololu/l3g-arduino
-
-
-\class QTRSensors
-For complete documentation of this class, see
-https://www.pololu.com/docs/0J19
-
-
-\class QTRSensorsRC
-For complete documentation of this class, see
-https://www.pololu.com/docs/0J19
-
-*/
