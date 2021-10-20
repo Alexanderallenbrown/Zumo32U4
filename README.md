@@ -67,8 +67,6 @@ This library also includes copies of several other Arduino libraries inside it w
 * [QTRSensors](https://github.com/pololu/qtr-sensors-arduino)
 * [USBPause](https://github.com/pololu/usb-pause-arduino)
 
-Additionally, the [LSM303](https://github.com/pololu/lsm303-arduino) and [L3G](https://github.com/pololu/l3g-arduino) libraries are included for backward compatibility with older versions of the Zumo32U4 library, but we recommend using the Zumo32U4IMU class to interface with the inertial sensors instead.
-
 You can use these libraries in your sketch automatically without any extra installation steps and without needing to add any extra `#include` lines to your sketch.
 
 You should avoid adding extra `#include` lines such as `#include <Pushbutton.h>` because then the Arduino IDE might try to use the standalone Pushbutton library (if you previously installed it), and it would conflict with the copy of the Pushbutton code included in this library.  The only `#include` lines needed to access all features of this library are:
