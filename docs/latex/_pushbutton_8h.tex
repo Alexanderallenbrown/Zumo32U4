@@ -1,81 +1,81 @@
-\hypertarget{_pushbutton_8h}{}\doxysection{Pushbutton.\+h File Reference}
-\label{_pushbutton_8h}\index{Pushbutton.h@{Pushbutton.h}}
+\hypertarget{_pushbutton_8h}{}\section{Pushbutton.\+h File Reference}
+\label{_pushbutton_8h}\index{Pushbutton.\+h@{Pushbutton.\+h}}
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
-\doxysubsection*{Classes}
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{class_pushbutton_base}{Pushbutton\+Base}}
+class \hyperlink{class_pushbutton_base}{Pushbutton\+Base}
 \begin{DoxyCompactList}\small\item\em General pushbutton class that handles debouncing. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class_pushbutton}{Pushbutton}}
+class \hyperlink{class_pushbutton}{Pushbutton}
 \begin{DoxyCompactList}\small\item\em Main class for interfacing with pushbuttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Macros}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}{PULL\+\_\+\+UP\+\_\+\+DISABLED}}~0
+\#define \hyperlink{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~0
 \item 
-\#define \mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\+\_\+\+UP\+\_\+\+ENABLED}}~1
+\#define \hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED}~1
 \item 
-\#define \mbox{\hyperlink{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}{DEFAULT\+\_\+\+STATE\+\_\+\+LOW}}~0
+\#define \hyperlink{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW}~0
 \item 
-\#define \mbox{\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{DEFAULT\+\_\+\+STATE\+\_\+\+HIGH}}~1
+\#define \hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH}~1
 \item 
-\#define \mbox{\hyperlink{_pushbutton_8h_a3b8801b3b90dfcc378128209f8029042}{ZUMO\+\_\+\+BUTTON}}~12
+\#define \hyperlink{_pushbutton_8h_a3b8801b3b90dfcc378128209f8029042}{Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON}~12
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\subsection{Detailed Description}
 This is the main header file for the Pushbutton library.
 
-For an overview of the library\textquotesingle{}s features, see \href{https://github.com/pololu/pushbutton-arduino}{\texttt{ https\+://github.\+com/pololu/pushbutton-\/arduino}}. That is the main repository for the library, though copies of the library may exist in other repositories. 
+For an overview of the library\textquotesingle{}s features, see \href{https://github.com/pololu/pushbutton-arduino}{\tt https\+://github.\+com/pololu/pushbutton-\/arduino}. That is the main repository for the library, though copies of the library may exist in other repositories. 
 
-\doxysubsection{Macro Definition Documentation}
+\subsection{Macro Definition Documentation}
 \mbox{\Hypertarget{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}\label{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}} 
-\index{Pushbutton.h@{Pushbutton.h}!DEFAULT\_STATE\_HIGH@{DEFAULT\_STATE\_HIGH}}
-\index{DEFAULT\_STATE\_HIGH@{DEFAULT\_STATE\_HIGH}!Pushbutton.h@{Pushbutton.h}}
-\doxysubsubsection{\texorpdfstring{DEFAULT\_STATE\_HIGH}{DEFAULT\_STATE\_HIGH}}
-{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+STATE\+\_\+\+HIGH~1}
+\index{Pushbutton.\+h@{Pushbutton.\+h}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH}!Pushbutton.\+h@{Pushbutton.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH}{DEFAULT\_STATE\_HIGH}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH~1}
 
 Indicates that the default (released) state of the button is when the I/O line reads high. 
 
 Definition at line 28 of file Pushbutton.\+h.
 
 \mbox{\Hypertarget{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}\label{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}} 
-\index{Pushbutton.h@{Pushbutton.h}!DEFAULT\_STATE\_LOW@{DEFAULT\_STATE\_LOW}}
-\index{DEFAULT\_STATE\_LOW@{DEFAULT\_STATE\_LOW}!Pushbutton.h@{Pushbutton.h}}
-\doxysubsubsection{\texorpdfstring{DEFAULT\_STATE\_LOW}{DEFAULT\_STATE\_LOW}}
-{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+STATE\+\_\+\+LOW~0}
+\index{Pushbutton.\+h@{Pushbutton.\+h}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW}!Pushbutton.\+h@{Pushbutton.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW}{DEFAULT\_STATE\_LOW}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW~0}
 
 Indicates that the default (released) state of the button is when the I/O line reads low. 
 
 Definition at line 24 of file Pushbutton.\+h.
 
 \mbox{\Hypertarget{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}\label{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}} 
-\index{Pushbutton.h@{Pushbutton.h}!PULL\_UP\_DISABLED@{PULL\_UP\_DISABLED}}
-\index{PULL\_UP\_DISABLED@{PULL\_UP\_DISABLED}!Pushbutton.h@{Pushbutton.h}}
-\doxysubsubsection{\texorpdfstring{PULL\_UP\_DISABLED}{PULL\_UP\_DISABLED}}
-{\footnotesize\ttfamily \#define PULL\+\_\+\+UP\+\_\+\+DISABLED~0}
+\index{Pushbutton.\+h@{Pushbutton.\+h}!P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!Pushbutton.\+h@{Pushbutton.\+h}}
+\subsubsection{\texorpdfstring{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{PULL\_UP\_DISABLED}}
+{\footnotesize\ttfamily \#define P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED~0}
 
 Indicates the that pull-\/up resistor should be disabled. 
 
 Definition at line 17 of file Pushbutton.\+h.
 
 \mbox{\Hypertarget{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}\label{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}} 
-\index{Pushbutton.h@{Pushbutton.h}!PULL\_UP\_ENABLED@{PULL\_UP\_ENABLED}}
-\index{PULL\_UP\_ENABLED@{PULL\_UP\_ENABLED}!Pushbutton.h@{Pushbutton.h}}
-\doxysubsubsection{\texorpdfstring{PULL\_UP\_ENABLED}{PULL\_UP\_ENABLED}}
-{\footnotesize\ttfamily \#define PULL\+\_\+\+UP\+\_\+\+ENABLED~1}
+\index{Pushbutton.\+h@{Pushbutton.\+h}!P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED@{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED@{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED}!Pushbutton.\+h@{Pushbutton.\+h}}
+\subsubsection{\texorpdfstring{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED}{PULL\_UP\_ENABLED}}
+{\footnotesize\ttfamily \#define P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED~1}
 
 Indicates the that pull-\/up resistor should be enabled. 
 
 Definition at line 20 of file Pushbutton.\+h.
 
 \mbox{\Hypertarget{_pushbutton_8h_a3b8801b3b90dfcc378128209f8029042}\label{_pushbutton_8h_a3b8801b3b90dfcc378128209f8029042}} 
-\index{Pushbutton.h@{Pushbutton.h}!ZUMO\_BUTTON@{ZUMO\_BUTTON}}
-\index{ZUMO\_BUTTON@{ZUMO\_BUTTON}!Pushbutton.h@{Pushbutton.h}}
-\doxysubsubsection{\texorpdfstring{ZUMO\_BUTTON}{ZUMO\_BUTTON}}
-{\footnotesize\ttfamily \#define ZUMO\+\_\+\+BUTTON~12}
+\index{Pushbutton.\+h@{Pushbutton.\+h}!Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON@{Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON}}
+\index{Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON@{Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON}!Pushbutton.\+h@{Pushbutton.\+h}}
+\subsubsection{\texorpdfstring{Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON}{ZUMO\_BUTTON}}
+{\footnotesize\ttfamily \#define Z\+U\+M\+O\+\_\+\+B\+U\+T\+T\+ON~12}
 
-The pin used for the button on the \href{http://www.pololu.com/product/2508}{\texttt{ Zumo Shield for Arduino}}.
+The pin used for the button on the \href{http://www.pololu.com/product/2508}{\tt Zumo Shield for Arduino}.
 
 This does not really belong here in this general pushbutton library and will probably be removed in the future. 
 

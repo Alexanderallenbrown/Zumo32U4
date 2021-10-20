@@ -1,20 +1,16 @@
-\hypertarget{class_q_t_r_sensors}{}\doxysection{QTRSensors Class Reference}
-\label{class_q_t_r_sensors}\index{QTRSensors@{QTRSensors}}
-
-
-{\ttfamily \#include $<$Zumo32\+U4.\+h$>$}
-
-Inheritance diagram for QTRSensors\+:\begin{figure}[H]
+\hypertarget{class_q_t_r_sensors}{}\section{Q\+T\+R\+Sensors Class Reference}
+\label{class_q_t_r_sensors}\index{Q\+T\+R\+Sensors@{Q\+T\+R\+Sensors}}
+Inheritance diagram for Q\+T\+R\+Sensors\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_q_t_r_sensors}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}\label{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}} 
-void {\bfseries read} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+void {\bfseries read} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON)
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}\label{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}} 
 void {\bfseries emitters\+Off} ()
@@ -23,18 +19,18 @@ void {\bfseries emitters\+Off} ()
 void {\bfseries emitters\+On} ()
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}\label{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}} 
-void {\bfseries calibrate} (unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+void {\bfseries calibrate} (unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON)
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}\label{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}} 
 void {\bfseries reset\+Calibration} ()
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}\label{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}} 
-void {\bfseries read\+Calibrated} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+void {\bfseries read\+Calibrated} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON)
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}\label{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}} 
-int {\bfseries read\+Line} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON, unsigned char white\+\_\+line=0)
+int {\bfseries read\+Line} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON, unsigned char white\+\_\+line=0)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}\label{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}} 
@@ -49,13 +45,13 @@ unsigned int $\ast$ {\bfseries calibrated\+Minimum\+Off}
 \mbox{\Hypertarget{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}\label{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}} 
 unsigned int $\ast$ {\bfseries calibrated\+Maximum\+Off}
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}\label{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}} 
 void {\bfseries init} (unsigned char $\ast$pins, unsigned char num\+Sensors, unsigned char emitter\+Pin)
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}\label{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}} 
@@ -75,14 +71,14 @@ int {\bfseries \+\_\+last\+Value}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-For complete documentation of this class, see \href{https://www.pololu.com/docs/0J19}{\texttt{ https\+://www.\+pololu.\+com/docs/0\+J19}} 
+\subsection{Detailed Description}
 
-Definition at line 48 of file QTRSensors.\+h.
+
+Definition at line 48 of file Q\+T\+R\+Sensors.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-QTRSensors.\+h\item 
-QTRSensors.\+cpp\end{DoxyCompactItemize}
+Q\+T\+R\+Sensors.\+h\item 
+Q\+T\+R\+Sensors.\+cpp\end{DoxyCompactItemize}

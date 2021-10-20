@@ -1,94 +1,85 @@
-\hypertarget{class_l3_g}{}\doxysection{L3G Class Reference}
+\hypertarget{class_l3_g}{}\section{L3G Class Reference}
 \label{class_l3_g}\index{L3G@{L3G}}
-
-
-Interfaces with the gyro (deprecated).  
-
-
-
-
-{\ttfamily \#include $<$Zumo32\+U4.\+h$>$}
-
-\doxysubsection*{Classes}
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}
+struct \hyperlink{struct_l3_g_1_1vector}{vector}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l3_g_a1bdc3c228ca5694828d9c174d52d9699}\label{class_l3_g_a1bdc3c228ca5694828d9c174d52d9699}} 
-enum {\bfseries device\+Type} \{ {\bfseries device\+\_\+4200D}
-, {\bfseries device\+\_\+\+D20}
-, {\bfseries device\+\_\+\+D20H}
-, {\bfseries device\+\_\+auto}
+enum {\bfseries device\+Type} \{ {\bfseries device\+\_\+4200D}, 
+{\bfseries device\+\_\+\+D20}, 
+{\bfseries device\+\_\+\+D20H}, 
+{\bfseries device\+\_\+auto}
  \}
 \item 
 \mbox{\Hypertarget{class_l3_g_a2f29221d97b804da8028bfeed6522b9a}\label{class_l3_g_a2f29221d97b804da8028bfeed6522b9a}} 
-enum {\bfseries sa0\+State} \{ {\bfseries sa0\+\_\+low}
-, {\bfseries sa0\+\_\+high}
-, {\bfseries sa0\+\_\+auto}
+enum {\bfseries sa0\+State} \{ {\bfseries sa0\+\_\+low}, 
+{\bfseries sa0\+\_\+high}, 
+{\bfseries sa0\+\_\+auto}
  \}
 \item 
 \mbox{\Hypertarget{class_l3_g_a3f96d1f7eac3f8b8b645464390c79319}\label{class_l3_g_a3f96d1f7eac3f8b8b645464390c79319}} 
 enum {\bfseries reg\+Addr} \{ \newline
-{\bfseries WHO\+\_\+\+AM\+\_\+I} = 0x0F
-, {\bfseries CTRL1} = 0x20
-, {\bfseries CTRL\+\_\+\+REG1} = 0x20
-, {\bfseries CTRL2} = 0x21
-, \newline
-{\bfseries CTRL\+\_\+\+REG2} = 0x21
-, {\bfseries CTRL3} = 0x22
-, {\bfseries CTRL\+\_\+\+REG3} = 0x22
-, {\bfseries CTRL4} = 0x23
-, \newline
-{\bfseries CTRL\+\_\+\+REG4} = 0x23
-, {\bfseries CTRL5} = 0x24
-, {\bfseries CTRL\+\_\+\+REG5} = 0x24
-, {\bfseries REFERENCE} = 0x25
-, \newline
-{\bfseries OUT\+\_\+\+TEMP} = 0x26
-, {\bfseries STATUS} = 0x27
-, {\bfseries STATUS\+\_\+\+REG} = 0x27
-, {\bfseries OUT\+\_\+\+X\+\_\+L} = 0x28
-, \newline
-{\bfseries OUT\+\_\+\+X\+\_\+H} = 0x29
-, {\bfseries OUT\+\_\+\+Y\+\_\+L} = 0x2A
-, {\bfseries OUT\+\_\+\+Y\+\_\+H} = 0x2B
-, {\bfseries OUT\+\_\+\+Z\+\_\+L} = 0x2C
-, \newline
-{\bfseries OUT\+\_\+\+Z\+\_\+H} = 0x2D
-, {\bfseries FIFO\+\_\+\+CTRL} = 0x2E
-, {\bfseries FIFO\+\_\+\+CTRL\+\_\+\+REG} = 0x2E
-, {\bfseries FIFO\+\_\+\+SRC} = 0x2F
-, \newline
-{\bfseries FIFO\+\_\+\+SRC\+\_\+\+REG} = 0x2F
-, {\bfseries IG\+\_\+\+CFG} = 0x30
-, {\bfseries INT1\+\_\+\+CFG} = 0x30
-, {\bfseries IG\+\_\+\+SRC} = 0x31
-, \newline
-{\bfseries INT1\+\_\+\+SRC} = 0x31
-, {\bfseries IG\+\_\+\+THS\+\_\+\+XH} = 0x32
-, {\bfseries INT1\+\_\+\+THS\+\_\+\+XH} = 0x32
-, {\bfseries IG\+\_\+\+THS\+\_\+\+XL} = 0x33
-, \newline
-{\bfseries INT1\+\_\+\+THS\+\_\+\+XL} = 0x33
-, {\bfseries IG\+\_\+\+THS\+\_\+\+YH} = 0x34
-, {\bfseries INT1\+\_\+\+THS\+\_\+\+YH} = 0x34
-, {\bfseries IG\+\_\+\+THS\+\_\+\+YL} = 0x35
-, \newline
-{\bfseries INT1\+\_\+\+THS\+\_\+\+YL} = 0x35
-, {\bfseries IG\+\_\+\+THS\+\_\+\+ZH} = 0x36
-, {\bfseries INT1\+\_\+\+THS\+\_\+\+ZH} = 0x36
-, {\bfseries IG\+\_\+\+THS\+\_\+\+ZL} = 0x37
-, \newline
-{\bfseries INT1\+\_\+\+THS\+\_\+\+ZL} = 0x37
-, {\bfseries IG\+\_\+\+DURATION} = 0x38
-, {\bfseries INT1\+\_\+\+DURATION} = 0x38
-, {\bfseries LOW\+\_\+\+ODR} = 0x39
+{\bfseries W\+H\+O\+\_\+\+A\+M\+\_\+I} = 0x0F, 
+{\bfseries C\+T\+R\+L1} = 0x20, 
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G1} = 0x20, 
+{\bfseries C\+T\+R\+L2} = 0x21, 
+\newline
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G2} = 0x21, 
+{\bfseries C\+T\+R\+L3} = 0x22, 
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G3} = 0x22, 
+{\bfseries C\+T\+R\+L4} = 0x23, 
+\newline
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G4} = 0x23, 
+{\bfseries C\+T\+R\+L5} = 0x24, 
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G5} = 0x24, 
+{\bfseries R\+E\+F\+E\+R\+E\+N\+CE} = 0x25, 
+\newline
+{\bfseries O\+U\+T\+\_\+\+T\+E\+MP} = 0x26, 
+{\bfseries S\+T\+A\+T\+US} = 0x27, 
+{\bfseries S\+T\+A\+T\+U\+S\+\_\+\+R\+EG} = 0x27, 
+{\bfseries O\+U\+T\+\_\+\+X\+\_\+L} = 0x28, 
+\newline
+{\bfseries O\+U\+T\+\_\+\+X\+\_\+H} = 0x29, 
+{\bfseries O\+U\+T\+\_\+\+Y\+\_\+L} = 0x2A, 
+{\bfseries O\+U\+T\+\_\+\+Y\+\_\+H} = 0x2B, 
+{\bfseries O\+U\+T\+\_\+\+Z\+\_\+L} = 0x2C, 
+\newline
+{\bfseries O\+U\+T\+\_\+\+Z\+\_\+H} = 0x2D, 
+{\bfseries F\+I\+F\+O\+\_\+\+C\+T\+RL} = 0x2E, 
+{\bfseries F\+I\+F\+O\+\_\+\+C\+T\+R\+L\+\_\+\+R\+EG} = 0x2E, 
+{\bfseries F\+I\+F\+O\+\_\+\+S\+RC} = 0x2F, 
+\newline
+{\bfseries F\+I\+F\+O\+\_\+\+S\+R\+C\+\_\+\+R\+EG} = 0x2F, 
+{\bfseries I\+G\+\_\+\+C\+FG} = 0x30, 
+{\bfseries I\+N\+T1\+\_\+\+C\+FG} = 0x30, 
+{\bfseries I\+G\+\_\+\+S\+RC} = 0x31, 
+\newline
+{\bfseries I\+N\+T1\+\_\+\+S\+RC} = 0x31, 
+{\bfseries I\+G\+\_\+\+T\+H\+S\+\_\+\+XH} = 0x32, 
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+\+XH} = 0x32, 
+{\bfseries I\+G\+\_\+\+T\+H\+S\+\_\+\+XL} = 0x33, 
+\newline
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+\+XL} = 0x33, 
+{\bfseries I\+G\+\_\+\+T\+H\+S\+\_\+\+YH} = 0x34, 
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+\+YH} = 0x34, 
+{\bfseries I\+G\+\_\+\+T\+H\+S\+\_\+\+YL} = 0x35, 
+\newline
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+\+YL} = 0x35, 
+{\bfseries I\+G\+\_\+\+T\+H\+S\+\_\+\+ZH} = 0x36, 
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+\+ZH} = 0x36, 
+{\bfseries I\+G\+\_\+\+T\+H\+S\+\_\+\+ZL} = 0x37, 
+\newline
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+\+ZL} = 0x37, 
+{\bfseries I\+G\+\_\+\+D\+U\+R\+A\+T\+I\+ON} = 0x38, 
+{\bfseries I\+N\+T1\+\_\+\+D\+U\+R\+A\+T\+I\+ON} = 0x38, 
+{\bfseries L\+O\+W\+\_\+\+O\+DR} = 0x39
  \}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l3_g_aaf0cde569c56ef9c477c988e576cae2f}\label{class_l3_g_aaf0cde569c56ef9c477c988e576cae2f}} 
@@ -118,37 +109,31 @@ unsigned int {\bfseries get\+Timeout} (void)
 \mbox{\Hypertarget{class_l3_g_a6ce276e7ccc180b0d8bec8e59511ce4f}\label{class_l3_g_a6ce276e7ccc180b0d8bec8e59511ce4f}} 
 bool {\bfseries timeout\+Occurred} (void)
 \end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l3_g_a3bb8e9c82e6a9bd8f1da42ca287ec120}\label{class_l3_g_a3bb8e9c82e6a9bd8f1da42ca287ec120}} 
-{\footnotesize template$<$typename Ta , typename Tb , typename To $>$ }\\static void {\bfseries vector\+\_\+cross} (const \mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ Ta $>$ $\ast$a, const \mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ Tb $>$ $\ast$b, \mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ To $>$ $\ast$out)
+{\footnotesize template$<$typename Ta , typename Tb , typename To $>$ }\\static void {\bfseries vector\+\_\+cross} (const \hyperlink{struct_l3_g_1_1vector}{vector}$<$ Ta $>$ $\ast$a, const \hyperlink{struct_l3_g_1_1vector}{vector}$<$ Tb $>$ $\ast$b, \hyperlink{struct_l3_g_1_1vector}{vector}$<$ To $>$ $\ast$out)
 \item 
 \mbox{\Hypertarget{class_l3_g_ac58624a8651cf3e66ea884510e9d8e73}\label{class_l3_g_ac58624a8651cf3e66ea884510e9d8e73}} 
-{\footnotesize template$<$typename Ta , typename Tb $>$ }\\static float {\bfseries vector\+\_\+dot} (const \mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ Ta $>$ $\ast$a, const \mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ Tb $>$ $\ast$b)
+{\footnotesize template$<$typename Ta , typename Tb $>$ }\\static float {\bfseries vector\+\_\+dot} (const \hyperlink{struct_l3_g_1_1vector}{vector}$<$ Ta $>$ $\ast$a, const \hyperlink{struct_l3_g_1_1vector}{vector}$<$ Tb $>$ $\ast$b)
 \item 
 \mbox{\Hypertarget{class_l3_g_adb9bb06f0fc8c8d0879236a87466e1b7}\label{class_l3_g_adb9bb06f0fc8c8d0879236a87466e1b7}} 
-static void {\bfseries vector\+\_\+normalize} (\mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ float $>$ $\ast$a)
+static void {\bfseries vector\+\_\+normalize} (\hyperlink{struct_l3_g_1_1vector}{vector}$<$ float $>$ $\ast$a)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l3_g_ab1cd0fd8c8f23e0f3ab1c6ce35f14324}\label{class_l3_g_ab1cd0fd8c8f23e0f3ab1c6ce35f14324}} 
-\mbox{\hyperlink{struct_l3_g_1_1vector}{vector}}$<$ int16\+\_\+t $>$ {\bfseries g}
+\hyperlink{struct_l3_g_1_1vector}{vector}$<$ int16\+\_\+t $>$ {\bfseries g}
 \item 
 \mbox{\Hypertarget{class_l3_g_a3a233a1c4c0421acabdc62a3e22d3272}\label{class_l3_g_a3a233a1c4c0421acabdc62a3e22d3272}} 
 byte {\bfseries last\+\_\+status}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Interfaces with the gyro (deprecated). 
+\subsection{Detailed Description}
 
-\begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000002}{Deprecated}}]This class is included for backward compatibility with older versions of the Zumo32\+U4 library, but as of version 1.\+2.\+0, we recommend using the \mbox{\hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+IMU}} class to interface with the inertial sensors instead.\end{DoxyRefDesc}
-
-
-For complete documentation of this class, see \href{https://github.com/pololu/l3g-arduino}{\texttt{ https\+://github.\+com/pololu/l3g-\/arduino}} 
 
 Definition at line 6 of file L3\+G.\+h.
 

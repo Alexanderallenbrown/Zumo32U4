@@ -1,8 +1,8 @@
-\hypertarget{class_zumo32_u4_button_c}{}\doxysection{Zumo32\+U4\+ButtonC Class Reference}
-\label{class_zumo32_u4_button_c}\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}}
+\hypertarget{class_zumo32_u4_button_c}{}\section{Zumo32\+U4\+ButtonC Class Reference}
+\label{class_zumo32_u4_button_c}\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
 
 
-Interfaces with button C on the Zumo 32U4.  
+Interfaces with button C on the Zumo 32\+U4.  
 
 
 
@@ -15,29 +15,29 @@ Inheritance diagram for Zumo32\+U4\+ButtonC\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_zumo32_u4_button_c}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual bool \mbox{\hyperlink{class_zumo32_u4_button_c_aa75e220cde340487a3fa8f1f99d645f8}{is\+Pressed}} ()
+virtual bool \hyperlink{class_zumo32_u4_button_c_aa75e220cde340487a3fa8f1f99d645f8}{is\+Pressed} ()
 \begin{DoxyCompactList}\small\item\em indicates whether button is currently pressed without any debouncing. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press}} ()
+void \hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press} ()
 \begin{DoxyCompactList}\small\item\em Waits until the button is pressed and takes care of debouncing. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release}} ()
+void \hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release} ()
 \begin{DoxyCompactList}\small\item\em Waits until the button is released and takes care of debouncing. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{wait\+For\+Button}} ()
+void \hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{wait\+For\+Button} ()
 \begin{DoxyCompactList}\small\item\em Waits until the button is pressed and then waits until the button is released, taking care of debouncing. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press}} ()
+bool \hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press} ()
 \begin{DoxyCompactList}\small\item\em Uses a state machine to return true once after each time it detects the button moving from the released state to the pressed state. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release}} ()
+bool \hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release} ()
 \begin{DoxyCompactList}\small\item\em Uses a state machine to return true once after each time it detects the button moving from the pressed state to the released state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Interfaces with button C on the Zumo 32U4. 
+\subsection{Detailed Description}
+Interfaces with button C on the Zumo 32\+U4. 
 
-The pin used for button C is also used for the RX LED.
+The pin used for button C is also used for the RX L\+ED.
 
-This class temporarily disables USB interrupts because the Arduino core code has USB interrupts enabled that sometimes write to the pin this button is on.
+This class temporarily disables U\+SB interrupts because the Arduino core code has U\+SB interrupts enabled that sometimes write to the pin this button is on.
 
 This class temporarily sets the pin to be an input without a pull-\/up resistor. The pull-\/up resistor is not needed because of the resistors on the board. 
 
@@ -45,11 +45,11 @@ Definition at line 66 of file Zumo32\+U4\+Buttons.\+h.
 
 
 
-\doxysubsection{Member Function Documentation}
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}\label{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}} 
-\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}!getSingleDebouncedPress@{getSingleDebouncedPress}}
-\index{getSingleDebouncedPress@{getSingleDebouncedPress}!Zumo32U4ButtonC@{Zumo32U4ButtonC}}
-\doxysubsubsection{\texorpdfstring{getSingleDebouncedPress()}{getSingleDebouncedPress()}}
+\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}!get\+Single\+Debounced\+Press@{get\+Single\+Debounced\+Press}}
+\index{get\+Single\+Debounced\+Press@{get\+Single\+Debounced\+Press}!Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
+\subsubsection{\texorpdfstring{get\+Single\+Debounced\+Press()}{getSingleDebouncedPress()}}
 {\footnotesize\ttfamily bool Pushbutton\+Base\+::get\+Single\+Debounced\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
@@ -61,25 +61,25 @@ This is a non-\/blocking function that is meant to be called repeatedly in a loo
 Definition at line 110 of file Pushbutton.\+cpp.
 
 \mbox{\Hypertarget{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}\label{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}} 
-\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}!getSingleDebouncedRelease@{getSingleDebouncedRelease}}
-\index{getSingleDebouncedRelease@{getSingleDebouncedRelease}!Zumo32U4ButtonC@{Zumo32U4ButtonC}}
-\doxysubsubsection{\texorpdfstring{getSingleDebouncedRelease()}{getSingleDebouncedRelease()}}
+\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}!get\+Single\+Debounced\+Release@{get\+Single\+Debounced\+Release}}
+\index{get\+Single\+Debounced\+Release@{get\+Single\+Debounced\+Release}!Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
+\subsubsection{\texorpdfstring{get\+Single\+Debounced\+Release()}{getSingleDebouncedRelease()}}
 {\footnotesize\ttfamily bool Pushbutton\+Base\+::get\+Single\+Debounced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
 
 Uses a state machine to return true once after each time it detects the button moving from the pressed state to the released state. 
 
-This is just like \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()}} except it has a separate state machine and it watches for when the button goes from the pressed state to the released state.
+This is just like \hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()} except it has a separate state machine and it watches for when the button goes from the pressed state to the released state.
 
-There is no strict guarantee that every debounced button press event returned by \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()}} will have a corresponding button release event returned by \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release()}}; the two functions use independent state machines and sample the button at different times. 
+There is no strict guarantee that every debounced button press event returned by \hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()} will have a corresponding button release event returned by \hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release()}; the two functions use independent state machines and sample the button at different times. 
 
 Definition at line 115 of file Pushbutton.\+cpp.
 
 \mbox{\Hypertarget{class_zumo32_u4_button_c_aa75e220cde340487a3fa8f1f99d645f8}\label{class_zumo32_u4_button_c_aa75e220cde340487a3fa8f1f99d645f8}} 
-\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}!isPressed@{isPressed}}
-\index{isPressed@{isPressed}!Zumo32U4ButtonC@{Zumo32U4ButtonC}}
-\doxysubsubsection{\texorpdfstring{isPressed()}{isPressed()}}
+\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}!is\+Pressed@{is\+Pressed}}
+\index{is\+Pressed@{is\+Pressed}!Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
+\subsubsection{\texorpdfstring{is\+Pressed()}{isPressed()}}
 {\footnotesize\ttfamily virtual bool Zumo32\+U4\+Button\+C\+::is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
@@ -89,32 +89,32 @@ indicates whether button is currently pressed without any debouncing.
 \begin{DoxyReturn}{Returns}
 1 if the button is pressed right now, 0 if it is not.
 \end{DoxyReturn}
-This function must be implemented in a subclass of \mbox{\hyperlink{class_pushbutton_base}{Pushbutton\+Base}}, such as \mbox{\hyperlink{class_pushbutton}{Pushbutton}}. 
+This function must be implemented in a subclass of \hyperlink{class_pushbutton_base}{Pushbutton\+Base}, such as \hyperlink{class_pushbutton}{Pushbutton}. 
 
-Implements \mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{Pushbutton\+Base}}.
+Implements \hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{Pushbutton\+Base}.
 
 
 
 Definition at line 70 of file Zumo32\+U4\+Buttons.\+h.
 
 \mbox{\Hypertarget{class_pushbutton_base_ab755065c930be0649597220316213e8a}\label{class_pushbutton_base_ab755065c930be0649597220316213e8a}} 
-\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}!waitForButton@{waitForButton}}
-\index{waitForButton@{waitForButton}!Zumo32U4ButtonC@{Zumo32U4ButtonC}}
-\doxysubsubsection{\texorpdfstring{waitForButton()}{waitForButton()}}
+\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}!wait\+For\+Button@{wait\+For\+Button}}
+\index{wait\+For\+Button@{wait\+For\+Button}!Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
+\subsubsection{\texorpdfstring{wait\+For\+Button()}{waitForButton()}}
 {\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
 
 Waits until the button is pressed and then waits until the button is released, taking care of debouncing. 
 
-This is equivalent to calling \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press()}} and then \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release()}}. 
+This is equivalent to calling \hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press()} and then \hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release()}. 
 
 Definition at line 104 of file Pushbutton.\+cpp.
 
 \mbox{\Hypertarget{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}\label{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}} 
-\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}!waitForPress@{waitForPress}}
-\index{waitForPress@{waitForPress}!Zumo32U4ButtonC@{Zumo32U4ButtonC}}
-\doxysubsubsection{\texorpdfstring{waitForPress()}{waitForPress()}}
+\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}!wait\+For\+Press@{wait\+For\+Press}}
+\index{wait\+For\+Press@{wait\+For\+Press}!Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
+\subsubsection{\texorpdfstring{wait\+For\+Press()}{waitForPress()}}
 {\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
@@ -126,9 +126,9 @@ This function waits until the button is in the pressed state and then returns. N
 Definition at line 84 of file Pushbutton.\+cpp.
 
 \mbox{\Hypertarget{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}\label{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}} 
-\index{Zumo32U4ButtonC@{Zumo32U4ButtonC}!waitForRelease@{waitForRelease}}
-\index{waitForRelease@{waitForRelease}!Zumo32U4ButtonC@{Zumo32U4ButtonC}}
-\doxysubsubsection{\texorpdfstring{waitForRelease()}{waitForRelease()}}
+\index{Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}!wait\+For\+Release@{wait\+For\+Release}}
+\index{wait\+For\+Release@{wait\+For\+Release}!Zumo32\+U4\+ButtonC@{Zumo32\+U4\+ButtonC}}
+\subsubsection{\texorpdfstring{wait\+For\+Release()}{waitForRelease()}}
 {\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
@@ -143,4 +143,4 @@ Definition at line 94 of file Pushbutton.\+cpp.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_zumo32_u4_buttons_8h}{Zumo32\+U4\+Buttons.\+h}}\end{DoxyCompactItemize}
+\hyperlink{_zumo32_u4_buttons_8h}{Zumo32\+U4\+Buttons.\+h}\end{DoxyCompactItemize}

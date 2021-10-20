@@ -1,186 +1,177 @@
-\hypertarget{class_l_s_m303}{}\doxysection{LSM303 Class Reference}
-\label{class_l_s_m303}\index{LSM303@{LSM303}}
-
-
-Interfaces with the accelerometer (deprecated).  
-
-
-
-
-{\ttfamily \#include $<$Zumo32\+U4.\+h$>$}
-
-\doxysubsection*{Classes}
+\hypertarget{class_l_s_m303}{}\section{L\+S\+M303 Class Reference}
+\label{class_l_s_m303}\index{L\+S\+M303@{L\+S\+M303}}
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}
+struct \hyperlink{struct_l_s_m303_1_1vector}{vector}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a8aa2d6395884e89c11f2204111bc53f8}\label{class_l_s_m303_a8aa2d6395884e89c11f2204111bc53f8}} 
 enum {\bfseries device\+Type} \{ \newline
-{\bfseries device\+\_\+\+DLH}
-, {\bfseries device\+\_\+\+DLM}
-, {\bfseries device\+\_\+\+DLHC}
-, {\bfseries device\+\_\+D}
-, \newline
+{\bfseries device\+\_\+\+D\+LH}, 
+{\bfseries device\+\_\+\+D\+LM}, 
+{\bfseries device\+\_\+\+D\+L\+HC}, 
+{\bfseries device\+\_\+D}, 
+\newline
 {\bfseries device\+\_\+auto}
  \}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a56dfb5bd3b4ec1bd311d247924cc54c1}\label{class_l_s_m303_a56dfb5bd3b4ec1bd311d247924cc54c1}} 
-enum {\bfseries sa0\+State} \{ {\bfseries sa0\+\_\+low}
-, {\bfseries sa0\+\_\+high}
-, {\bfseries sa0\+\_\+auto}
+enum {\bfseries sa0\+State} \{ {\bfseries sa0\+\_\+low}, 
+{\bfseries sa0\+\_\+high}, 
+{\bfseries sa0\+\_\+auto}
  \}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_aec959b54c433194ac47239d613ab9875}\label{class_l_s_m303_aec959b54c433194ac47239d613ab9875}} 
 enum {\bfseries reg\+Addr} \{ \newline
-{\bfseries TEMP\+\_\+\+OUT\+\_\+L} = 0x05
-, {\bfseries TEMP\+\_\+\+OUT\+\_\+H} = 0x06
-, {\bfseries STATUS\+\_\+M} = 0x07
-, {\bfseries INT\+\_\+\+CTRL\+\_\+M} = 0x12
-, \newline
-{\bfseries INT\+\_\+\+SRC\+\_\+M} = 0x13
-, {\bfseries INT\+\_\+\+THS\+\_\+\+L\+\_\+M} = 0x14
-, {\bfseries INT\+\_\+\+THS\+\_\+\+H\+\_\+M} = 0x15
-, {\bfseries OFFSET\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x16
-, \newline
-{\bfseries OFFSET\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x17
-, {\bfseries OFFSET\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x18
-, {\bfseries OFFSET\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x19
-, {\bfseries OFFSET\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x1A
-, \newline
-{\bfseries OFFSET\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x1B
-, {\bfseries REFERENCE\+\_\+X} = 0x1C
-, {\bfseries REFERENCE\+\_\+Y} = 0x1D
-, {\bfseries REFERENCE\+\_\+Z} = 0x1E
-, \newline
-{\bfseries CTRL0} = 0x1F
-, {\bfseries CTRL1} = 0x20
-, {\bfseries CTRL\+\_\+\+REG1\+\_\+A} = 0x20
-, {\bfseries CTRL2} = 0x21
-, \newline
-{\bfseries CTRL\+\_\+\+REG2\+\_\+A} = 0x21
-, {\bfseries CTRL3} = 0x22
-, {\bfseries CTRL\+\_\+\+REG3\+\_\+A} = 0x22
-, {\bfseries CTRL4} = 0x23
-, \newline
-{\bfseries CTRL\+\_\+\+REG4\+\_\+A} = 0x23
-, {\bfseries CTRL5} = 0x24
-, {\bfseries CTRL\+\_\+\+REG5\+\_\+A} = 0x24
-, {\bfseries CTRL6} = 0x25
-, \newline
-{\bfseries CTRL\+\_\+\+REG6\+\_\+A} = 0x25
-, {\bfseries HP\+\_\+\+FILTER\+\_\+\+RESET\+\_\+A} = 0x25
-, {\bfseries CTRL7} = 0x26
-, {\bfseries REFERENCE\+\_\+A} = 0x26
-, \newline
-{\bfseries STATUS\+\_\+A} = 0x27
-, {\bfseries STATUS\+\_\+\+REG\+\_\+A} = 0x27
-, {\bfseries OUT\+\_\+\+X\+\_\+\+L\+\_\+A} = 0x28
-, {\bfseries OUT\+\_\+\+X\+\_\+\+H\+\_\+A} = 0x29
-, \newline
-{\bfseries OUT\+\_\+\+Y\+\_\+\+L\+\_\+A} = 0x2A
-, {\bfseries OUT\+\_\+\+Y\+\_\+\+H\+\_\+A} = 0x2B
-, {\bfseries OUT\+\_\+\+Z\+\_\+\+L\+\_\+A} = 0x2C
-, {\bfseries OUT\+\_\+\+Z\+\_\+\+H\+\_\+A} = 0x2D
-, \newline
-{\bfseries FIFO\+\_\+\+CTRL} = 0x2E
-, {\bfseries FIFO\+\_\+\+CTRL\+\_\+\+REG\+\_\+A} = 0x2E
-, {\bfseries FIFO\+\_\+\+SRC} = 0x2F
-, {\bfseries FIFO\+\_\+\+SRC\+\_\+\+REG\+\_\+A} = 0x2F
-, \newline
-{\bfseries IG\+\_\+\+CFG1} = 0x30
-, {\bfseries INT1\+\_\+\+CFG\+\_\+A} = 0x30
-, {\bfseries IG\+\_\+\+SRC1} = 0x31
-, {\bfseries INT1\+\_\+\+SRC\+\_\+A} = 0x31
-, \newline
-{\bfseries IG\+\_\+\+THS1} = 0x32
-, {\bfseries INT1\+\_\+\+THS\+\_\+A} = 0x32
-, {\bfseries IG\+\_\+\+DUR1} = 0x33
-, {\bfseries INT1\+\_\+\+DURATION\+\_\+A} = 0x33
-, \newline
-{\bfseries IG\+\_\+\+CFG2} = 0x34
-, {\bfseries INT2\+\_\+\+CFG\+\_\+A} = 0x34
-, {\bfseries IG\+\_\+\+SRC2} = 0x35
-, {\bfseries INT2\+\_\+\+SRC\+\_\+A} = 0x35
-, \newline
-{\bfseries IG\+\_\+\+THS2} = 0x36
-, {\bfseries INT2\+\_\+\+THS\+\_\+A} = 0x36
-, {\bfseries IG\+\_\+\+DUR2} = 0x37
-, {\bfseries INT2\+\_\+\+DURATION\+\_\+A} = 0x37
-, \newline
-{\bfseries CLICK\+\_\+\+CFG} = 0x38
-, {\bfseries CLICK\+\_\+\+CFG\+\_\+A} = 0x38
-, {\bfseries CLICK\+\_\+\+SRC} = 0x39
-, {\bfseries CLICK\+\_\+\+SRC\+\_\+A} = 0x39
-, \newline
-{\bfseries CLICK\+\_\+\+THS} = 0x3A
-, {\bfseries CLICK\+\_\+\+THS\+\_\+A} = 0x3A
-, {\bfseries TIME\+\_\+\+LIMIT} = 0x3B
-, {\bfseries TIME\+\_\+\+LIMIT\+\_\+A} = 0x3B
-, \newline
-{\bfseries TIME\+\_\+\+LATENCY} = 0x3C
-, {\bfseries TIME\+\_\+\+LATENCY\+\_\+A} = 0x3C
-, {\bfseries TIME\+\_\+\+WINDOW} = 0x3D
-, {\bfseries TIME\+\_\+\+WINDOW\+\_\+A} = 0x3D
-, \newline
-{\bfseries Act\+\_\+\+THS} = 0x3E
-, {\bfseries Act\+\_\+\+DUR} = 0x3F
-, {\bfseries CRA\+\_\+\+REG\+\_\+M} = 0x00
-, {\bfseries CRB\+\_\+\+REG\+\_\+M} = 0x01
-, \newline
-{\bfseries MR\+\_\+\+REG\+\_\+M} = 0x02
-, {\bfseries SR\+\_\+\+REG\+\_\+M} = 0x09
-, {\bfseries IRA\+\_\+\+REG\+\_\+M} = 0x0A
-, {\bfseries IRB\+\_\+\+REG\+\_\+M} = 0x0B
-, \newline
-{\bfseries IRC\+\_\+\+REG\+\_\+M} = 0x0C
-, {\bfseries WHO\+\_\+\+AM\+\_\+I} = 0x0F
-, {\bfseries WHO\+\_\+\+AM\+\_\+\+I\+\_\+M} = 0x0F
-, {\bfseries TEMP\+\_\+\+OUT\+\_\+\+H\+\_\+M} = 0x31
-, \newline
-{\bfseries TEMP\+\_\+\+OUT\+\_\+\+L\+\_\+M} = 0x32
-, {\bfseries OUT\+\_\+\+X\+\_\+\+H\+\_\+M} = -\/1
-, {\bfseries OUT\+\_\+\+X\+\_\+\+L\+\_\+M} = -\/2
-, {\bfseries OUT\+\_\+\+Y\+\_\+\+H\+\_\+M} = -\/3
-, \newline
-{\bfseries OUT\+\_\+\+Y\+\_\+\+L\+\_\+M} = -\/4
-, {\bfseries OUT\+\_\+\+Z\+\_\+\+H\+\_\+M} = -\/5
-, {\bfseries OUT\+\_\+\+Z\+\_\+\+L\+\_\+M} = -\/6
-, {\bfseries DLH\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x03
-, \newline
-{\bfseries DLH\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x04
-, {\bfseries DLH\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x05
-, {\bfseries DLH\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x06
-, {\bfseries DLH\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x07
-, \newline
-{\bfseries DLH\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x08
-, {\bfseries DLM\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x03
-, {\bfseries DLM\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x04
-, {\bfseries DLM\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x05
-, \newline
-{\bfseries DLM\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x06
-, {\bfseries DLM\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x07
-, {\bfseries DLM\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x08
-, {\bfseries DLHC\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x03
-, \newline
-{\bfseries DLHC\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x04
-, {\bfseries DLHC\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x05
-, {\bfseries DLHC\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x06
-, {\bfseries DLHC\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x07
-, \newline
-{\bfseries DLHC\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x08
-, {\bfseries D\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x08
-, {\bfseries D\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x09
-, {\bfseries D\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x0A
-, \newline
-{\bfseries D\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x0B
-, {\bfseries D\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x0C
-, {\bfseries D\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x0D
+{\bfseries T\+E\+M\+P\+\_\+\+O\+U\+T\+\_\+L} = 0x05, 
+{\bfseries T\+E\+M\+P\+\_\+\+O\+U\+T\+\_\+H} = 0x06, 
+{\bfseries S\+T\+A\+T\+U\+S\+\_\+M} = 0x07, 
+{\bfseries I\+N\+T\+\_\+\+C\+T\+R\+L\+\_\+M} = 0x12, 
+\newline
+{\bfseries I\+N\+T\+\_\+\+S\+R\+C\+\_\+M} = 0x13, 
+{\bfseries I\+N\+T\+\_\+\+T\+H\+S\+\_\+\+L\+\_\+M} = 0x14, 
+{\bfseries I\+N\+T\+\_\+\+T\+H\+S\+\_\+\+H\+\_\+M} = 0x15, 
+{\bfseries O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x16, 
+\newline
+{\bfseries O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x17, 
+{\bfseries O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x18, 
+{\bfseries O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x19, 
+{\bfseries O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x1A, 
+\newline
+{\bfseries O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x1B, 
+{\bfseries R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+X} = 0x1C, 
+{\bfseries R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+Y} = 0x1D, 
+{\bfseries R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+Z} = 0x1E, 
+\newline
+{\bfseries C\+T\+R\+L0} = 0x1F, 
+{\bfseries C\+T\+R\+L1} = 0x20, 
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A} = 0x20, 
+{\bfseries C\+T\+R\+L2} = 0x21, 
+\newline
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G2\+\_\+A} = 0x21, 
+{\bfseries C\+T\+R\+L3} = 0x22, 
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G3\+\_\+A} = 0x22, 
+{\bfseries C\+T\+R\+L4} = 0x23, 
+\newline
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A} = 0x23, 
+{\bfseries C\+T\+R\+L5} = 0x24, 
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G5\+\_\+A} = 0x24, 
+{\bfseries C\+T\+R\+L6} = 0x25, 
+\newline
+{\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G6\+\_\+A} = 0x25, 
+{\bfseries H\+P\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+R\+E\+S\+E\+T\+\_\+A} = 0x25, 
+{\bfseries C\+T\+R\+L7} = 0x26, 
+{\bfseries R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+A} = 0x26, 
+\newline
+{\bfseries S\+T\+A\+T\+U\+S\+\_\+A} = 0x27, 
+{\bfseries S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G\+\_\+A} = 0x27, 
+{\bfseries O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+A} = 0x28, 
+{\bfseries O\+U\+T\+\_\+\+X\+\_\+\+H\+\_\+A} = 0x29, 
+\newline
+{\bfseries O\+U\+T\+\_\+\+Y\+\_\+\+L\+\_\+A} = 0x2A, 
+{\bfseries O\+U\+T\+\_\+\+Y\+\_\+\+H\+\_\+A} = 0x2B, 
+{\bfseries O\+U\+T\+\_\+\+Z\+\_\+\+L\+\_\+A} = 0x2C, 
+{\bfseries O\+U\+T\+\_\+\+Z\+\_\+\+H\+\_\+A} = 0x2D, 
+\newline
+{\bfseries F\+I\+F\+O\+\_\+\+C\+T\+RL} = 0x2E, 
+{\bfseries F\+I\+F\+O\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G\+\_\+A} = 0x2E, 
+{\bfseries F\+I\+F\+O\+\_\+\+S\+RC} = 0x2F, 
+{\bfseries F\+I\+F\+O\+\_\+\+S\+R\+C\+\_\+\+R\+E\+G\+\_\+A} = 0x2F, 
+\newline
+{\bfseries I\+G\+\_\+\+C\+F\+G1} = 0x30, 
+{\bfseries I\+N\+T1\+\_\+\+C\+F\+G\+\_\+A} = 0x30, 
+{\bfseries I\+G\+\_\+\+S\+R\+C1} = 0x31, 
+{\bfseries I\+N\+T1\+\_\+\+S\+R\+C\+\_\+A} = 0x31, 
+\newline
+{\bfseries I\+G\+\_\+\+T\+H\+S1} = 0x32, 
+{\bfseries I\+N\+T1\+\_\+\+T\+H\+S\+\_\+A} = 0x32, 
+{\bfseries I\+G\+\_\+\+D\+U\+R1} = 0x33, 
+{\bfseries I\+N\+T1\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+A} = 0x33, 
+\newline
+{\bfseries I\+G\+\_\+\+C\+F\+G2} = 0x34, 
+{\bfseries I\+N\+T2\+\_\+\+C\+F\+G\+\_\+A} = 0x34, 
+{\bfseries I\+G\+\_\+\+S\+R\+C2} = 0x35, 
+{\bfseries I\+N\+T2\+\_\+\+S\+R\+C\+\_\+A} = 0x35, 
+\newline
+{\bfseries I\+G\+\_\+\+T\+H\+S2} = 0x36, 
+{\bfseries I\+N\+T2\+\_\+\+T\+H\+S\+\_\+A} = 0x36, 
+{\bfseries I\+G\+\_\+\+D\+U\+R2} = 0x37, 
+{\bfseries I\+N\+T2\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N\+\_\+A} = 0x37, 
+\newline
+{\bfseries C\+L\+I\+C\+K\+\_\+\+C\+FG} = 0x38, 
+{\bfseries C\+L\+I\+C\+K\+\_\+\+C\+F\+G\+\_\+A} = 0x38, 
+{\bfseries C\+L\+I\+C\+K\+\_\+\+S\+RC} = 0x39, 
+{\bfseries C\+L\+I\+C\+K\+\_\+\+S\+R\+C\+\_\+A} = 0x39, 
+\newline
+{\bfseries C\+L\+I\+C\+K\+\_\+\+T\+HS} = 0x3A, 
+{\bfseries C\+L\+I\+C\+K\+\_\+\+T\+H\+S\+\_\+A} = 0x3A, 
+{\bfseries T\+I\+M\+E\+\_\+\+L\+I\+M\+IT} = 0x3B, 
+{\bfseries T\+I\+M\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+A} = 0x3B, 
+\newline
+{\bfseries T\+I\+M\+E\+\_\+\+L\+A\+T\+E\+N\+CY} = 0x3C, 
+{\bfseries T\+I\+M\+E\+\_\+\+L\+A\+T\+E\+N\+C\+Y\+\_\+A} = 0x3C, 
+{\bfseries T\+I\+M\+E\+\_\+\+W\+I\+N\+D\+OW} = 0x3D, 
+{\bfseries T\+I\+M\+E\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+A} = 0x3D, 
+\newline
+{\bfseries Act\+\_\+\+T\+HS} = 0x3E, 
+{\bfseries Act\+\_\+\+D\+UR} = 0x3F, 
+{\bfseries C\+R\+A\+\_\+\+R\+E\+G\+\_\+M} = 0x00, 
+{\bfseries C\+R\+B\+\_\+\+R\+E\+G\+\_\+M} = 0x01, 
+\newline
+{\bfseries M\+R\+\_\+\+R\+E\+G\+\_\+M} = 0x02, 
+{\bfseries S\+R\+\_\+\+R\+E\+G\+\_\+M} = 0x09, 
+{\bfseries I\+R\+A\+\_\+\+R\+E\+G\+\_\+M} = 0x0A, 
+{\bfseries I\+R\+B\+\_\+\+R\+E\+G\+\_\+M} = 0x0B, 
+\newline
+{\bfseries I\+R\+C\+\_\+\+R\+E\+G\+\_\+M} = 0x0C, 
+{\bfseries W\+H\+O\+\_\+\+A\+M\+\_\+I} = 0x0F, 
+{\bfseries W\+H\+O\+\_\+\+A\+M\+\_\+\+I\+\_\+M} = 0x0F, 
+{\bfseries T\+E\+M\+P\+\_\+\+O\+U\+T\+\_\+\+H\+\_\+M} = 0x31, 
+\newline
+{\bfseries T\+E\+M\+P\+\_\+\+O\+U\+T\+\_\+\+L\+\_\+M} = 0x32, 
+{\bfseries O\+U\+T\+\_\+\+X\+\_\+\+H\+\_\+M} = -\/1, 
+{\bfseries O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+M} = -\/2, 
+{\bfseries O\+U\+T\+\_\+\+Y\+\_\+\+H\+\_\+M} = -\/3, 
+\newline
+{\bfseries O\+U\+T\+\_\+\+Y\+\_\+\+L\+\_\+M} = -\/4, 
+{\bfseries O\+U\+T\+\_\+\+Z\+\_\+\+H\+\_\+M} = -\/5, 
+{\bfseries O\+U\+T\+\_\+\+Z\+\_\+\+L\+\_\+M} = -\/6, 
+{\bfseries D\+L\+H\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x03, 
+\newline
+{\bfseries D\+L\+H\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x04, 
+{\bfseries D\+L\+H\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x05, 
+{\bfseries D\+L\+H\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x06, 
+{\bfseries D\+L\+H\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x07, 
+\newline
+{\bfseries D\+L\+H\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x08, 
+{\bfseries D\+L\+M\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x03, 
+{\bfseries D\+L\+M\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x04, 
+{\bfseries D\+L\+M\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x05, 
+\newline
+{\bfseries D\+L\+M\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x06, 
+{\bfseries D\+L\+M\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x07, 
+{\bfseries D\+L\+M\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x08, 
+{\bfseries D\+L\+H\+C\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x03, 
+\newline
+{\bfseries D\+L\+H\+C\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x04, 
+{\bfseries D\+L\+H\+C\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x05, 
+{\bfseries D\+L\+H\+C\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x06, 
+{\bfseries D\+L\+H\+C\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x07, 
+\newline
+{\bfseries D\+L\+H\+C\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x08, 
+{\bfseries D\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+M} = 0x08, 
+{\bfseries D\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+H\+\_\+M} = 0x09, 
+{\bfseries D\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+L\+\_\+M} = 0x0A, 
+\newline
+{\bfseries D\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+H\+\_\+M} = 0x0B, 
+{\bfseries D\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+L\+\_\+M} = 0x0C, 
+{\bfseries D\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+H\+\_\+M} = 0x0D
  \}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a123959c3c9fc7ea31083843c0db286c0}\label{class_l_s_m303_a123959c3c9fc7ea31083843c0db286c0}} 
@@ -232,54 +223,48 @@ bool {\bfseries timeout\+Occurred} (void)
 float {\bfseries heading} (void)
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a7d6df7654f9130e68723b55070fc5bbe}\label{class_l_s_m303_a7d6df7654f9130e68723b55070fc5bbe}} 
-{\footnotesize template$<$typename T $>$ }\\float {\bfseries heading} (\mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ T $>$ from)
+{\footnotesize template$<$typename T $>$ }\\float {\bfseries heading} (\hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ T $>$ from)
 \end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_ae590be5fbc5f3dc2b20349c462dd80bb}\label{class_l_s_m303_ae590be5fbc5f3dc2b20349c462dd80bb}} 
-{\footnotesize template$<$typename Ta , typename Tb , typename To $>$ }\\static void {\bfseries vector\+\_\+cross} (const \mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ Ta $>$ $\ast$a, const \mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ Tb $>$ $\ast$b, \mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ To $>$ $\ast$out)
+{\footnotesize template$<$typename Ta , typename Tb , typename To $>$ }\\static void {\bfseries vector\+\_\+cross} (const \hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ Ta $>$ $\ast$a, const \hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ Tb $>$ $\ast$b, \hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ To $>$ $\ast$out)
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a1fac94fcc4b58c085dee979544599037}\label{class_l_s_m303_a1fac94fcc4b58c085dee979544599037}} 
-{\footnotesize template$<$typename Ta , typename Tb $>$ }\\static float {\bfseries vector\+\_\+dot} (const \mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ Ta $>$ $\ast$a, const \mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ Tb $>$ $\ast$b)
+{\footnotesize template$<$typename Ta , typename Tb $>$ }\\static float {\bfseries vector\+\_\+dot} (const \hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ Ta $>$ $\ast$a, const \hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ Tb $>$ $\ast$b)
 \item 
 \mbox{\Hypertarget{class_l_s_m303_ab0117d66614a77b1ef215c04fb47dcdc}\label{class_l_s_m303_ab0117d66614a77b1ef215c04fb47dcdc}} 
-static void {\bfseries vector\+\_\+normalize} (\mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ float $>$ $\ast$a)
+static void {\bfseries vector\+\_\+normalize} (\hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ float $>$ $\ast$a)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a7f494234f7a645807162a7992a68be9d}\label{class_l_s_m303_a7f494234f7a645807162a7992a68be9d}} 
-\mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ int16\+\_\+t $>$ {\bfseries a}
+\hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ int16\+\_\+t $>$ {\bfseries a}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a773d68d3d00d8dd0aec7e91931540495}\label{class_l_s_m303_a773d68d3d00d8dd0aec7e91931540495}} 
-\mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ int16\+\_\+t $>$ {\bfseries m}
+\hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ int16\+\_\+t $>$ {\bfseries m}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a46f3ac13cdd309558b9e02da105c8a93}\label{class_l_s_m303_a46f3ac13cdd309558b9e02da105c8a93}} 
-\mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ int16\+\_\+t $>$ {\bfseries m\+\_\+max}
+\hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ int16\+\_\+t $>$ {\bfseries m\+\_\+max}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a2e211642cfd7b18b252def22987438f2}\label{class_l_s_m303_a2e211642cfd7b18b252def22987438f2}} 
-\mbox{\hyperlink{struct_l_s_m303_1_1vector}{vector}}$<$ int16\+\_\+t $>$ {\bfseries m\+\_\+min}
+\hyperlink{struct_l_s_m303_1_1vector}{vector}$<$ int16\+\_\+t $>$ {\bfseries m\+\_\+min}
 \item 
 \mbox{\Hypertarget{class_l_s_m303_a71331bb0974b49dd30d9748aef24836b}\label{class_l_s_m303_a71331bb0974b49dd30d9748aef24836b}} 
 byte {\bfseries last\+\_\+status}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Interfaces with the accelerometer (deprecated). 
-
-\begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]1.\+2.\+0 This class is included for backward compatibility with older versions of the Zumo32\+U4 library, but as of version 1.\+2.\+0, we recommend using the \mbox{\hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+IMU}} class to interface with the inertial sensors instead.\end{DoxyRefDesc}
+\subsection{Detailed Description}
 
 
-For complete documentation of the this class, see \href{https://github.com/pololu/lsm303-arduino}{\texttt{ https\+://github.\+com/pololu/lsm303-\/arduino}} 
-
-Definition at line 6 of file LSM303.\+h.
+Definition at line 6 of file L\+S\+M303.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-LSM303.\+h\item 
-LSM303.\+cpp\end{DoxyCompactItemize}
+L\+S\+M303.\+h\item 
+L\+S\+M303.\+cpp\end{DoxyCompactItemize}
