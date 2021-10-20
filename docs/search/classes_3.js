@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['usbpause',['USBPause',['../class_u_s_b_pause.html',1,'']]]
+  ['vector',['vector',['../struct_zumo32_u4_i_m_u_1_1vector.html',1,'Zumo32U4IMU']]],
+  ['vector_3c_20int16_5ft_20_3e',['vector&lt; int16_t &gt;',['../struct_zumo32_u4_i_m_u_1_1vector.html',1,'Zumo32U4IMU']]]
 ];
