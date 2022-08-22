@@ -9,24 +9,14 @@ Release date: 2020-09-11<br/>
 
 This is a C++ library for the Arduino IDE that helps access the on-board hardware of the Zumo 32U4 robot.
 
-The Zumo 32U4 robot consists of the Zumo chassis, the Zumo 32U4 Main Board, and the Zumo 32U4 Front Sensor Array.  It has an integrated AVR ATmega32U4 microcontroller, motor drivers, encoders, proximity sensors, line sensors, inertial sensors, buzzer, four buttons, LCD connector.  The user's guide for the Zumo 32U4 robot is here:
+The user's guide for the Zumo 32U4 robot is here:
 
 https://www.pololu.com/docs/0J63
 
-Please note that this library does NOT work with the Zumo Shield for Arduino, which is a very different product.  The Zumo Shield does not have an integrated microcontroller, so it must be connected to an Arduino-sized board to run.  If you have the Zumo Shield, then you should not use this library and instead refer to the Zumo Shield documentation [here](https://www.pololu.com/docs/0J57).
 
 ## Installing the library
 
-If you are using version 1.6.2 or later of the [Arduino software (IDE)](http://www.arduino.cc/en/Main/Software), you can use the Library Manager to install this library:
-
-1. In the Arduino IDE, open the "Sketch" menu, select "Include Library", then "Manage Libraries...".
-2. Search for "Zumo32U4".
-3. Click the Zumo32U4 entry in the list.
-4. Click "Install".
-
-If this does not work, you can manually install the library:
-
-1. Download the [latest release archive from GitHub](https://github.com/pololu/zumo-32u4-arduino-library) and decompress it.
+1. Download the [library from here](https://github.com/Alexanderallenbrown/Zumo32U4/archive/refs/heads/main.zip) and decompress it.
 2. Rename the folder "zumo-32u4-arduino-library-master" to "Zumo32U4".
 3. Move the "Zumo32U4" folder into the "libraries" directory inside your Arduino sketchbook directory.  You can view your sketchbook location by opening the "File" menu and selecting "Preferences" in the Arduino IDE.  If there is not already a "libraries" folder in that location, you should make the folder yourself.
 4. After installing the library, restart the Arduino IDE.
@@ -75,10 +65,6 @@ You should avoid adding extra `#include` lines such as `#include <Pushbutton.h>`
 #include <Wire.h>
 #include <Zumo32U4.h>
 ~~~
-
-## Documentation
-
-For complete documentation, see https://pololu.github.io/zumo-32u4-arduino-library.  If you are already on that page, then click on the links in the "Classes and functions" section above.
 
 ## Version history
 
