@@ -1,0 +1,63 @@
+\hypertarget{_zumo32_u4_l_c_d_8h_source}{}\doxysection{Zumo32\+U4\+LCD.\+h}
+\mbox{\hyperlink{_zumo32_u4_l_c_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00005}00005 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_pololu_h_d44780_8h}{PololuHD44780.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_fast_g_p_i_o_8h}{FastGPIO.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_u_s_b_pause_8h}{USBPause.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00033}\mbox{\hyperlink{class_zumo32_u4_l_c_d}{00033}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_l_c_d}{Zumo32U4LCD}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_pololu_h_d44780_base}{PololuHD44780Base}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00034}00034 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00035}00035     \textcolor{comment}{// Pin assignments}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00036}00036     \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t rs = 0, e = 1, db4 = 14, db5 = 17, db6 = 13, db7 = IO\_D5;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00038}00038 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00040}\mbox{\hyperlink{class_zumo32_u4_l_c_d_a15ad296b2faa2196760b816301983ea5}{00040}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_l_c_d_a15ad296b2faa2196760b816301983ea5}{initPins}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00042}00042         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a557f119d37b84f3f521d7cbd4cc27b21}{FastGPIO::Pin<e>::setOutputLow}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00045}\mbox{\hyperlink{class_zumo32_u4_l_c_d_a219e5ae0c67b8a5fd359c397c69ab713}{00045}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_l_c_d_a219e5ae0c67b8a5fd359c397c69ab713}{send}}(uint8\_t data, \textcolor{keywordtype}{bool} rsValue, \textcolor{keywordtype}{bool} only4bits)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00046}00046     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00047}00047         \textcolor{comment}{// Temporarily disable USB interrupts because they write some pins}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00048}00048         \textcolor{comment}{// we are using as LCD pins.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00049}00049         \mbox{\hyperlink{class_u_s_b_pause}{USBPause}} usbPause;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00051}00051         \textcolor{comment}{// Save the state of the RS and data pins.  The state automatically}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00052}00052         \textcolor{comment}{// gets restored before this function returns.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00053}00053         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<rs>}} loanRS;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00054}00054         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<db4>}} loanDB4;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00055}00055         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<db5>}} loanDB5;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00056}00056         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<db6>}} loanDB6;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00057}00057         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<db7>}} loanDB7;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00059}00059         \textcolor{comment}{// Drive the RS pin high or low.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00060}00060         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<rs>::setOutput}}(rsValue);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00062}00062         \textcolor{comment}{// Send the data.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00063}00063         \textcolor{keywordflow}{if} (!only4bits) \{ sendNibble(data >> 4); \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00064}00064         sendNibble(data \& 0x0F);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00067}00067 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00069}00069     \textcolor{keywordtype}{void} sendNibble(uint8\_t data)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00070}00070     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00071}00071         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<db4>::setOutput}}(data >> 0 \& 1);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00072}00072         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<db5>::setOutput}}(data >> 1 \& 1);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00073}00073         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<db6>::setOutput}}(data >> 2 \& 1);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00074}00074         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<db7>::setOutput}}(data >> 3 \& 1);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00076}00076         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_aaa0032dcb76492716f477d60721a0579}{FastGPIO::Pin<e>::setOutputHigh}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00077}00077         \_delay\_us(1);   \textcolor{comment}{// Must be at least 450 ns.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00078}00078         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a557f119d37b84f3f521d7cbd4cc27b21}{FastGPIO::Pin<e>::setOutputLow}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00079}00079         \_delay\_us(1);   \textcolor{comment}{// Must be at least 550 ns.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00081}00081 \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_l_c_d_8h_source_l00082}00082 }
+
+\end{DoxyCode}

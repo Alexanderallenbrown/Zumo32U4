@@ -1,0 +1,151 @@
+\hypertarget{_pushbutton_8cpp_source}{}\doxysection{Pushbutton.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pushbutton_8h}{Pushbutton.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00005}00005 \textcolor{comment}{// \(\backslash\)cond}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00007}00007 PushbuttonStateMachine::PushbuttonStateMachine()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00009}00009   state = 0;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00012}00012 \textcolor{comment}{// state 0: The value is considered to be true.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00013}00013 \textcolor{comment}{// state 1: The value was considered to be true, but there}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00014}00014 \textcolor{comment}{//   was a recent false reading so it might be falling.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00015}00015 \textcolor{comment}{// state 2: The value is considered to be false.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00016}00016 \textcolor{comment}{// state 3: The value was considered to be false, but there}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00017}00017 \textcolor{comment}{//   was a recent true reading so it might be rising.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00018}00018 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00019}00019 \textcolor{comment}{// The transition from state 3 to state 0 is the point where we}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00020}00020 \textcolor{comment}{// have successfully detected a rising edge an we return true.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00021}00021 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00022}00022 \textcolor{comment}{// The prevTimeMillis variable holds the last time that we}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00023}00023 \textcolor{comment}{// transitioned to states 1 or 3.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00024}00024 \textcolor{keywordtype}{bool} PushbuttonStateMachine::getSingleDebouncedRisingEdge(\textcolor{keywordtype}{bool} value)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00026}00026   uint16\_t timeMillis = millis();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00028}00028   \textcolor{keywordflow}{switch} (state)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00029}00029   \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00030}00030   \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00031}00031     \textcolor{comment}{// If value is false, proceed to the next state.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00032}00032     \textcolor{keywordflow}{if} (!value)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00034}00034       prevTimeMillis = timeMillis;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00035}00035       state = 1;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00037}00037     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00039}00039   \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00040}00040     \textcolor{keywordflow}{if} (value)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00042}00042       \textcolor{comment}{// The value is true or bouncing, so go back to previous (initial)}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00043}00043       \textcolor{comment}{// state.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00044}00044       state = 0;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00046}00046     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((uint16\_t)(timeMillis -\/ prevTimeMillis) >= 15)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00047}00047     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00048}00048       \textcolor{comment}{// It has been at least 15 ms and the value is still false, so}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00049}00049       \textcolor{comment}{// proceed to the next state.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00050}00050       state = 2;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00052}00052     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00054}00054   \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00055}00055     \textcolor{comment}{// If the value is true, proceed to the next state.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00056}00056     \textcolor{keywordflow}{if} (value)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00057}00057     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00058}00058       prevTimeMillis = timeMillis;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00059}00059       state = 3;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00061}00061     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00063}00063   \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00064}00064     \textcolor{keywordflow}{if} (!value)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00065}00065     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00066}00066       \textcolor{comment}{// The value is false or bouncing, so go back to previous state.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00067}00067       state = 2;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00069}00069     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((uint16\_t)(timeMillis -\/ prevTimeMillis) >= 15)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00070}00070     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00071}00071       \textcolor{comment}{// It has been at least 15 ms and the value is still true, so}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00072}00072       \textcolor{comment}{// go back to the initial state and report this rising edge.}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00073}00073       state = 0;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00074}00074       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00076}00076     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00077}00077   \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00079}00079   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00080}00080 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00082}00082 \textcolor{comment}{// \(\backslash\)endcond}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00084}\mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{00084}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{PushbuttonBase::waitForPress}}()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00086}00086   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00087}00087   \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00088}00088     \textcolor{keywordflow}{while} (!\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}()); \textcolor{comment}{// wait for button to be pressed}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00089}00089     delay(10);            \textcolor{comment}{// debounce the button press}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00090}00090   \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00091}00091   \textcolor{keywordflow}{while} (!\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}());   \textcolor{comment}{// if button isn't still pressed, loop}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00094}\mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{00094}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{PushbuttonBase::waitForRelease}}()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00095}00095 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00096}00096   \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00097}00097   \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00098}00098     \textcolor{keywordflow}{while} (\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}()); \textcolor{comment}{// wait for button to be released}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00099}00099     delay(10);           \textcolor{comment}{// debounce the button release}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00100}00100   \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00101}00101   \textcolor{keywordflow}{while} (\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}());   \textcolor{comment}{// if button isn't still released, loop}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00102}00102 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00104}\mbox{\hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{00104}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{PushbuttonBase::waitForButton}}()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00105}00105 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00106}00106   \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{waitForPress}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00107}00107   \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{waitForRelease}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00108}00108 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00110}\mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{00110}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{PushbuttonBase::getSingleDebouncedPress}}()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00111}00111 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00112}00112   \textcolor{keywordflow}{return} pressState.getSingleDebouncedRisingEdge(\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}());}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00113}00113 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00115}\mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{00115}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{PushbuttonBase::getSingleDebouncedRelease}}()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00116}00116 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00117}00117   \textcolor{keywordflow}{return} releaseState.getSingleDebouncedRisingEdge(!\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}());}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00118}00118 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00120}\mbox{\hyperlink{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}{00120}} \mbox{\hyperlink{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}{Pushbutton::Pushbutton}}(uint8\_t pin, uint8\_t pullUp, uint8\_t defaultState)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00121}00121 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00122}00122   initialized = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00123}00123   \_pin = pin;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00124}00124   \_pullUp = pullUp;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00125}00125   \_defaultState = defaultState;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00126}00126 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00128}00128 \textcolor{keywordtype}{void} Pushbutton::init2()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00129}00129 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00130}00130   \textcolor{keywordflow}{if} (\_pullUp == \mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\_UP\_ENABLED}})}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00131}00131   \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00132}00132     pinMode(\_pin, INPUT\_PULLUP);}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00133}00133   \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00134}00134   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00135}00135   \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00136}00136     pinMode(\_pin, INPUT); \textcolor{comment}{// high impedance}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00137}00137   \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00139}00139   delayMicroseconds(5); \textcolor{comment}{// give pull-\/up time to stabilize}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00140}00140 \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00142}\mbox{\hyperlink{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}{00142}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}{Pushbutton::isPressed}}()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00143}00143 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00144}00144   init();  \textcolor{comment}{// initialize if needed}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00145}00145   \textcolor{keywordflow}{return} digitalRead(\_pin) != \_defaultState;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8cpp_source_l00146}00146 \}}
+
+\end{DoxyCode}

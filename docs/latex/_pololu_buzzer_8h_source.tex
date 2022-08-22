@@ -1,0 +1,74 @@
+\hypertarget{_pololu_buzzer_8h_source}{}\doxysection{Pololu\+Buzzer.\+h}
+\mbox{\hyperlink{_pololu_buzzer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00036}00036 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00038}00038 \textcolor{preprocessor}{\#include <avr/pgmspace.h>}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00042}\mbox{\hyperlink{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}{00042}} \textcolor{preprocessor}{\#define PLAY\_AUTOMATIC 0}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00046}\mbox{\hyperlink{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}{00046}} \textcolor{preprocessor}{\#define PLAY\_CHECK     1}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00048}00048 \textcolor{comment}{//                                             n}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00049}00049 \textcolor{comment}{// Equal Tempered Scale is given by f  = f  * a}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00050}00050 \textcolor{comment}{//                                   n    o}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00051}00051 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00052}00052 \textcolor{comment}{//  where f  is chosen as A above middle C (A4) at f  = 440 Hz}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00053}00053 \textcolor{comment}{//         o                                        o}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00054}00054 \textcolor{comment}{//  and a is given by the twelfth root of 2 (\string~1.059463094359)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00062}00062 \textcolor{preprocessor}{\#define NOTE\_C(x)       ( 0 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00063}00063 \textcolor{preprocessor}{\#define NOTE\_C\_SHARP(x) ( 1 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00064}00064 \textcolor{preprocessor}{\#define NOTE\_D\_FLAT(x)  ( 1 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00065}00065 \textcolor{preprocessor}{\#define NOTE\_D(x)       ( 2 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00066}00066 \textcolor{preprocessor}{\#define NOTE\_D\_SHARP(x) ( 3 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00067}00067 \textcolor{preprocessor}{\#define NOTE\_E\_FLAT(x)  ( 3 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00068}00068 \textcolor{preprocessor}{\#define NOTE\_E(x)       ( 4 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00069}00069 \textcolor{preprocessor}{\#define NOTE\_F(x)       ( 5 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00070}00070 \textcolor{preprocessor}{\#define NOTE\_F\_SHARP(x) ( 6 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00071}00071 \textcolor{preprocessor}{\#define NOTE\_G\_FLAT(x)  ( 6 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00072}00072 \textcolor{preprocessor}{\#define NOTE\_G(x)       ( 7 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00073}00073 \textcolor{preprocessor}{\#define NOTE\_G\_SHARP(x) ( 8 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00074}00074 \textcolor{preprocessor}{\#define NOTE\_A\_FLAT(x)  ( 8 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00075}00075 \textcolor{preprocessor}{\#define NOTE\_A(x)       ( 9 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00076}00076 \textcolor{preprocessor}{\#define NOTE\_A\_SHARP(x) (10 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00077}00077 \textcolor{preprocessor}{\#define NOTE\_B\_FLAT(x)  (10 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00078}00078 \textcolor{preprocessor}{\#define NOTE\_B(x)       (11 + (x)*12)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00081}\mbox{\hyperlink{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}{00081}} \textcolor{preprocessor}{\#define SILENT\_NOTE   0xFF}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00086}\mbox{\hyperlink{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}{00086}} \textcolor{preprocessor}{\#define DIV\_BY\_10     (1 << 15)}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00089}\mbox{\hyperlink{class_pololu_buzzer}{00089}} \textcolor{keyword}{class }\mbox{\hyperlink{class_pololu_buzzer}{PololuBuzzer}}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00090}00090 \{}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00091}00091   \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00145}00145   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pololu_buzzer_a931fafd76045ae59d4ba62c9bf90b0dc}{playFrequency}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} freq, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} duration,}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00146}00146                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} volume);}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00171}00171   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pololu_buzzer_a989d410dd6cdb7abfa136c3734040fb5}{playNote}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} note, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} duration,}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00172}00172           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} volume);}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00264}00264   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pololu_buzzer_a22f45ef7cdf9dc8fc54e617244368277}{play}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *sequence);}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00265}00265 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00288}00288   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pololu_buzzer_a07ff4e9d9f7e4f37a58e149640b61f4e}{playFromProgramSpace}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *sequence);}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00289}00289 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00310}00310   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pololu_buzzer_ab72bde97ceceef8705f1bbaeccb970db}{playMode}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} mode);}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00311}00311 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00325}00325   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_pololu_buzzer_a427225dcc85c1e65078e4397b9890929}{playCheck}}();}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00326}00326 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00338}00338   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_pololu_buzzer_a8045fdf0a144e0b71a5b223a0ef34027}{isPlaying}}();}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00339}00339 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00345}00345   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pololu_buzzer_a233fe0ffe5f23582b1c55beaa718d527}{stopPlaying}}();}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00346}00346 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00347}00347 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00348}00348   \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00349}00349 }
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00350}00350   \textcolor{comment}{// initializes timer for buzzer control}}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00351}00351   \textcolor{keyword}{static} \textcolor{keywordtype}{void} init2();}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00352}00352   \textcolor{keyword}{static} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{\Hypertarget{_pololu_buzzer_8h_source_l00353}00353 \};}
+
+\end{DoxyCode}

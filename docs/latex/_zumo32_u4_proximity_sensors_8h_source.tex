@@ -1,0 +1,176 @@
+\hypertarget{_zumo32_u4_proximity_sensors_8h_source}{}\doxysection{Zumo32\+U4\+Proximity\+Sensors.\+h}
+\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00005}00005 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00012}\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a4eb73edabf9d0b70e1109ec8714ca03f}{00012}} \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a4eb73edabf9d0b70e1109ec8714ca03f}{SENSOR\_LEFT}} = 20;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00016}\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{00016}} \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{SENSOR\_FRONT}} = 22;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00020}\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_aca17401d9c56c2ff8a87f59474da7844}{00020}} \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_aca17401d9c56c2ff8a87f59474da7844}{SENSOR\_RIGHT}} = 4;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00024}\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_ab9a5a2bb8dceb3e519806f346ea52ef0}{00024}} \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_ab9a5a2bb8dceb3e519806f346ea52ef0}{SENSOR\_NO\_PIN}} = 255;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00105}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors}{00105}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_proximity_sensors}{Zumo32U4ProximitySensors}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00106}00106 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00107}00107 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00113}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d6a79ab499972b36c52d2a8c03fe0f7}{00113}}     \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d6a79ab499972b36c52d2a8c03fe0f7}{defaultLineSensorEmitterPin}} = 11;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00121}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a73a7f00157adb39ba403649160f0f73b}{00121}}     \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a73a7f00157adb39ba403649160f0f73b}{Zumo32U4ProximitySensors}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00122}00122     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00123}00123         clearAll();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00124}00124     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00129}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a09d74928abeea79a5eed616655c1429e}{00129}}     \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a09d74928abeea79a5eed616655c1429e}{Zumo32U4ProximitySensors}}(uint8\_t * pins, uint8\_t numSensors,}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00130}00130         uint8\_t lineSensorEmitterPin = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d6a79ab499972b36c52d2a8c03fe0f7}{defaultLineSensorEmitterPin}})}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00131}00131     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00132}00132         clearAll();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00133}00133         \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a250ef26e66807bc800adc42be912fab5}{init}}(pins, numSensors, lineSensorEmitterPin);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00134}00134     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00150}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a521c7fe0992317c0566ff59ec132b469}{00150}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a521c7fe0992317c0566ff59ec132b469}{initThreeSensors}}(uint8\_t lineSensorEmitterPin = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d6a79ab499972b36c52d2a8c03fe0f7}{defaultLineSensorEmitterPin}})}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00151}00151     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00152}00152         uint8\_t defaultPins[] = \{ \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a4eb73edabf9d0b70e1109ec8714ca03f}{SENSOR\_LEFT}}, \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{SENSOR\_FRONT}}, \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_aca17401d9c56c2ff8a87f59474da7844}{SENSOR\_RIGHT}} \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00153}00153         \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a250ef26e66807bc800adc42be912fab5}{init}}(defaultPins, \textcolor{keyword}{sizeof}(defaultPins), lineSensorEmitterPin);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00154}00154     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00167}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_abcc9c393f47cf994f06d9cae51369a6a}{00167}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_abcc9c393f47cf994f06d9cae51369a6a}{initFrontSensor}}(uint8\_t lineSensorEmitterPin = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d6a79ab499972b36c52d2a8c03fe0f7}{defaultLineSensorEmitterPin}})}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00168}00168     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00169}00169         uint8\_t pins[] = \{ \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{SENSOR\_FRONT}} \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00170}00170         \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a250ef26e66807bc800adc42be912fab5}{init}}(pins, \textcolor{keyword}{sizeof}(pins), lineSensorEmitterPin);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00171}00171     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00182}00182     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a250ef26e66807bc800adc42be912fab5}{init}}(uint8\_t * pins, uint8\_t numSensors,}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00183}00183         uint8\_t lineSensorEmitterPin = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d6a79ab499972b36c52d2a8c03fe0f7}{defaultLineSensorEmitterPin}});}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00188}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_abf645921ec976cf1b657fccc50b123a1}{00188}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_abf645921ec976cf1b657fccc50b123a1}{getNumSensors}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00189}00189 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00190}00190         \textcolor{keywordflow}{return} numSensors;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00191}00191     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00193}00193     \textcolor{comment}{/* LED parameters **********************************************************/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00200}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a0857da91ca57c4f884094736bd1c0824}{00200}}     \textcolor{keyword}{static} \textcolor{keyword}{const} uint16\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a0857da91ca57c4f884094736bd1c0824}{defaultPeriod}} = 420;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00213}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6d47a41b45a7088916fbeaa5b38c60b3}{00213}}     \textcolor{keyword}{static} \textcolor{keyword}{const} uint16\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6d47a41b45a7088916fbeaa5b38c60b3}{defaultPulseOnTimeUs}} = 421;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00238}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a60fcba68f8cc7f2710f32ac76de85cdf}{00238}}     \textcolor{keyword}{static} \textcolor{keyword}{const} uint16\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a60fcba68f8cc7f2710f32ac76de85cdf}{defaultPulseOffTimeUs}} = 578;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00251}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ab288aeae9bcc5933cede8941b709b4fc}{00251}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ab288aeae9bcc5933cede8941b709b4fc}{setPeriod}}(uint16\_t period)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00252}00252     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00253}00253         this-\/>period = period;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00254}00254     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00272}00272     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a47820baf67dfa58dedb41cb7bb26dc65}{setBrightnessLevels}}(uint16\_t * levels, uint8\_t levelCount);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00278}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_aeb626f226420976e774d93dd2a83e768}{00278}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_aeb626f226420976e774d93dd2a83e768}{setPulseOnTimeUs}}(uint16\_t pulseOnTimeUs)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00279}00279     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00280}00280         this-\/>pulseOnTimeUs = pulseOnTimeUs;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00281}00281     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00289}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a4d7911aca58734a76be212de103a1387}{00289}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a4d7911aca58734a76be212de103a1387}{setPulseOffTimeUs}}(uint16\_t pulseOffTimeUs)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00290}00290     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00291}00291         this-\/>pulseOffTimeUs = pulseOffTimeUs;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00292}00292     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00293}00293 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00297}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ab6cf32a103b2eafb16ad051ca499db48}{00297}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ab6cf32a103b2eafb16ad051ca499db48}{getNumBrightnessLevels}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00298}00298 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00299}00299         \textcolor{keywordflow}{return} numLevels;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00300}00300     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00301}00301 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00302}00302     \textcolor{comment}{/* Basic operations *********************************************************/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00303}00303 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00311}00311     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a583dada6ad676cbda2ec7d55b05338b8}{lineSensorEmittersOff}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00312}00312 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00314}00314     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ae596289faf5921bc7c199cf73edf534e}{pullupsOn}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00315}00315 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00329}00329     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a5c254dc2adf7c47203384241582349d3}{readBasic}}(uint8\_t sensorNumber);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00330}00330 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00331}00331     \textcolor{comment}{/* Sensor reading ***********************************************************/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00332}00332 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00368}00368     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a071d935e10e2a16a3ae2559d16a12683}{read}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00369}00369 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00376}00376     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a734abb888814a97379c349e1deb8897f}{countsWithLeftLeds}}(uint8\_t sensorNumber) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00377}00377 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00384}00384     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2789f740828a81fe3c942998639355ae}{countsWithRightLeds}}(uint8\_t sensorNumber) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00385}00385 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00386}00386     \textcolor{comment}{/* Helper methods for the typical Zumo sensor setup ************************/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00387}00387 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00394}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_adb60bbaa2fffc19cfe783bf5a2ff4161}{00394}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_adb60bbaa2fffc19cfe783bf5a2ff4161}{countsLeftWithLeftLeds}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00395}00395 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00396}00396         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a734abb888814a97379c349e1deb8897f}{countsWithLeftLeds}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a4eb73edabf9d0b70e1109ec8714ca03f}{SENSOR\_LEFT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00397}00397     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00398}00398 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00405}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_aaa0bcd5ab03cc2b7c26710cccc9114de}{00405}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_aaa0bcd5ab03cc2b7c26710cccc9114de}{countsLeftWithRightLeds}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00406}00406 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00407}00407         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2789f740828a81fe3c942998639355ae}{countsWithRightLeds}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a4eb73edabf9d0b70e1109ec8714ca03f}{SENSOR\_LEFT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00408}00408     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00409}00409 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00416}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a9c9f5ada0b3e7b8bc14dc97bf9681090}{00416}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a9c9f5ada0b3e7b8bc14dc97bf9681090}{countsFrontWithLeftLeds}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00417}00417 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00418}00418         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a734abb888814a97379c349e1deb8897f}{countsWithLeftLeds}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{SENSOR\_FRONT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00419}00419     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00420}00420 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00427}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6eb08641584b371308b6901a0423e564}{00427}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6eb08641584b371308b6901a0423e564}{countsFrontWithRightLeds}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00428}00428 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00429}00429         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2789f740828a81fe3c942998639355ae}{countsWithRightLeds}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{SENSOR\_FRONT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00430}00430     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00438}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_aa804ac099f3f141b60644accdb94c737}{00438}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_aa804ac099f3f141b60644accdb94c737}{countsRightWithLeftLeds}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00439}00439 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00440}00440         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a734abb888814a97379c349e1deb8897f}{countsWithLeftLeds}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_aca17401d9c56c2ff8a87f59474da7844}{SENSOR\_RIGHT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00441}00441     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00442}00442 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00449}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2b2b38429cdd297068a2b0addf1c54d7}{00449}}     uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2b2b38429cdd297068a2b0addf1c54d7}{countsRightWithRightLeds}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00450}00450 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00451}00451         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2789f740828a81fe3c942998639355ae}{countsWithRightLeds}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_aca17401d9c56c2ff8a87f59474da7844}{SENSOR\_RIGHT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00452}00452     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00453}00453 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00462}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d72d0576fa21327d6295b61b61f88f6}{00462}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a7d72d0576fa21327d6295b61b61f88f6}{readBasicLeft}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00463}00463     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00464}00464         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a5c254dc2adf7c47203384241582349d3}{readBasic}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a4eb73edabf9d0b70e1109ec8714ca03f}{SENSOR\_LEFT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00465}00465     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00466}00466 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00475}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6394e540d0bd14ad9b2637d0772fff5c}{00475}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6394e540d0bd14ad9b2637d0772fff5c}{readBasicFront}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00476}00476     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00477}00477         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a5c254dc2adf7c47203384241582349d3}{readBasic}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_a70fea81f17e197fe723b751933133720}{SENSOR\_FRONT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00478}00478     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00479}00479 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00488}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a727ec0d918736c55dfb58c4495bad068}{00488}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a727ec0d918736c55dfb58c4495bad068}{readBasicRight}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00489}00489     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00490}00490         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a5c254dc2adf7c47203384241582349d3}{readBasic}}(findIndexForPin(\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_aca17401d9c56c2ff8a87f59474da7844}{SENSOR\_RIGHT}}));}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00491}00491     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00492}00492 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00493}00493 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00494}00494 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00495}00495     \textcolor{keywordtype}{void} clearAll();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00496}00496     \textcolor{keywordtype}{void} prepareToRead();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00497}00497     uint8\_t findIndexForPin(uint8\_t pin) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00498}00498 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00499}00499     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }SensorData}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00500}00500     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00501}00501         uint8\_t pin;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00502}00502         uint8\_t withLeftLeds;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00503}00503         uint8\_t withRightLeds;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00504}00504     \} SensorData;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00505}00505 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00506}00506     SensorData * dataArray;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00507}00507     uint8\_t numSensors;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00508}00508 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00509}00509     uint8\_t lineSensorEmitterPin;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00510}00510 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00511}00511     uint16\_t * levelsArray;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00512}00512     uint8\_t numLevels;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00513}00513 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00514}00514     uint16\_t period;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00515}00515     uint16\_t pulseOnTimeUs;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00516}00516     uint16\_t pulseOffTimeUs;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8h_source_l00517}00517 \};}
+
+\end{DoxyCode}

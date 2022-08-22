@@ -1,0 +1,65 @@
+\hypertarget{_zumo32_u4_8h_source}{}\doxysection{Zumo32\+U4.\+h}
+\mbox{\hyperlink{_zumo32_u4_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00010}00010 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00012}00012 \textcolor{preprocessor}{\#ifndef \_\_AVR\_ATmega32U4\_\_}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00013}00013 \textcolor{preprocessor}{\#error "{}This library only supports the ATmega32U4.  Try selecting A-\/Star 32U4 in the Boards menu."{}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00014}00014 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_fast_g_p_i_o_8h}{FastGPIO.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <LSM303.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <L3G.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_buttons_8h}{Zumo32U4Buttons.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_buzzer_8h}{Zumo32U4Buzzer.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_encoders_8h}{Zumo32U4Encoders.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_i_m_u_8h}{Zumo32U4IMU.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h}{Zumo32U4IRPulses.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_l_c_d_8h}{Zumo32U4LCD.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_line_sensors_8h}{Zumo32U4LineSensors.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00026}00026 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_motors_8h}{Zumo32U4Motors.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h}{Zumo32U4ProximitySensors.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00029}00029 \textcolor{comment}{// TODO: servo support}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00038}\mbox{\hyperlink{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}{00038}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}{ledRed}}(\textcolor{keywordtype}{bool} on)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00040}00040     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<17>::setOutput}}(!on);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00046}\mbox{\hyperlink{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}{00046}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}{ledYellow}}(\textcolor{keywordtype}{bool} on)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00047}00047 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00048}00048     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<13>::setOutput}}(on);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00058}\mbox{\hyperlink{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}{00058}} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}{ledGreen}}(\textcolor{keywordtype}{bool} on)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00059}00059 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00060}00060     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<IO\_D5>::setOutput}}(!on);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00061}00061 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00071}\mbox{\hyperlink{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}{00071}} \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}{usbPowerPresent}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00072}00072 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00073}00073     \textcolor{keywordflow}{return} USBSTA >> VBUS \& 1;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00074}00074 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00077}\mbox{\hyperlink{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}{00077}} \textcolor{keyword}{inline} uint16\_t \mbox{\hyperlink{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}{readBatteryMillivolts}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00078}00078 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00079}00079     \textcolor{keyword}{const} uint8\_t sampleCount = 8;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00080}00080     uint16\_t sum = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00081}00081     \textcolor{keywordflow}{for} (uint8\_t i = 0; i < sampleCount; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00082}00082     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00083}00083         sum += analogRead(A1);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00086}00086     \textcolor{comment}{// VBAT = 2 * millivolt reading = 2 * raw * 5000/1024}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00087}00087     \textcolor{comment}{//      = raw * 625 / 64}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00088}00088     \textcolor{comment}{// The correction term below makes it so that we round to the}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00089}00089     \textcolor{comment}{// nearest whole number instead of always rounding down.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00090}00090     \textcolor{keyword}{const} uint32\_t correction = 32 * sampleCount -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00091}00091     \textcolor{keywordflow}{return} ((uint32\_t)sum * 625 + correction) / (64 * sampleCount);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_8h_source_l00093}00093 }
+
+\end{DoxyCode}

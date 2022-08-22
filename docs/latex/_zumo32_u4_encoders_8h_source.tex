@@ -1,0 +1,42 @@
+\hypertarget{_zumo32_u4_encoders_8h_source}{}\doxysection{Zumo32\+U4\+Encoders.\+h}
+\mbox{\hyperlink{_zumo32_u4_encoders_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00005}00005 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00025}\mbox{\hyperlink{class_zumo32_u4_encoders}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_encoders}{Zumo32U4Encoders}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00034}\mbox{\hyperlink{class_zumo32_u4_encoders_afa1199db1c88dce2e42a461dc45df560}{00034}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_encoders_afa1199db1c88dce2e42a461dc45df560}{init}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00036}00036         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} initialized = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00037}00037         \textcolor{keywordflow}{if} (!initialized)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00038}00038         \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00039}00039             initialized = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00040}00040             init2();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00052}00052     \textcolor{keyword}{static} int16\_t \mbox{\hyperlink{class_zumo32_u4_encoders_a142d33610a12b209e257c1635b2daae6}{getCountsLeft}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00056}00056     \textcolor{keyword}{static} int16\_t \mbox{\hyperlink{class_zumo32_u4_encoders_ad570df0c84cbb719dc975233b4f65756}{getCountsRight}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00061}00061     \textcolor{keyword}{static} int16\_t \mbox{\hyperlink{class_zumo32_u4_encoders_a9b212103e652d1edb9d622381c303497}{getCountsAndResetLeft}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00065}00065     \textcolor{keyword}{static} int16\_t \mbox{\hyperlink{class_zumo32_u4_encoders_a613358c24dbc997cb9fee36d66bbf2ba}{getCountsAndResetRight}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00079}00079     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_encoders_ad20765947ef87f562a4a19975a7fb9ca}{checkErrorLeft}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00083}00083     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_encoders_a9d7de11def7409becbe870056ef2d719}{checkErrorRight}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00085}00085 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00087}00087     \textcolor{keyword}{static} \textcolor{keywordtype}{void} init2();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_encoders_8h_source_l00088}00088 \};}
+
+\end{DoxyCode}

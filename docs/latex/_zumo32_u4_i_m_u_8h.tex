@@ -1,29 +1,25 @@
-\hypertarget{_zumo32_u4_i_m_u_8h}{}\section{Zumo32\+U4\+I\+M\+U.\+h File Reference}
-\label{_zumo32_u4_i_m_u_8h}\index{Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}}
-\subsection*{Classes}
+\hypertarget{_zumo32_u4_i_m_u_8h}{}\doxysection{Zumo32\+U4\+IMU.\+h File Reference}
+\label{_zumo32_u4_i_m_u_8h}\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+I\+MU}
-\begin{DoxyCompactList}\small\item\em Interfaces with the inertial sensors on the Zumo 32\+U4. \end{DoxyCompactList}\item 
-struct \hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{Zumo32\+U4\+I\+M\+U\+::vector$<$ T $>$}
+class \mbox{\hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+IMU}}
+\begin{DoxyCompactList}\small\item\em Interfaces with the inertial sensors on the Zumo 32U4. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{Zumo32\+U4\+IMU\+::vector$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em Represents a 3-\/dimensional vector with x, y, and z components. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Macros}
+\doxysubsection*{Macros}
 \begin{Indent}\textbf{ Device Addresses}\par
 {\em \label{_zumo32_u4_i_m_u_8h_device_addresses}%
 \Hypertarget{_zumo32_u4_i_m_u_8h_device_addresses}%
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a1d05dae32f7a60a45ad600d2f814200f}\label{_zumo32_u4_i_m_u_8h_a1d05dae32f7a60a45ad600d2f814200f}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+A\+D\+DR}~0b0011101
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a1d05dae32f7a60a45ad600d2f814200f}{LSM303\+D\+\_\+\+ADDR}}~0b0011101
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a55ceefa4c8e0195e8110b76045a1e07d}\label{_zumo32_u4_i_m_u_8h_a55ceefa4c8e0195e8110b76045a1e07d}} 
-\#define {\bfseries L3\+G\+D20\+H\+\_\+\+A\+D\+DR}~0b1101011
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a55ceefa4c8e0195e8110b76045a1e07d}{L3\+GD20\+H\+\_\+\+ADDR}}~0b1101011
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad248a378501ac3bd80d2511cb18dfed9}\label{_zumo32_u4_i_m_u_8h_ad248a378501ac3bd80d2511cb18dfed9}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+A\+D\+DR}~0b1101011
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ad248a378501ac3bd80d2511cb18dfed9}{LSM6\+DS33\+\_\+\+ADDR}}~0b1101011
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a9b0a104c20ec7337ca433b4ecf402410}\label{_zumo32_u4_i_m_u_8h_a9b0a104c20ec7337ca433b4ecf402410}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+A\+D\+DR}~0b0011110
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a9b0a104c20ec7337ca433b4ecf402410}{LIS3\+MDL\+\_\+\+ADDR}}~0b0011110
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Register Addresses}\par
@@ -31,130 +27,434 @@ struct \hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{Zumo32\+U4\+I\+M\+U\+::vecto
 \Hypertarget{_zumo32_u4_i_m_u_8h_register_addresses}%
 }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_abb5f7e7a29b9824721f560afbaeaad99}\label{_zumo32_u4_i_m_u_8h_abb5f7e7a29b9824721f560afbaeaad99}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+M}~0x07
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_abb5f7e7a29b9824721f560afbaeaad99}{LSM303\+D\+\_\+\+REG\+\_\+\+STATUS\+\_\+M}}~0x07
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ae8e13d506f367ab80060b8a23627bb4c}\label{_zumo32_u4_i_m_u_8h_ae8e13d506f367ab80060b8a23627bb4c}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+M}~0x08
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ae8e13d506f367ab80060b8a23627bb4c}{LSM303\+D\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M}}~0x08
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a613f0a720a517c6d32f3fbfe33a5f517}\label{_zumo32_u4_i_m_u_8h_a613f0a720a517c6d32f3fbfe33a5f517}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+W\+H\+O\+\_\+\+A\+M\+\_\+I}~0x0F
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a613f0a720a517c6d32f3fbfe33a5f517}{LSM303\+D\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I}}~0x0F
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a8f5f538ca3c707e78824de4f861645f5}\label{_zumo32_u4_i_m_u_8h_a8f5f538ca3c707e78824de4f861645f5}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L1}~0x20
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a8f5f538ca3c707e78824de4f861645f5}{LSM303\+D\+\_\+\+REG\+\_\+\+CTRL1}}~0x20
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_accb47d1292b671cc23e5d2483fcaa438}\label{_zumo32_u4_i_m_u_8h_accb47d1292b671cc23e5d2483fcaa438}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L2}~0x21
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_accb47d1292b671cc23e5d2483fcaa438}{LSM303\+D\+\_\+\+REG\+\_\+\+CTRL2}}~0x21
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ace79bad9d9f4baa09fb0dbdb793a47dc}\label{_zumo32_u4_i_m_u_8h_ace79bad9d9f4baa09fb0dbdb793a47dc}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L5}~0x24
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ace79bad9d9f4baa09fb0dbdb793a47dc}{LSM303\+D\+\_\+\+REG\+\_\+\+CTRL5}}~0x24
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_adcf19f685f004c3f692d85491fec49c1}\label{_zumo32_u4_i_m_u_8h_adcf19f685f004c3f692d85491fec49c1}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L6}~0x25
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_adcf19f685f004c3f692d85491fec49c1}{LSM303\+D\+\_\+\+REG\+\_\+\+CTRL6}}~0x25
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2e9732e7da9fec7d085cccca0fb84e23}\label{_zumo32_u4_i_m_u_8h_a2e9732e7da9fec7d085cccca0fb84e23}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L7}~0x26
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2e9732e7da9fec7d085cccca0fb84e23}{LSM303\+D\+\_\+\+REG\+\_\+\+CTRL7}}~0x26
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_af9ad015fff9d3809f3727a437859501e}\label{_zumo32_u4_i_m_u_8h_af9ad015fff9d3809f3727a437859501e}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+A}~0x27
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_af9ad015fff9d3809f3727a437859501e}{LSM303\+D\+\_\+\+REG\+\_\+\+STATUS\+\_\+A}}~0x27
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ade5681e03778b42605bd86065f8027fa}\label{_zumo32_u4_i_m_u_8h_ade5681e03778b42605bd86065f8027fa}} 
-\#define {\bfseries L\+S\+M303\+D\+\_\+\+R\+E\+G\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+\_\+A}~0x28
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ade5681e03778b42605bd86065f8027fa}{LSM303\+D\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+A}}~0x28
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a0ca909163559aeb532091115103c58e0}\label{_zumo32_u4_i_m_u_8h_a0ca909163559aeb532091115103c58e0}} 
-\#define {\bfseries L3\+G\+D20\+H\+\_\+\+R\+E\+G\+\_\+\+W\+H\+O\+\_\+\+A\+M\+\_\+I}~0x0F
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a0ca909163559aeb532091115103c58e0}{L3\+GD20\+H\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I}}~0x0F
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a4d8ca6ed02a5d8355667cd821cbc7a1c}\label{_zumo32_u4_i_m_u_8h_a4d8ca6ed02a5d8355667cd821cbc7a1c}} 
-\#define {\bfseries L3\+G\+D20\+H\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L1}~0x20
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a4d8ca6ed02a5d8355667cd821cbc7a1c}{L3\+GD20\+H\+\_\+\+REG\+\_\+\+CTRL1}}~0x20
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a1664a2832e68cc66ab12ded679e13a34}\label{_zumo32_u4_i_m_u_8h_a1664a2832e68cc66ab12ded679e13a34}} 
-\#define {\bfseries L3\+G\+D20\+H\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L4}~0x23
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a1664a2832e68cc66ab12ded679e13a34}{L3\+GD20\+H\+\_\+\+REG\+\_\+\+CTRL4}}~0x23
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aedd0757a0a642180c24514a354606157}\label{_zumo32_u4_i_m_u_8h_aedd0757a0a642180c24514a354606157}} 
-\#define {\bfseries L3\+G\+D20\+H\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+US}~0x27
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_aedd0757a0a642180c24514a354606157}{L3\+GD20\+H\+\_\+\+REG\+\_\+\+STATUS}}~0x27
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aabdc43025377b4512c69655a551ab78f}\label{_zumo32_u4_i_m_u_8h_aabdc43025377b4512c69655a551ab78f}} 
-\#define {\bfseries L3\+G\+D20\+H\+\_\+\+R\+E\+G\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+L}~0x28
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_aabdc43025377b4512c69655a551ab78f}{L3\+GD20\+H\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+L}}~0x28
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ab5b330125e7d344b2670fa83c9ed41c9}\label{_zumo32_u4_i_m_u_8h_ab5b330125e7d344b2670fa83c9ed41c9}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+W\+H\+O\+\_\+\+A\+M\+\_\+I}~0x0F
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ab5b330125e7d344b2670fa83c9ed41c9}{LSM6\+DS33\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I}}~0x0F
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a80c2406e7c37c65981e13496131a4085}\label{_zumo32_u4_i_m_u_8h_a80c2406e7c37c65981e13496131a4085}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L1\+\_\+\+XL}~0x10
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a80c2406e7c37c65981e13496131a4085}{LSM6\+DS33\+\_\+\+REG\+\_\+\+CTRL1\+\_\+\+XL}}~0x10
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_affcd15473a02673b95d10a874f7e4244}\label{_zumo32_u4_i_m_u_8h_affcd15473a02673b95d10a874f7e4244}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L2\+\_\+G}~0x11
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_affcd15473a02673b95d10a874f7e4244}{LSM6\+DS33\+\_\+\+REG\+\_\+\+CTRL2\+\_\+G}}~0x11
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2bc5a07f13b9066f55638733c5b099d4}\label{_zumo32_u4_i_m_u_8h_a2bc5a07f13b9066f55638733c5b099d4}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L3\+\_\+C}~0x12
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2bc5a07f13b9066f55638733c5b099d4}{LSM6\+DS33\+\_\+\+REG\+\_\+\+CTRL3\+\_\+C}}~0x12
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aea82d5941dcf759b484a96f023363d51}\label{_zumo32_u4_i_m_u_8h_aea82d5941dcf759b484a96f023363d51}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+EG}~0x1E
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_aea82d5941dcf759b484a96f023363d51}{LSM6\+DS33\+\_\+\+REG\+\_\+\+STATUS\+\_\+\+REG}}~0x1E
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a80ceef9e5459ec230c75e3d05e353217}\label{_zumo32_u4_i_m_u_8h_a80ceef9e5459ec230c75e3d05e353217}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+O\+U\+T\+X\+\_\+\+L\+\_\+G}~0x22
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a80ceef9e5459ec230c75e3d05e353217}{LSM6\+DS33\+\_\+\+REG\+\_\+\+OUTX\+\_\+\+L\+\_\+G}}~0x22
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aa9e6f6ee7ea5c353d68791c952d25de9}\label{_zumo32_u4_i_m_u_8h_aa9e6f6ee7ea5c353d68791c952d25de9}} 
-\#define {\bfseries L\+S\+M6\+D\+S33\+\_\+\+R\+E\+G\+\_\+\+O\+U\+T\+X\+\_\+\+L\+\_\+\+XL}~0x28
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_aa9e6f6ee7ea5c353d68791c952d25de9}{LSM6\+DS33\+\_\+\+REG\+\_\+\+OUTX\+\_\+\+L\+\_\+\+XL}}~0x28
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad33f9a4d126c3c083ead45d77735fd6b}\label{_zumo32_u4_i_m_u_8h_ad33f9a4d126c3c083ead45d77735fd6b}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+W\+H\+O\+\_\+\+A\+M\+\_\+I}~0x0F
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ad33f9a4d126c3c083ead45d77735fd6b}{LIS3\+MDL\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I}}~0x0F
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ac60cad06556f0c538c92fd53d9a6d6d8}\label{_zumo32_u4_i_m_u_8h_ac60cad06556f0c538c92fd53d9a6d6d8}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1}~0x20
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ac60cad06556f0c538c92fd53d9a6d6d8}{LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG1}}~0x20
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a78ee1d10509078222bd16f09e38b97fe}\label{_zumo32_u4_i_m_u_8h_a78ee1d10509078222bd16f09e38b97fe}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G2}~0x21
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a78ee1d10509078222bd16f09e38b97fe}{LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG2}}~0x21
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad193f73fbf28ee3c16f021e2f5e0d337}\label{_zumo32_u4_i_m_u_8h_ad193f73fbf28ee3c16f021e2f5e0d337}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G3}~0x22
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ad193f73fbf28ee3c16f021e2f5e0d337}{LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG3}}~0x22
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad63047e173d840bdeed23a9bb56dd42d}\label{_zumo32_u4_i_m_u_8h_ad63047e173d840bdeed23a9bb56dd42d}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4}~0x23
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_ad63047e173d840bdeed23a9bb56dd42d}{LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG4}}~0x23
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a72881e99250e704e34d934153c87d144}\label{_zumo32_u4_i_m_u_8h_a72881e99250e704e34d934153c87d144}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+EG}~0x27
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a72881e99250e704e34d934153c87d144}{LIS3\+MDL\+\_\+\+REG\+\_\+\+STATUS\+\_\+\+REG}}~0x27
 \item 
-\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_adb4fe4c10c4c94644ff726b66b6646cf}\label{_zumo32_u4_i_m_u_8h_adb4fe4c10c4c94644ff726b66b6646cf}} 
-\#define {\bfseries L\+I\+S3\+M\+D\+L\+\_\+\+R\+E\+G\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+L}~0x28
+\#define \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_adb4fe4c10c4c94644ff726b66b6646cf}{LIS3\+MDL\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+L}}~0x28
 \end{DoxyCompactItemize}
 \end{Indent}
-\subsection*{Enumerations}
+\doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+I\+M\+U\+Type} \+: uint8\+\_\+t \{ \hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}{Zumo32\+U4\+I\+M\+U\+Type\+::\+Unknown}, 
-\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}{Zumo32\+U4\+I\+M\+U\+Type\+::\+L\+S\+M303\+D\+\_\+\+L3\+G\+D20H}, 
-\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}{Zumo32\+U4\+I\+M\+U\+Type\+::\+L\+S\+M6\+D\+S33\+\_\+\+L\+I\+S3\+M\+DL}
- \}\begin{DoxyCompactList}\small\item\em The type of the inertial sensors. \end{DoxyCompactList}
-\end{DoxyCompactItemize}
+enum class \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+IMUType}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}}
+, \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}{LSM303\+D\+\_\+\+L3\+GD20H}}
+, \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}{LSM6\+DS33\+\_\+\+LIS3\+MDL}}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of the inertial sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Enumeration Type Documentation}
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a55ceefa4c8e0195e8110b76045a1e07d}\label{_zumo32_u4_i_m_u_8h_a55ceefa4c8e0195e8110b76045a1e07d}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!L3GD20H\_ADDR@{L3GD20H\_ADDR}}
+\index{L3GD20H\_ADDR@{L3GD20H\_ADDR}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{L3GD20H\_ADDR}{L3GD20H\_ADDR}}
+{\footnotesize\ttfamily \#define L3\+GD20\+H\+\_\+\+ADDR~0b1101011}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00013}{13}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a4d8ca6ed02a5d8355667cd821cbc7a1c}\label{_zumo32_u4_i_m_u_8h_a4d8ca6ed02a5d8355667cd821cbc7a1c}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!L3GD20H\_REG\_CTRL1@{L3GD20H\_REG\_CTRL1}}
+\index{L3GD20H\_REG\_CTRL1@{L3GD20H\_REG\_CTRL1}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{L3GD20H\_REG\_CTRL1}{L3GD20H\_REG\_CTRL1}}
+{\footnotesize\ttfamily \#define L3\+GD20\+H\+\_\+\+REG\+\_\+\+CTRL1~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00035}{35}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a1664a2832e68cc66ab12ded679e13a34}\label{_zumo32_u4_i_m_u_8h_a1664a2832e68cc66ab12ded679e13a34}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!L3GD20H\_REG\_CTRL4@{L3GD20H\_REG\_CTRL4}}
+\index{L3GD20H\_REG\_CTRL4@{L3GD20H\_REG\_CTRL4}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{L3GD20H\_REG\_CTRL4}{L3GD20H\_REG\_CTRL4}}
+{\footnotesize\ttfamily \#define L3\+GD20\+H\+\_\+\+REG\+\_\+\+CTRL4~0x23}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00036}{36}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aabdc43025377b4512c69655a551ab78f}\label{_zumo32_u4_i_m_u_8h_aabdc43025377b4512c69655a551ab78f}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!L3GD20H\_REG\_OUT\_X\_L@{L3GD20H\_REG\_OUT\_X\_L}}
+\index{L3GD20H\_REG\_OUT\_X\_L@{L3GD20H\_REG\_OUT\_X\_L}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{L3GD20H\_REG\_OUT\_X\_L}{L3GD20H\_REG\_OUT\_X\_L}}
+{\footnotesize\ttfamily \#define L3\+GD20\+H\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+L~0x28}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00038}{38}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aedd0757a0a642180c24514a354606157}\label{_zumo32_u4_i_m_u_8h_aedd0757a0a642180c24514a354606157}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!L3GD20H\_REG\_STATUS@{L3GD20H\_REG\_STATUS}}
+\index{L3GD20H\_REG\_STATUS@{L3GD20H\_REG\_STATUS}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{L3GD20H\_REG\_STATUS}{L3GD20H\_REG\_STATUS}}
+{\footnotesize\ttfamily \#define L3\+GD20\+H\+\_\+\+REG\+\_\+\+STATUS~0x27}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00037}{37}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a0ca909163559aeb532091115103c58e0}\label{_zumo32_u4_i_m_u_8h_a0ca909163559aeb532091115103c58e0}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!L3GD20H\_REG\_WHO\_AM\_I@{L3GD20H\_REG\_WHO\_AM\_I}}
+\index{L3GD20H\_REG\_WHO\_AM\_I@{L3GD20H\_REG\_WHO\_AM\_I}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{L3GD20H\_REG\_WHO\_AM\_I}{L3GD20H\_REG\_WHO\_AM\_I}}
+{\footnotesize\ttfamily \#define L3\+GD20\+H\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I~0x0F}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00034}{34}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a9b0a104c20ec7337ca433b4ecf402410}\label{_zumo32_u4_i_m_u_8h_a9b0a104c20ec7337ca433b4ecf402410}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_ADDR@{LIS3MDL\_ADDR}}
+\index{LIS3MDL\_ADDR@{LIS3MDL\_ADDR}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_ADDR}{LIS3MDL\_ADDR}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+ADDR~0b0011110}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00015}{15}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ac60cad06556f0c538c92fd53d9a6d6d8}\label{_zumo32_u4_i_m_u_8h_ac60cad06556f0c538c92fd53d9a6d6d8}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_CTRL\_REG1@{LIS3MDL\_REG\_CTRL\_REG1}}
+\index{LIS3MDL\_REG\_CTRL\_REG1@{LIS3MDL\_REG\_CTRL\_REG1}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_CTRL\_REG1}{LIS3MDL\_REG\_CTRL\_REG1}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG1~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00049}{49}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a78ee1d10509078222bd16f09e38b97fe}\label{_zumo32_u4_i_m_u_8h_a78ee1d10509078222bd16f09e38b97fe}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_CTRL\_REG2@{LIS3MDL\_REG\_CTRL\_REG2}}
+\index{LIS3MDL\_REG\_CTRL\_REG2@{LIS3MDL\_REG\_CTRL\_REG2}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_CTRL\_REG2}{LIS3MDL\_REG\_CTRL\_REG2}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG2~0x21}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00050}{50}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad193f73fbf28ee3c16f021e2f5e0d337}\label{_zumo32_u4_i_m_u_8h_ad193f73fbf28ee3c16f021e2f5e0d337}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_CTRL\_REG3@{LIS3MDL\_REG\_CTRL\_REG3}}
+\index{LIS3MDL\_REG\_CTRL\_REG3@{LIS3MDL\_REG\_CTRL\_REG3}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_CTRL\_REG3}{LIS3MDL\_REG\_CTRL\_REG3}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG3~0x22}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00051}{51}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad63047e173d840bdeed23a9bb56dd42d}\label{_zumo32_u4_i_m_u_8h_ad63047e173d840bdeed23a9bb56dd42d}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_CTRL\_REG4@{LIS3MDL\_REG\_CTRL\_REG4}}
+\index{LIS3MDL\_REG\_CTRL\_REG4@{LIS3MDL\_REG\_CTRL\_REG4}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_CTRL\_REG4}{LIS3MDL\_REG\_CTRL\_REG4}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+CTRL\+\_\+\+REG4~0x23}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00052}{52}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_adb4fe4c10c4c94644ff726b66b6646cf}\label{_zumo32_u4_i_m_u_8h_adb4fe4c10c4c94644ff726b66b6646cf}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_OUT\_X\_L@{LIS3MDL\_REG\_OUT\_X\_L}}
+\index{LIS3MDL\_REG\_OUT\_X\_L@{LIS3MDL\_REG\_OUT\_X\_L}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_OUT\_X\_L}{LIS3MDL\_REG\_OUT\_X\_L}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+L~0x28}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00054}{54}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a72881e99250e704e34d934153c87d144}\label{_zumo32_u4_i_m_u_8h_a72881e99250e704e34d934153c87d144}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_STATUS\_REG@{LIS3MDL\_REG\_STATUS\_REG}}
+\index{LIS3MDL\_REG\_STATUS\_REG@{LIS3MDL\_REG\_STATUS\_REG}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_STATUS\_REG}{LIS3MDL\_REG\_STATUS\_REG}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+STATUS\+\_\+\+REG~0x27}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00053}{53}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad33f9a4d126c3c083ead45d77735fd6b}\label{_zumo32_u4_i_m_u_8h_ad33f9a4d126c3c083ead45d77735fd6b}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LIS3MDL\_REG\_WHO\_AM\_I@{LIS3MDL\_REG\_WHO\_AM\_I}}
+\index{LIS3MDL\_REG\_WHO\_AM\_I@{LIS3MDL\_REG\_WHO\_AM\_I}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_REG\_WHO\_AM\_I}{LIS3MDL\_REG\_WHO\_AM\_I}}
+{\footnotesize\ttfamily \#define LIS3\+MDL\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I~0x0F}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00048}{48}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a1d05dae32f7a60a45ad600d2f814200f}\label{_zumo32_u4_i_m_u_8h_a1d05dae32f7a60a45ad600d2f814200f}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_ADDR@{LSM303D\_ADDR}}
+\index{LSM303D\_ADDR@{LSM303D\_ADDR}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_ADDR}{LSM303D\_ADDR}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+ADDR~0b0011101}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00012}{12}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a8f5f538ca3c707e78824de4f861645f5}\label{_zumo32_u4_i_m_u_8h_a8f5f538ca3c707e78824de4f861645f5}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_CTRL1@{LSM303D\_REG\_CTRL1}}
+\index{LSM303D\_REG\_CTRL1@{LSM303D\_REG\_CTRL1}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_CTRL1}{LSM303D\_REG\_CTRL1}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+CTRL1~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00026}{26}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_accb47d1292b671cc23e5d2483fcaa438}\label{_zumo32_u4_i_m_u_8h_accb47d1292b671cc23e5d2483fcaa438}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_CTRL2@{LSM303D\_REG\_CTRL2}}
+\index{LSM303D\_REG\_CTRL2@{LSM303D\_REG\_CTRL2}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_CTRL2}{LSM303D\_REG\_CTRL2}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+CTRL2~0x21}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00027}{27}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ace79bad9d9f4baa09fb0dbdb793a47dc}\label{_zumo32_u4_i_m_u_8h_ace79bad9d9f4baa09fb0dbdb793a47dc}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_CTRL5@{LSM303D\_REG\_CTRL5}}
+\index{LSM303D\_REG\_CTRL5@{LSM303D\_REG\_CTRL5}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_CTRL5}{LSM303D\_REG\_CTRL5}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+CTRL5~0x24}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00028}{28}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_adcf19f685f004c3f692d85491fec49c1}\label{_zumo32_u4_i_m_u_8h_adcf19f685f004c3f692d85491fec49c1}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_CTRL6@{LSM303D\_REG\_CTRL6}}
+\index{LSM303D\_REG\_CTRL6@{LSM303D\_REG\_CTRL6}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_CTRL6}{LSM303D\_REG\_CTRL6}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+CTRL6~0x25}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00029}{29}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2e9732e7da9fec7d085cccca0fb84e23}\label{_zumo32_u4_i_m_u_8h_a2e9732e7da9fec7d085cccca0fb84e23}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_CTRL7@{LSM303D\_REG\_CTRL7}}
+\index{LSM303D\_REG\_CTRL7@{LSM303D\_REG\_CTRL7}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_CTRL7}{LSM303D\_REG\_CTRL7}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+CTRL7~0x26}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00030}{30}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ade5681e03778b42605bd86065f8027fa}\label{_zumo32_u4_i_m_u_8h_ade5681e03778b42605bd86065f8027fa}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_OUT\_X\_L\_A@{LSM303D\_REG\_OUT\_X\_L\_A}}
+\index{LSM303D\_REG\_OUT\_X\_L\_A@{LSM303D\_REG\_OUT\_X\_L\_A}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_OUT\_X\_L\_A}{LSM303D\_REG\_OUT\_X\_L\_A}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+A~0x28}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00032}{32}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ae8e13d506f367ab80060b8a23627bb4c}\label{_zumo32_u4_i_m_u_8h_ae8e13d506f367ab80060b8a23627bb4c}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_OUT\_X\_L\_M@{LSM303D\_REG\_OUT\_X\_L\_M}}
+\index{LSM303D\_REG\_OUT\_X\_L\_M@{LSM303D\_REG\_OUT\_X\_L\_M}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_OUT\_X\_L\_M}{LSM303D\_REG\_OUT\_X\_L\_M}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M~0x08}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00024}{24}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_af9ad015fff9d3809f3727a437859501e}\label{_zumo32_u4_i_m_u_8h_af9ad015fff9d3809f3727a437859501e}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_STATUS\_A@{LSM303D\_REG\_STATUS\_A}}
+\index{LSM303D\_REG\_STATUS\_A@{LSM303D\_REG\_STATUS\_A}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_STATUS\_A}{LSM303D\_REG\_STATUS\_A}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+STATUS\+\_\+A~0x27}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00031}{31}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_abb5f7e7a29b9824721f560afbaeaad99}\label{_zumo32_u4_i_m_u_8h_abb5f7e7a29b9824721f560afbaeaad99}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_STATUS\_M@{LSM303D\_REG\_STATUS\_M}}
+\index{LSM303D\_REG\_STATUS\_M@{LSM303D\_REG\_STATUS\_M}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_STATUS\_M}{LSM303D\_REG\_STATUS\_M}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+STATUS\+\_\+M~0x07}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00023}{23}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a613f0a720a517c6d32f3fbfe33a5f517}\label{_zumo32_u4_i_m_u_8h_a613f0a720a517c6d32f3fbfe33a5f517}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_REG\_WHO\_AM\_I@{LSM303D\_REG\_WHO\_AM\_I}}
+\index{LSM303D\_REG\_WHO\_AM\_I@{LSM303D\_REG\_WHO\_AM\_I}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM303D\_REG\_WHO\_AM\_I}{LSM303D\_REG\_WHO\_AM\_I}}
+{\footnotesize\ttfamily \#define LSM303\+D\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I~0x0F}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00025}{25}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ad248a378501ac3bd80d2511cb18dfed9}\label{_zumo32_u4_i_m_u_8h_ad248a378501ac3bd80d2511cb18dfed9}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_ADDR@{LSM6DS33\_ADDR}}
+\index{LSM6DS33\_ADDR@{LSM6DS33\_ADDR}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_ADDR}{LSM6DS33\_ADDR}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+ADDR~0b1101011}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00014}{14}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a80c2406e7c37c65981e13496131a4085}\label{_zumo32_u4_i_m_u_8h_a80c2406e7c37c65981e13496131a4085}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_CTRL1\_XL@{LSM6DS33\_REG\_CTRL1\_XL}}
+\index{LSM6DS33\_REG\_CTRL1\_XL@{LSM6DS33\_REG\_CTRL1\_XL}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_CTRL1\_XL}{LSM6DS33\_REG\_CTRL1\_XL}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+CTRL1\+\_\+\+XL~0x10}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00041}{41}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_affcd15473a02673b95d10a874f7e4244}\label{_zumo32_u4_i_m_u_8h_affcd15473a02673b95d10a874f7e4244}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_CTRL2\_G@{LSM6DS33\_REG\_CTRL2\_G}}
+\index{LSM6DS33\_REG\_CTRL2\_G@{LSM6DS33\_REG\_CTRL2\_G}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_CTRL2\_G}{LSM6DS33\_REG\_CTRL2\_G}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+CTRL2\+\_\+G~0x11}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00042}{42}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2bc5a07f13b9066f55638733c5b099d4}\label{_zumo32_u4_i_m_u_8h_a2bc5a07f13b9066f55638733c5b099d4}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_CTRL3\_C@{LSM6DS33\_REG\_CTRL3\_C}}
+\index{LSM6DS33\_REG\_CTRL3\_C@{LSM6DS33\_REG\_CTRL3\_C}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_CTRL3\_C}{LSM6DS33\_REG\_CTRL3\_C}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+CTRL3\+\_\+C~0x12}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00043}{43}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a80ceef9e5459ec230c75e3d05e353217}\label{_zumo32_u4_i_m_u_8h_a80ceef9e5459ec230c75e3d05e353217}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_OUTX\_L\_G@{LSM6DS33\_REG\_OUTX\_L\_G}}
+\index{LSM6DS33\_REG\_OUTX\_L\_G@{LSM6DS33\_REG\_OUTX\_L\_G}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_OUTX\_L\_G}{LSM6DS33\_REG\_OUTX\_L\_G}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+OUTX\+\_\+\+L\+\_\+G~0x22}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00045}{45}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aa9e6f6ee7ea5c353d68791c952d25de9}\label{_zumo32_u4_i_m_u_8h_aa9e6f6ee7ea5c353d68791c952d25de9}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_OUTX\_L\_XL@{LSM6DS33\_REG\_OUTX\_L\_XL}}
+\index{LSM6DS33\_REG\_OUTX\_L\_XL@{LSM6DS33\_REG\_OUTX\_L\_XL}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_OUTX\_L\_XL}{LSM6DS33\_REG\_OUTX\_L\_XL}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+OUTX\+\_\+\+L\+\_\+\+XL~0x28}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00046}{46}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_aea82d5941dcf759b484a96f023363d51}\label{_zumo32_u4_i_m_u_8h_aea82d5941dcf759b484a96f023363d51}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_STATUS\_REG@{LSM6DS33\_REG\_STATUS\_REG}}
+\index{LSM6DS33\_REG\_STATUS\_REG@{LSM6DS33\_REG\_STATUS\_REG}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_STATUS\_REG}{LSM6DS33\_REG\_STATUS\_REG}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+STATUS\+\_\+\+REG~0x1E}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00044}{44}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_ab5b330125e7d344b2670fa83c9ed41c9}\label{_zumo32_u4_i_m_u_8h_ab5b330125e7d344b2670fa83c9ed41c9}} 
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_REG\_WHO\_AM\_I@{LSM6DS33\_REG\_WHO\_AM\_I}}
+\index{LSM6DS33\_REG\_WHO\_AM\_I@{LSM6DS33\_REG\_WHO\_AM\_I}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{LSM6DS33\_REG\_WHO\_AM\_I}{LSM6DS33\_REG\_WHO\_AM\_I}}
+{\footnotesize\ttfamily \#define LSM6\+DS33\+\_\+\+REG\+\_\+\+WHO\+\_\+\+AM\+\_\+I~0x0F}
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00040}{40}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}} 
-\index{Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}!Zumo32\+U4\+I\+M\+U\+Type@{Zumo32\+U4\+I\+M\+U\+Type}}
-\index{Zumo32\+U4\+I\+M\+U\+Type@{Zumo32\+U4\+I\+M\+U\+Type}!Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}}
-\subsubsection{\texorpdfstring{Zumo32\+U4\+I\+M\+U\+Type}{Zumo32U4IMUType}}
-{\footnotesize\ttfamily enum \hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+I\+M\+U\+Type} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!Zumo32U4IMUType@{Zumo32U4IMUType}}
+\index{Zumo32U4IMUType@{Zumo32U4IMUType}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}
+\doxysubsubsection{\texorpdfstring{Zumo32U4IMUType}{Zumo32U4IMUType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+IMUType}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
 
 
 
 The type of the inertial sensors. 
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}}\index{Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}!Unknown@{Unknown}}}\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!Unknown@{Unknown}}}\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}} 
 Unknown&Unknown or unrecognized \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+S\+M303\+D\+\_\+\+L3\+G\+D20H@{L\+S\+M303\+D\+\_\+\+L3\+G\+D20H}!Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}}\index{Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}!L\+S\+M303\+D\+\_\+\+L3\+G\+D20H@{L\+S\+M303\+D\+\_\+\+L3\+G\+D20H}}}\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}} 
-L\+S\+M303\+D\+\_\+\+L3\+G\+D20H&L\+S\+M303D accelerometer + magnetometer, L3\+G\+D20H gyro \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LSM303D\_L3GD20H@{LSM303D\_L3GD20H}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM303D\_L3GD20H@{LSM303D\_L3GD20H}}}\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}} 
+LSM303\+D\+\_\+\+L3\+GD20H&LSM303D accelerometer + magnetometer, L3\+GD20H gyro \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+S\+M6\+D\+S33\+\_\+\+L\+I\+S3\+M\+DL@{L\+S\+M6\+D\+S33\+\_\+\+L\+I\+S3\+M\+DL}!Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}}\index{Zumo32\+U4\+I\+M\+U.\+h@{Zumo32\+U4\+I\+M\+U.\+h}!L\+S\+M6\+D\+S33\+\_\+\+L\+I\+S3\+M\+DL@{L\+S\+M6\+D\+S33\+\_\+\+L\+I\+S3\+M\+DL}}}\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}} 
-L\+S\+M6\+D\+S33\+\_\+\+L\+I\+S3\+M\+DL&L\+S\+M6\+D\+S33 gyro + accelerometer, L\+I\+S3\+M\+DL magnetometer \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LSM6DS33\_LIS3MDL@{LSM6DS33\_LIS3MDL}!Zumo32U4IMU.h@{Zumo32U4IMU.h}}\index{Zumo32U4IMU.h@{Zumo32U4IMU.h}!LSM6DS33\_LIS3MDL@{LSM6DS33\_LIS3MDL}}}\mbox{\Hypertarget{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}\label{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}} 
+LSM6\+DS33\+\_\+\+LIS3\+MDL&LSM6\+DS33 gyro + accelerometer, LIS3\+MDL magnetometer \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line 58 of file Zumo32\+U4\+I\+M\+U.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00058}{58}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
 

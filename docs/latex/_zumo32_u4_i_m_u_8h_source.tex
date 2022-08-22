@@ -1,0 +1,106 @@
+\hypertarget{_zumo32_u4_i_m_u_8h_source}{}\doxysection{Zumo32\+U4\+IMU.\+h}
+\mbox{\hyperlink{_zumo32_u4_i_m_u_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00005}00005 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00012}00012 \textcolor{preprocessor}{\#define LSM303D\_ADDR  0b0011101}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00013}00013 \textcolor{preprocessor}{\#define L3GD20H\_ADDR  0b1101011}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00014}00014 \textcolor{preprocessor}{\#define LSM6DS33\_ADDR 0b1101011}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00015}00015 \textcolor{preprocessor}{\#define LIS3MDL\_ADDR  0b0011110}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00023}00023 \textcolor{preprocessor}{\#define LSM303D\_REG\_STATUS\_M  0x07}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00024}00024 \textcolor{preprocessor}{\#define LSM303D\_REG\_OUT\_X\_L\_M 0x08}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00025}00025 \textcolor{preprocessor}{\#define LSM303D\_REG\_WHO\_AM\_I  0x0F}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00026}00026 \textcolor{preprocessor}{\#define LSM303D\_REG\_CTRL1     0x20}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00027}00027 \textcolor{preprocessor}{\#define LSM303D\_REG\_CTRL2     0x21}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00028}00028 \textcolor{preprocessor}{\#define LSM303D\_REG\_CTRL5     0x24}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00029}00029 \textcolor{preprocessor}{\#define LSM303D\_REG\_CTRL6     0x25}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00030}00030 \textcolor{preprocessor}{\#define LSM303D\_REG\_CTRL7     0x26}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00031}00031 \textcolor{preprocessor}{\#define LSM303D\_REG\_STATUS\_A  0x27}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00032}00032 \textcolor{preprocessor}{\#define LSM303D\_REG\_OUT\_X\_L\_A 0x28}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00034}00034 \textcolor{preprocessor}{\#define L3GD20H\_REG\_WHO\_AM\_I 0x0F}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00035}00035 \textcolor{preprocessor}{\#define L3GD20H\_REG\_CTRL1    0x20}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00036}00036 \textcolor{preprocessor}{\#define L3GD20H\_REG\_CTRL4    0x23}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00037}00037 \textcolor{preprocessor}{\#define L3GD20H\_REG\_STATUS   0x27}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00038}00038 \textcolor{preprocessor}{\#define L3GD20H\_REG\_OUT\_X\_L  0x28}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00040}00040 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_WHO\_AM\_I   0x0F}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00041}00041 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_CTRL1\_XL   0x10}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00042}00042 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_CTRL2\_G    0x11}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00043}00043 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_CTRL3\_C    0x12}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00044}00044 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_STATUS\_REG 0x1E}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00045}00045 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_OUTX\_L\_G   0x22}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00046}00046 \textcolor{preprocessor}{\#define LSM6DS33\_REG\_OUTX\_L\_XL  0x28}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00048}00048 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_WHO\_AM\_I   0x0F}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00049}00049 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_CTRL\_REG1  0x20}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00050}00050 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_CTRL\_REG2  0x21}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00051}00051 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_CTRL\_REG3  0x22}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00052}00052 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_CTRL\_REG4  0x23}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00053}00053 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_STATUS\_REG 0x27}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00054}00054 \textcolor{preprocessor}{\#define LIS3MDL\_REG\_OUT\_X\_L    0x28}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00058}\mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{00058}} \textcolor{keyword}{enum class} \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32U4IMUType}} : uint8\_t \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00060}00060   \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}},}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00062}00062   \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452ac3b3251271260085ff56e8dab1ea70f7}{LSM303D\_L3GD20H}},}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00064}00064   \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452acc356737653225a1fc9deac6cea1b4e5}{LSM6DS33\_LIS3MDL}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00065}00065 \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00075}\mbox{\hyperlink{class_zumo32_u4_i_m_u}{00075}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_i_m_u}{Zumo32U4IMU}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00077}00077 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00081}\mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{00081}}   \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{struct }\mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00082}00082   \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00083}00083     T x, y, z;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00084}00084   \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00087}\mbox{\hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{00087}}   \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector<int16\_t>}} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{a}} = \{0, 0, 0\};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00090}\mbox{\hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{00090}}   \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector<int16\_t>}} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{g}} = \{0, 0, 0\};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00093}\mbox{\hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{00093}}   \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector<int16\_t>}} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{m}} = \{0, 0, 0\};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00097}\mbox{\hyperlink{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}{00097}}   uint8\_t \mbox{\hyperlink{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}{getLastError}}() \{ \textcolor{keywordflow}{return} lastError; \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00103}00103   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}{init}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00110}\mbox{\hyperlink{class_zumo32_u4_i_m_u_a936427abfbed839c5669746d274427bd}{00110}}   \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32U4IMUType}} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a936427abfbed839c5669746d274427bd}{getType}}() \{ \textcolor{keywordflow}{return} type; \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00114}00114   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}{enableDefault}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00117}00117   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}{configureForTurnSensing}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00120}00120   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}{configureForBalancing}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00124}00124   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}{configureForFaceUphill}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00131}00131   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_ab5cb0c1c2342386c13afe36f7064d1e8}{writeReg}}(uint8\_t addr, uint8\_t reg, uint8\_t value);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00139}00139   uint8\_t \mbox{\hyperlink{class_zumo32_u4_i_m_u_a8bc90dccbd0259a97a5f0bd1e8f0316a}{readReg}}(uint8\_t addr, uint8\_t reg);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00143}00143   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}{readAcc}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00147}00147   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}{readGyro}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00151}00151   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}{readMag}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00156}00156   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}{read}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00162}00162   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a75735024206bd09d0905f28455f0a368}{accDataReady}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00168}00168   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a82a4b99d45afb0b5008e32213fa2e0cc}{gyroDataReady}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00174}00174   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_i_m_u_ad9a7bde2fa435b4ceb6929e73acef4b6}{magDataReady}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00176}00176 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00178}00178   uint8\_t lastError = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00179}00179   \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32U4IMUType}} type = \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}{Zumo32U4IMUType::Unknown}};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00181}00181   int16\_t testReg(uint8\_t addr, uint8\_t reg);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00182}00182   \textcolor{keywordtype}{void} readAxes16Bit(uint8\_t addr, uint8\_t firstReg, vector<int16\_t> \& v);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_i_m_u_8h_source_l00183}00183 \};}
+
+\end{DoxyCode}

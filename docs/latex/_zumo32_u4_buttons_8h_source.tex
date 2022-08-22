@@ -1,0 +1,56 @@
+\hypertarget{_zumo32_u4_buttons_8h_source}{}\doxysection{Zumo32\+U4\+Buttons.\+h}
+\mbox{\hyperlink{_zumo32_u4_buttons_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00005}00005 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_pushbutton_8h}{Pushbutton.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_fast_g_p_i_o_8h}{FastGPIO.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_u_s_b_pause_8h}{USBPause.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <util/delay.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00013}\mbox{\hyperlink{_zumo32_u4_buttons_8h_ae63358d269b799fe65a4c91b1dfc9868}{00013}} \textcolor{preprocessor}{\#define ZUMO\_32U4\_BUTTON\_A 14}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00018}\mbox{\hyperlink{_zumo32_u4_buttons_8h_a3a6f43d0bad38ca495e67b3016d14921}{00018}} \textcolor{preprocessor}{\#define ZUMO\_32U4\_BUTTON\_B IO\_D5}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00021}\mbox{\hyperlink{_zumo32_u4_buttons_8h_a599cde72147f5996fdf2bf03e000a1c5}{00021}} \textcolor{preprocessor}{\#define ZUMO\_32U4\_BUTTON\_C 17}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00024}\mbox{\hyperlink{class_zumo32_u4_button_a}{00024}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_button_a}{Zumo32U4ButtonA}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_pushbutton}{Pushbutton}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00026}00026 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00027}00027     \mbox{\hyperlink{class_zumo32_u4_button_a}{Zumo32U4ButtonA}}() : \mbox{\hyperlink{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}{Pushbutton}}(\mbox{\hyperlink{_zumo32_u4_buttons_8h_ae63358d269b799fe65a4c91b1dfc9868}{ZUMO\_32U4\_BUTTON\_A}})}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00030}00030 \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00042}\mbox{\hyperlink{class_zumo32_u4_button_b}{00042}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_button_b}{Zumo32U4ButtonB}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_pushbutton_base}{PushbuttonBase}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00044}00044 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00046}\mbox{\hyperlink{class_zumo32_u4_button_b_a013a2c0029356aece18b93963373a736}{00046}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_button_b_a013a2c0029356aece18b93963373a736}{isPressed}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00047}00047     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00048}00048         \mbox{\hyperlink{class_u_s_b_pause}{USBPause}} usbPause;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00049}00049         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<ZUMO\_32U4\_BUTTON\_B>}} loan;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00050}00050         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a32eadc02b421b9b7fc92807bb3304f6e}{FastGPIO::Pin<ZUMO\_32U4\_BUTTON\_B>::setInputPulledUp}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00051}00051         \_delay\_us(3);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00052}00052         \textcolor{keywordflow}{return} !\mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_acbc38591335717f3feeed14f53b7b79c}{FastGPIO::Pin<ZUMO\_32U4\_BUTTON\_B>::isInputHigh}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00054}00054 \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00066}\mbox{\hyperlink{class_zumo32_u4_button_c}{00066}} \textcolor{keyword}{class }\mbox{\hyperlink{class_zumo32_u4_button_c}{Zumo32U4ButtonC}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_pushbutton_base}{PushbuttonBase}}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00067}00067 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00068}00068 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00070}\mbox{\hyperlink{class_zumo32_u4_button_c_aa75e220cde340487a3fa8f1f99d645f8}{00070}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_button_c_aa75e220cde340487a3fa8f1f99d645f8}{isPressed}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00071}00071     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00072}00072         \mbox{\hyperlink{class_u_s_b_pause}{USBPause}} usbPause;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00073}00073         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_loan}{FastGPIO::PinLoan<ZUMO\_32U4\_BUTTON\_C>}} loan;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00074}00074         \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a32eadc02b421b9b7fc92807bb3304f6e}{FastGPIO::Pin<ZUMO\_32U4\_BUTTON\_C>::setInputPulledUp}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00075}00075         \_delay\_us(3);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00076}00076         \textcolor{keywordflow}{return} !\mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_acbc38591335717f3feeed14f53b7b79c}{FastGPIO::Pin<ZUMO\_32U4\_BUTTON\_C>::isInputHigh}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00078}00078 \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_buttons_8h_source_l00079}00079 }
+
+\end{DoxyCode}

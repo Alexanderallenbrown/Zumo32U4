@@ -1,93 +1,74 @@
-Version\+: 1.\+2.\+0~\newline
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ Version\+: 1.\+2.\+0~\newline
  Release date\+: 2020-\/09-\/11~\newline
- \href{https://travis-ci.org/pololu/zumo-32u4-arduino-library}{\tt }~\newline
- \href{http://www.pololu.com/}{\tt www.\+pololu.\+com}
+ \href{https://travis-ci.org/pololu/zumo-32u4-arduino-library}{\texttt{ }}~\newline
+ \href{http://www.pololu.com/}{\texttt{ www.\+pololu.\+com}}\hypertarget{index_autotoc_md5}{}\doxysection{Summary}\label{index_autotoc_md5}
+This is a C++ library for the Arduino IDE that helps access the on-\/board hardware of the Zumo 32U4 robot.
 
-This is a C++ library for the Arduino I\+DE that helps access the on-\/board hardware of the Zumo 32\+U4 robot.
+The user\textquotesingle{}s guide for the Zumo 32U4 robot is here\+:
 
-The Zumo 32\+U4 robot consists of the Zumo chassis, the Zumo 32\+U4 Main Board, and the Zumo 32\+U4 Front Sensor Array. It has an integrated A\+VR A\+Tmega32\+U4 microcontroller, motor drivers, encoders, proximity sensors, line sensors, inertial sensors, buzzer, four buttons, L\+CD connector. The user\textquotesingle{}s guide for the Zumo 32\+U4 robot is here\+:
-
-\href{https://www.pololu.com/docs/0J63}{\tt https\+://www.\+pololu.\+com/docs/0\+J63}
-
-Please note that this library does N\+OT work with the Zumo Shield for Arduino, which is a very different product. The Zumo Shield does not have an integrated microcontroller, so it must be connected to an Arduino-\/sized board to run. If you have the Zumo Shield, then you should not use this library and instead refer to the Zumo Shield documentation \href{https://www.pololu.com/docs/0J57}{\tt here}.
-
-If you are using version 1.\+6.\+2 or later of the \href{http://www.arduino.cc/en/Main/Software}{\tt Arduino software (I\+DE)}, you can use the Library Manager to install this library\+:
-
+\href{https://www.pololu.com/docs/0J63}{\texttt{ https\+://www.\+pololu.\+com/docs/0\+J63}}\hypertarget{index_autotoc_md6}{}\doxysection{Installing the library}\label{index_autotoc_md6}
 
 \begin{DoxyEnumerate}
-\item In the Arduino I\+DE, open the \char`\"{}\+Sketch\char`\"{} menu, select \char`\"{}\+Include Library\char`\"{}, then \char`\"{}\+Manage Libraries...\char`\"{}.
-\item Search for \char`\"{}\+Zumo32\+U4\char`\"{}.
-\item Click the Zumo32\+U4 entry in the list.
-\item Click \char`\"{}\+Install\char`\"{}.
-\end{DoxyEnumerate}
-
-If this does not work, you can manually install the library\+:
-
-
-\begin{DoxyEnumerate}
-\item Download the \href{https://github.com/pololu/zumo-32u4-arduino-library}{\tt latest release archive from Git\+Hub} and decompress it.
+\item Download the \href{https://github.com/Alexanderallenbrown/Zumo32U4/archive/refs/heads/main.zip}{\texttt{ library from here}} and decompress it.
 \item Rename the folder \char`\"{}zumo-\/32u4-\/arduino-\/library-\/master\char`\"{} to \char`\"{}\+Zumo32\+U4\char`\"{}.
-\item Move the \char`\"{}\+Zumo32\+U4\char`\"{} folder into the \char`\"{}libraries\char`\"{} directory inside your Arduino sketchbook directory. You can view your sketchbook location by opening the \char`\"{}\+File\char`\"{} menu and selecting \char`\"{}\+Preferences\char`\"{} in the Arduino I\+DE. If there is not already a \char`\"{}libraries\char`\"{} folder in that location, you should make the folder yourself.
-\item After installing the library, restart the Arduino I\+DE.
-\end{DoxyEnumerate}
-
-Several example sketches are available that show how to use the library. You can access them from the Arduino I\+DE by opening the \char`\"{}\+File\char`\"{} menu, selecting \char`\"{}\+Examples\char`\"{}, and then selecting \char`\"{}\+Zumo32\+U4\char`\"{}. If you cannot find these examples, the library was probably installed incorrectly and you should retry the installation instructions above.
-
+\item Move the \char`\"{}\+Zumo32\+U4\char`\"{} folder into the \char`\"{}libraries\char`\"{} directory inside your Arduino sketchbook directory. You can view your sketchbook location by opening the \char`\"{}\+File\char`\"{} menu and selecting \char`\"{}\+Preferences\char`\"{} in the Arduino IDE. If there is not already a \char`\"{}libraries\char`\"{} folder in that location, you should make the folder yourself.
+\item After installing the library, restart the Arduino IDE.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md7}{}\doxysection{Examples}\label{index_autotoc_md7}
+Several example sketches are available that show how to use the library. You can access them from the Arduino IDE by opening the \char`\"{}\+File\char`\"{} menu, selecting \char`\"{}\+Examples\char`\"{}, and then selecting \char`\"{}\+Zumo32\+U4\char`\"{}. If you cannot find these examples, the library was probably installed incorrectly and you should retry the installation instructions above.\hypertarget{index_autotoc_md8}{}\doxysection{Classes and functions}\label{index_autotoc_md8}
 The main classes and functions provided by the library are listed below\+:
 
 
 \begin{DoxyItemize}
-\item \hyperlink{class_zumo32_u4_button_a}{Zumo32\+U4\+ButtonA}
-\item \hyperlink{class_zumo32_u4_button_b}{Zumo32\+U4\+ButtonB}
-\item \hyperlink{class_zumo32_u4_button_c}{Zumo32\+U4\+ButtonC}
-\item \hyperlink{class_zumo32_u4_buzzer}{Zumo32\+U4\+Buzzer}
-\item \hyperlink{class_zumo32_u4_encoders}{Zumo32\+U4\+Encoders}
-\item \hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+I\+MU}
-\item \hyperlink{class_zumo32_u4_i_r_pulses}{Zumo32\+U4\+I\+R\+Pulses}
-\item \hyperlink{class_zumo32_u4_l_c_d}{Zumo32\+U4\+L\+CD}
-\item \hyperlink{class_zumo32_u4_line_sensors}{Zumo32\+U4\+Line\+Sensors}
-\item \hyperlink{class_zumo32_u4_motors}{Zumo32\+U4\+Motors}
-\item \hyperlink{class_zumo32_u4_proximity_sensors}{Zumo32\+U4\+Proximity\+Sensors}
-\item \hyperlink{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}{led\+Red()}
-\item \hyperlink{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}{led\+Green()}
-\item \hyperlink{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}{led\+Yellow()}
-\item \hyperlink{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}{usb\+Power\+Present()}
-\item \hyperlink{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}{read\+Battery\+Millivolts()}
-\end{DoxyItemize}
-
+\item \mbox{\hyperlink{class_zumo32_u4_button_a}{Zumo32\+U4\+ButtonA}}
+\item \mbox{\hyperlink{class_zumo32_u4_button_b}{Zumo32\+U4\+ButtonB}}
+\item \mbox{\hyperlink{class_zumo32_u4_button_c}{Zumo32\+U4\+ButtonC}}
+\item \mbox{\hyperlink{class_zumo32_u4_buzzer}{Zumo32\+U4\+Buzzer}}
+\item \mbox{\hyperlink{class_zumo32_u4_encoders}{Zumo32\+U4\+Encoders}}
+\item \mbox{\hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+IMU}}
+\item \mbox{\hyperlink{class_zumo32_u4_i_r_pulses}{Zumo32\+U4\+IRPulses}}
+\item \mbox{\hyperlink{class_zumo32_u4_l_c_d}{Zumo32\+U4\+LCD}}
+\item \mbox{\hyperlink{class_zumo32_u4_line_sensors}{Zumo32\+U4\+Line\+Sensors}}
+\item \mbox{\hyperlink{class_zumo32_u4_motors}{Zumo32\+U4\+Motors}}
+\item \mbox{\hyperlink{class_zumo32_u4_proximity_sensors}{Zumo32\+U4\+Proximity\+Sensors}}
+\item \mbox{\hyperlink{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}{led\+Red()}}
+\item \mbox{\hyperlink{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}{led\+Green()}}
+\item \mbox{\hyperlink{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}{led\+Yellow()}}
+\item \mbox{\hyperlink{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}{usb\+Power\+Present()}}
+\item \mbox{\hyperlink{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}{read\+Battery\+Millivolts()}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysection{Component libraries}\label{index_autotoc_md9}
 This library also includes copies of several other Arduino libraries inside it which are used to help implement the classes and functions above.
 
 
 \begin{DoxyItemize}
-\item \href{https://github.com/pololu/fastgpio-arduino}{\tt Fast\+G\+P\+IO}
-\item \href{https://github.com/pololu/pololu-buzzer-arduino}{\tt Pololu\+Buzzer}
-\item \href{https://github.com/pololu/pololu-hd44780-arduino}{\tt Pololu\+H\+D44780}
-\item \href{https://github.com/pololu/pushbutton-arduino}{\tt Pushbutton}
-\item \href{https://github.com/pololu/qtr-sensors-arduino}{\tt Q\+T\+R\+Sensors}
-\item \href{https://github.com/pololu/usb-pause-arduino}{\tt U\+S\+B\+Pause}
+\item \href{https://github.com/pololu/fastgpio-arduino}{\texttt{ Fast\+GPIO}}
+\item \href{https://github.com/pololu/pololu-buzzer-arduino}{\texttt{ Pololu\+Buzzer}}
+\item \href{https://github.com/pololu/pololu-hd44780-arduino}{\texttt{ Pololu\+HD44780}}
+\item \href{https://github.com/pololu/pushbutton-arduino}{\texttt{ Pushbutton}}
+\item \href{https://github.com/pololu/qtr-sensors-arduino}{\texttt{ QTRSensors}}
+\item \href{https://github.com/pololu/usb-pause-arduino}{\texttt{ USBPause}}
 \end{DoxyItemize}
 
 You can use these libraries in your sketch automatically without any extra installation steps and without needing to add any extra {\ttfamily \#include} lines to your sketch.
 
-You should avoid adding extra {\ttfamily \#include} lines such as {\ttfamily \#include $<$\hyperlink{_pushbutton_8h}{Pushbutton.\+h}$>$} because then the Arduino I\+DE might try to use the standalone \hyperlink{class_pushbutton}{Pushbutton} library (if you previously installed it), and it would conflict with the copy of the \hyperlink{class_pushbutton}{Pushbutton} code included in this library. The only {\ttfamily \#include} lines needed to access all features of this library are\+:
+You should avoid adding extra {\ttfamily \#include} lines such as {\ttfamily \#include \texorpdfstring{$<$}{<}\mbox{\hyperlink{_pushbutton_8h}{Pushbutton.\+h}}\texorpdfstring{$>$}{>}} because then the Arduino IDE might try to use the standalone \mbox{\hyperlink{class_pushbutton}{Pushbutton}} library (if you previously installed it), and it would conflict with the copy of the \mbox{\hyperlink{class_pushbutton}{Pushbutton}} code included in this library. The only {\ttfamily \#include} lines needed to access all features of this library are\+:
 
 
-\begin{DoxyCode}
-\textcolor{preprocessor}{#include <Wire.h>}
-\textcolor{preprocessor}{#include <\hyperlink{_zumo32_u4_8h}{Zumo32U4.h}>}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <Wire.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_8h}{Zumo32U4.h}}>}}
+
 \end{DoxyCode}
-
-
-For complete documentation, see \href{https://pololu.github.io/zumo-32u4-arduino-library}{\tt https\+://pololu.\+github.\+io/zumo-\/32u4-\/arduino-\/library}. If you are already on that page, then click on the links in the \char`\"{}\+Classes and functions\char`\"{} section above.
-
+\hypertarget{index_autotoc_md10}{}\doxysection{Version history}\label{index_autotoc_md10}
 
 \begin{DoxyItemize}
-\item 1.\+2.\+0 (2020-\/09-\/11)\+: Added a \hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+I\+MU} class that abstracts some details of the inertial sensors and supports different I\+MU types. The examples have been updated to use this class.
+\item 1.\+2.\+0 (2020-\/09-\/11)\+: Added a \mbox{\hyperlink{class_zumo32_u4_i_m_u}{Zumo32\+U4\+IMU}} class that abstracts some details of the inertial sensors and supports different IMU types. The examples have been updated to use this class.
 \item 1.\+1.\+4 (2017-\/07-\/17)\+: Fixed a bug that caused errors from the right encoder to be reported as errors from the left encoder.
-\item 1.\+1.\+3 (2016-\/10-\/12)\+: Fixed a bug that caused the buzzer\textquotesingle{}s {\ttfamily is\+Playing} method to malfunction sometimes when link time optimization is enabled. Also incorporated some minor fixes to the \hyperlink{class_q_t_r_sensors}{Q\+T\+R\+Sensors} and L\+S\+M303 libraries.
+\item 1.\+1.\+3 (2016-\/10-\/12)\+: Fixed a bug that caused the buzzer\textquotesingle{}s {\ttfamily is\+Playing} method to malfunction sometimes when link time optimization is enabled. Also incorporated some minor fixes to the \mbox{\hyperlink{class_q_t_r_sensors}{QTRSensors}} and LSM303 libraries.
 \item 1.\+1.\+2 (2016-\/03-\/14)\+: Updated the Demo example so it can compile in Arduino 1.\+6.\+7.
 \item 1.\+1.\+1 (2015-\/09-\/01)\+: Moved the library out of the a-\/star repository into its own repository. Added Demo example.
-\item 1.\+1.\+0 (2015-\/05-\/06)\+: Updated Fast\+G\+P\+IO to version 1.\+0.\+2. Fixed a bug in \hyperlink{class_zumo32_u4_proximity_sensors}{Zumo32\+U4\+Proximity\+Sensors} where the wrong array length was used. Added five demos\+: Rotation\+Resist, Face\+Uphill, Remote\+Control, Balancing, and Sumo\+Proximity\+Sensors.
+\item 1.\+1.\+0 (2015-\/05-\/06)\+: Updated Fast\+GPIO to version 1.\+0.\+2. Fixed a bug in \mbox{\hyperlink{class_zumo32_u4_proximity_sensors}{Zumo32\+U4\+Proximity\+Sensors}} where the wrong array length was used. Added five demos\+: Rotation\+Resist, Face\+Uphill, Remote\+Control, Balancing, and Sumo\+Proximity\+Sensors.
 \item 1.\+0.\+1 (2015-\/03-\/11)\+: Improve the Buttons example.
 \item 1.\+0.\+0 (2015-\/03-\/05)\+: Original release. 
 \end{DoxyItemize}

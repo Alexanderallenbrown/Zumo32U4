@@ -1,0 +1,104 @@
+\hypertarget{_zumo32_u4_motors_8cpp_source}{}\doxysection{Zumo32\+U4\+Motors.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_motors_8h}{Zumo32U4Motors.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_fast_g_p_i_o_8h}{FastGPIO.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <avr/io.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#define PWM\_L 10}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#define PWM\_R 9}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#define DIR\_L 16}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#define DIR\_R 15}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00012}00012 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} flipLeft = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00013}00013 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} flipRight = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00015}00015 \textcolor{comment}{// initialize timer1 to generate the proper PWM outputs to the motor drivers}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00016}00016 \textcolor{keywordtype}{void} Zumo32U4Motors::init2()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00018}00018     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a557f119d37b84f3f521d7cbd4cc27b21}{FastGPIO::Pin<PWM\_L>::setOutputLow}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00019}00019     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a557f119d37b84f3f521d7cbd4cc27b21}{FastGPIO::Pin<PWM\_R>::setOutputLow}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00020}00020     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a557f119d37b84f3f521d7cbd4cc27b21}{FastGPIO::Pin<DIR\_L>::setOutputLow}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00021}00021     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a557f119d37b84f3f521d7cbd4cc27b21}{FastGPIO::Pin<DIR\_R>::setOutputLow}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00023}00023     \textcolor{comment}{// Timer 1 configuration}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00024}00024     \textcolor{comment}{// prescaler: clockI/O / 1}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00025}00025     \textcolor{comment}{// outputs enabled}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00026}00026     \textcolor{comment}{// phase-\/correct PWM}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00027}00027     \textcolor{comment}{// top of 400}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00028}00028     \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00029}00029     \textcolor{comment}{// PWM frequency calculation}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00030}00030     \textcolor{comment}{// 16MHz / 1 (prescaler) / 2 (phase-\/correct) / 400 (top) = 20kHz}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00031}00031     TCCR1A = 0b10100000;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00032}00032     TCCR1B = 0b00010001;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00033}00033     ICR1 = 400;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00034}00034     OCR1A = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00035}00035     OCR1B = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00038}00038 \textcolor{comment}{// enable/disable flipping of left motor}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00039}\mbox{\hyperlink{class_zumo32_u4_motors_a18cbe58293cdc075528414861d614931}{00039}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_motors_a18cbe58293cdc075528414861d614931}{Zumo32U4Motors::flipLeftMotor}}(\textcolor{keywordtype}{bool} flip)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00041}00041     flipLeft = flip;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00042}00042 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00044}00044 \textcolor{comment}{// enable/disable flipping of right motor}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00045}\mbox{\hyperlink{class_zumo32_u4_motors_a4e37f55575f2e468d50de17c369ad54d}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_motors_a4e37f55575f2e468d50de17c369ad54d}{Zumo32U4Motors::flipRightMotor}}(\textcolor{keywordtype}{bool} flip)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00046}00046 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00047}00047     flipRight = flip;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00048}00048 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00050}00050 \textcolor{comment}{// set speed for left motor; speed is a number between -\/400 and 400}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00051}\mbox{\hyperlink{class_zumo32_u4_motors_a59cb85c91d0425ae1a8116d4e6dab969}{00051}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_motors_a59cb85c91d0425ae1a8116d4e6dab969}{Zumo32U4Motors::setLeftSpeed}}(int16\_t speed)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00053}00053     init();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00055}00055     \textcolor{keywordtype}{bool} reverse = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00057}00057     \textcolor{keywordflow}{if} (speed < 0)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00058}00058     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00059}00059         speed = -\/speed; \textcolor{comment}{// Make speed a positive quantity.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00060}00060         reverse = 1;    \textcolor{comment}{// Preserve the direction.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00061}00061     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00062}00062     \textcolor{keywordflow}{if} (speed > 400)    \textcolor{comment}{// Max PWM duty cycle.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00063}00063     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00064}00064         speed = 400;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00067}00067     OCR1B = speed;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00069}00069     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<DIR\_L>::setOutput}}(reverse \string^ flipLeft);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00070}00070 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00072}00072 \textcolor{comment}{// set speed for right motor; speed is a number between -\/400 and 400}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00073}\mbox{\hyperlink{class_zumo32_u4_motors_a453fe0d34efe64fc44b7021878730534}{00073}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_motors_a453fe0d34efe64fc44b7021878730534}{Zumo32U4Motors::setRightSpeed}}(int16\_t speed)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00074}00074 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00075}00075     init();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00077}00077     \textcolor{keywordtype}{bool} reverse = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00079}00079     \textcolor{keywordflow}{if} (speed < 0)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00080}00080     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00081}00081         speed = -\/speed;  \textcolor{comment}{// Make speed a positive quantity.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00082}00082         reverse = 1;     \textcolor{comment}{// Preserve the direction.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00083}00083     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00084}00084     \textcolor{keywordflow}{if} (speed > 400)     \textcolor{comment}{// Max PWM duty cycle.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00085}00085     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00086}00086         speed = 400;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00089}00089     OCR1A = speed;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00091}00091     \mbox{\hyperlink{class_fast_g_p_i_o_1_1_pin_a87fb88b3ea6343db0e4a06f579a10249}{FastGPIO::Pin<DIR\_R>::setOutput}}(reverse \string^ flipRight);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00094}00094 \textcolor{comment}{// set speed for both motors}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00095}\mbox{\hyperlink{class_zumo32_u4_motors_afdc238f045d9c919afd01f143f2fdbbb}{00095}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_motors_afdc238f045d9c919afd01f143f2fdbbb}{Zumo32U4Motors::setSpeeds}}(int16\_t leftSpeed, int16\_t rightSpeed)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00096}00096 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00097}00097   \mbox{\hyperlink{class_zumo32_u4_motors_a59cb85c91d0425ae1a8116d4e6dab969}{setLeftSpeed}}(leftSpeed);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00098}00098   \mbox{\hyperlink{class_zumo32_u4_motors_a453fe0d34efe64fc44b7021878730534}{setRightSpeed}}(rightSpeed);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_motors_8cpp_source_l00099}00099 \}}
+
+\end{DoxyCode}

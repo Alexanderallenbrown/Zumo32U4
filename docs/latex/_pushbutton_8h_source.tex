@@ -1,0 +1,86 @@
+\hypertarget{_pushbutton_8h_source}{}\doxysection{Pushbutton.\+h}
+\mbox{\hyperlink{_pushbutton_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00012}00012 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00017}\mbox{\hyperlink{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}{00017}} \textcolor{preprocessor}{\#define PULL\_UP\_DISABLED    0}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00020}\mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{00020}} \textcolor{preprocessor}{\#define PULL\_UP\_ENABLED     1}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00024}\mbox{\hyperlink{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}{00024}} \textcolor{preprocessor}{\#define DEFAULT\_STATE\_LOW   0}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00028}\mbox{\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{00028}} \textcolor{preprocessor}{\#define DEFAULT\_STATE\_HIGH  1}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00035}\mbox{\hyperlink{_pushbutton_8h_a3b8801b3b90dfcc378128209f8029042}{00035}} \textcolor{preprocessor}{\#define ZUMO\_BUTTON 12}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00037}00037 \textcolor{comment}{// \(\backslash\)cond}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00043}00043 \textcolor{comment}{}\textcolor{keyword}{class }PushbuttonStateMachine}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00044}00044 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00045}00045 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00047}00047   PushbuttonStateMachine();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00051}00051   \textcolor{keywordtype}{bool} getSingleDebouncedRisingEdge(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00053}00053 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00055}00055   uint8\_t state;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00056}00056   uint16\_t prevTimeMillis;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00057}00057 \};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00058}00058 \textcolor{comment}{// \(\backslash\)endcond}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00070}\mbox{\hyperlink{class_pushbutton_base}{00070}} \textcolor{keyword}{class }\mbox{\hyperlink{class_pushbutton_base}{PushbuttonBase}}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00071}00071 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00072}00072 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00079}00079   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{waitForPress}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00086}00086   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{waitForRelease}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00092}00092   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{waitForButton}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00101}00101   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{getSingleDebouncedPress}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00114}00114   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{getSingleDebouncedRelease}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00122}\mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{00122}}   \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{isPressed}}() = 0;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00124}00124 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00126}00126   PushbuttonStateMachine pressState;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00127}00127   PushbuttonStateMachine releaseState;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00128}00128 \};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00137}\mbox{\hyperlink{class_pushbutton}{00137}} \textcolor{keyword}{class }\mbox{\hyperlink{class_pushbutton}{Pushbutton}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_pushbutton_base}{PushbuttonBase}}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00138}00138 \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00139}00139 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00154}00154   \mbox{\hyperlink{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}{Pushbutton}}(uint8\_t pin, uint8\_t pullUp = \mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\_UP\_ENABLED}},}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00155}00155       uint8\_t defaultState = \mbox{\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{DEFAULT\_STATE\_HIGH}});}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00157}00157   \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}{isPressed}}();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00159}00159 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00161}00161   \textcolor{keywordtype}{void} init()}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00162}00162   \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00163}00163     \textcolor{keywordflow}{if} (!initialized)}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00164}00164     \{}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00165}00165       initialized = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00166}00166       init2();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00167}00167     \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00168}00168   \}}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00170}00170   \textcolor{keywordtype}{void} init2();}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00172}00172   \textcolor{keywordtype}{bool} initialized;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00173}00173   uint8\_t \_pin;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00174}00174   \textcolor{keywordtype}{bool} \_pullUp;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00175}00175   \textcolor{keywordtype}{bool} \_defaultState;}
+\DoxyCodeLine{\Hypertarget{_pushbutton_8h_source_l00176}00176 \};}
+
+\end{DoxyCode}

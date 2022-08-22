@@ -1,0 +1,206 @@
+\hypertarget{_zumo32_u4_proximity_sensors_8cpp_source}{}\doxysection{Zumo32\+U4\+Proximity\+Sensors.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see http://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h}{Zumo32U4ProximitySensors.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h}{Zumo32U4IRPulses.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_fast_g_p_i_o_8h}{FastGPIO.h}}>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00009}00009 \textcolor{comment}{// The Arduino's digitalRead, digitalWrite, and pinMode functions will have}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00010}00010 \textcolor{comment}{// unexpected behavior if the pin number argument happens to be greater than}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00011}00011 \textcolor{comment}{// NUM\_DIGITAL\_PINS.  We protect users of our library from that.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00012}00012 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} digitalReadSafe(uint8\_t pin, \textcolor{keywordtype}{bool} defaultValue = 1)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00014}00014     \textcolor{keywordflow}{if} (pin < NUM\_DIGITAL\_PINS)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00016}00016         \textcolor{keywordflow}{return} digitalRead(pin);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00018}00018     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00020}00020         \textcolor{keywordflow}{return} defaultValue;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00021}00021     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00022}00022 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00024}00024 \textcolor{keyword}{static} \textcolor{keywordtype}{void} pinModeSafe(uint8\_t pin, uint8\_t mode)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00026}00026     \textcolor{keywordflow}{if} (pin < NUM\_DIGITAL\_PINS)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00027}00027     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00028}00028         pinMode(pin, mode);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00032}00032 \textcolor{keywordtype}{void} Zumo32U4ProximitySensors::clearAll()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00033}00033 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00034}00034     dataArray = NULL;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00035}00035     numSensors = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00037}00037     lineSensorEmitterPin = \mbox{\hyperlink{_zumo32_u4_proximity_sensors_8h_ab9a5a2bb8dceb3e519806f346ea52ef0}{SENSOR\_NO\_PIN}};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00039}00039     levelsArray = NULL;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00040}00040     numLevels = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00042}00042     pulseOnTimeUs = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a6d47a41b45a7088916fbeaa5b38c60b3}{defaultPulseOnTimeUs}};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00043}00043     pulseOffTimeUs = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a60fcba68f8cc7f2710f32ac76de85cdf}{defaultPulseOffTimeUs}};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00044}00044     period = \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a0857da91ca57c4f884094736bd1c0824}{defaultPeriod}};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00047}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a250ef26e66807bc800adc42be912fab5}{00047}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a250ef26e66807bc800adc42be912fab5}{Zumo32U4ProximitySensors::init}}(uint8\_t * pins, uint8\_t numSensors,}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00048}00048     uint8\_t lineSensorEmitterPin)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00049}00049 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00050}00050     this-\/>lineSensorEmitterPin = lineSensorEmitterPin;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00052}00052     \textcolor{comment}{// Allocate memory for the new dataArray.  If there is an error, return}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00053}00053     \textcolor{comment}{// before modifying the existing dataArray or numSensors so that we}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00054}00054     \textcolor{comment}{// don't leave the object in an invalid state.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00055}00055     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} size = numSensors * \textcolor{keyword}{sizeof}(SensorData);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00056}00056     \textcolor{keywordtype}{void} * newArray = realloc(dataArray, size);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00057}00057     \textcolor{keywordflow}{if} (newArray == NULL) \{ \textcolor{keywordflow}{return}; \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00059}00059     \textcolor{comment}{// Store the pointer to the new dataArray.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00060}00060     this-\/>dataArray = (SensorData *)newArray;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00062}00062     \textcolor{comment}{// Store the number of sensors.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00063}00063     this-\/>numSensors = numSensors;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00065}00065     \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numSensors; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00066}00066     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00067}00067         \textcolor{comment}{// Store the pin numbers specified by the user.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00068}00068         dataArray[i].pin = pins[i];}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00070}00070 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00073}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a47820baf67dfa58dedb41cb7bb26dc65}{00073}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a47820baf67dfa58dedb41cb7bb26dc65}{Zumo32U4ProximitySensors::setBrightnessLevels}}(uint16\_t * levels, uint8\_t numLevels)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00074}00074 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00075}00075     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} size = numLevels * \textcolor{keyword}{sizeof}(uint16\_t);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00077}00077     \textcolor{keywordtype}{void} * newArray = realloc(levelsArray, size);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00078}00078     \textcolor{keywordflow}{if} (newArray == NULL)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00079}00079     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00080}00080         \textcolor{comment}{// There was an error allocating memory so just leave the}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00081}00081         \textcolor{comment}{// state of the object the same as it was before.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00082}00082         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00083}00083     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00085}00085     memcpy(newArray, levels, size);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00086}00086     levelsArray = (uint16\_t *)newArray;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00087}00087     this-\/>numLevels = numLevels;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00088}00088 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00090}00090 \textcolor{keywordtype}{void} Zumo32U4ProximitySensors::prepareToRead()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00091}00091 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00092}00092     \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ae596289faf5921bc7c199cf73edf534e}{pullupsOn}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00094}00094     \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a583dada6ad676cbda2ec7d55b05338b8}{lineSensorEmittersOff}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00096}00096     \textcolor{keywordflow}{if} (levelsArray == NULL)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00097}00097     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00098}00098         uint16\_t defaultBrightnessLevels[] = \{ 4, 15, 32, 55, 85, 120 \};}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00099}00099         \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a47820baf67dfa58dedb41cb7bb26dc65}{setBrightnessLevels}}(defaultBrightnessLevels, 6);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00100}00100     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00101}00101 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00103}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ae596289faf5921bc7c199cf73edf534e}{00103}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_ae596289faf5921bc7c199cf73edf534e}{Zumo32U4ProximitySensors::pullupsOn}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00104}00104 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00105}00105     \textcolor{comment}{// Set all the sensor pins to be pulled-\/up inputs so that they}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00106}00106     \textcolor{comment}{// are high whenever the sensor outputs are not active.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00107}00107     \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numSensors; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00108}00108     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00109}00109         pinModeSafe(dataArray[i].pin, INPUT\_PULLUP);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00110}00110     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00111}00111 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00113}00113 \textcolor{comment}{// Turn off the down-\/facing IR LEDs because the proximity}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00114}00114 \textcolor{comment}{// sensors tend to detect the IR coming from them.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00115}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a583dada6ad676cbda2ec7d55b05338b8}{00115}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a583dada6ad676cbda2ec7d55b05338b8}{Zumo32U4ProximitySensors::lineSensorEmittersOff}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00116}00116 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00117}00117     \textcolor{keywordflow}{if} (lineSensorEmitterPin < NUM\_DIGITAL\_PINS)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00118}00118     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00119}00119         digitalWrite(lineSensorEmitterPin, LOW);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00120}00120         pinMode(lineSensorEmitterPin, OUTPUT);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00121}00121         delayMicroseconds(pulseOffTimeUs);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00123}00123 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00125}00125 \textcolor{comment}{/* It is not feasible to turn off the pulses before checking the output of}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00126}00126 \textcolor{comment}{ * the sensor because an interrupt might fire and cause the sensor check to}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00127}00127 \textcolor{comment}{ * happen too late.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00128}00128 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00129}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a071d935e10e2a16a3ae2559d16a12683}{00129}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a071d935e10e2a16a3ae2559d16a12683}{Zumo32U4ProximitySensors::read}}()}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00130}00130 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00131}00131     prepareToRead();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00133}00133     \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numSensors; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00134}00134     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00135}00135         dataArray[i].withRightLeds = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00136}00136         dataArray[i].withLeftLeds = 0;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00137}00137     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00139}00139     \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numLevels; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00140}00140     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00141}00141         uint16\_t brightness = levelsArray[i];}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00143}00143         \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_abef1e5f17a173505c6acc0f8c0d917d9}{Zumo32U4IRPulses::start}}(\mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}{Zumo32U4IRPulses::Left}}, brightness, period);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00144}00144         delayMicroseconds(pulseOnTimeUs);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00145}00145         \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numSensors; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00146}00146         \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00147}00147             \textcolor{keywordflow}{if} (!digitalReadSafe(dataArray[i].pin, 1))}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00148}00148             \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00149}00149                 dataArray[i].withLeftLeds++;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00150}00150             \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00151}00151         \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00152}00152         \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a99f222656413341fc07bd8fed823027b}{Zumo32U4IRPulses::stop}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00153}00153         delayMicroseconds(pulseOffTimeUs);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00155}00155         \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_abef1e5f17a173505c6acc0f8c0d917d9}{Zumo32U4IRPulses::start}}(\mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}{Zumo32U4IRPulses::Right}}, brightness, period);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00156}00156         delayMicroseconds(pulseOnTimeUs);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00157}00157         \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numSensors; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00158}00158         \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00159}00159             \textcolor{keywordflow}{if} (!digitalReadSafe(dataArray[i].pin, 1))}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00160}00160             \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00161}00161                 dataArray[i].withRightLeds++;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00162}00162             \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00163}00163         \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00164}00164         \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a99f222656413341fc07bd8fed823027b}{Zumo32U4IRPulses::stop}}();}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00165}00165         delayMicroseconds(pulseOffTimeUs);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00166}00166     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00167}00167 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00169}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a5c254dc2adf7c47203384241582349d3}{00169}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a5c254dc2adf7c47203384241582349d3}{Zumo32U4ProximitySensors::readBasic}}(uint8\_t sensorNumber)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00170}00170 \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00171}00171     \textcolor{keywordflow}{if} (sensorNumber >= numSensors) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00172}00172     \textcolor{keywordflow}{return} !digitalReadSafe(dataArray[sensorNumber].pin, 1);}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00173}00173 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00175}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a734abb888814a97379c349e1deb8897f}{00175}} uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a734abb888814a97379c349e1deb8897f}{Zumo32U4ProximitySensors::countsWithLeftLeds}}(uint8\_t sensorNumber)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00176}00176 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00177}00177     \textcolor{keywordflow}{if} (sensorNumber >= numSensors) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00178}00178     \textcolor{keywordflow}{return} dataArray[sensorNumber].withLeftLeds;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00179}00179 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00181}\mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2789f740828a81fe3c942998639355ae}{00181}} uint8\_t \mbox{\hyperlink{class_zumo32_u4_proximity_sensors_a2789f740828a81fe3c942998639355ae}{Zumo32U4ProximitySensors::countsWithRightLeds}}(uint8\_t sensorNumber)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00182}00182 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00183}00183     \textcolor{keywordflow}{if} (sensorNumber >= numSensors) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00184}00184     \textcolor{keywordflow}{return} dataArray[sensorNumber].withRightLeds;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00185}00185 \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00187}00187 uint8\_t Zumo32U4ProximitySensors::findIndexForPin(uint8\_t pin)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00188}00188 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00189}00189     \textcolor{keywordflow}{for} (uint8\_t i = 0; i < numSensors; i++)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00190}00190     \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00191}00191         \textcolor{keywordflow}{if} (dataArray[i].pin == pin)}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00192}00192         \{}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00193}00193             \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00194}00194         \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00195}00195     \}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00197}00197     \textcolor{comment}{// The specified pin is not being used as a sensor, so return 255.  This can}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00198}00198     \textcolor{comment}{// be safely passed to countsWithLeftLeds, countsWithRightLeds, or}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00199}00199     \textcolor{comment}{// readBasic, and those functions will return 0.}}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00200}00200     \textcolor{keywordflow}{return} 255;}
+\DoxyCodeLine{\Hypertarget{_zumo32_u4_proximity_sensors_8cpp_source_l00201}00201 \}}
+
+\end{DoxyCode}

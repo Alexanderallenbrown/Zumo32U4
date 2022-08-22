@@ -1,19 +1,17 @@
-\hypertarget{_pololu_buzzer_8h}{}\section{Pololu\+Buzzer.\+h File Reference}
-\label{_pololu_buzzer_8h}\index{Pololu\+Buzzer.\+h@{Pololu\+Buzzer.\+h}}
+\hypertarget{_pololu_buzzer_8h}{}\doxysection{Pololu\+Buzzer.\+h File Reference}
+\label{_pololu_buzzer_8h}\index{PololuBuzzer.h@{PololuBuzzer.h}}
 {\ttfamily \#include $<$avr/pgmspace.\+h$>$}\newline
-\subsection*{Classes}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_pololu_buzzer}{Pololu\+Buzzer}
+class \mbox{\hyperlink{class_pololu_buzzer}{Pololu\+Buzzer}}
 \begin{DoxyCompactList}\small\item\em Play beeps and music with the buzzer. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Macros}
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}\label{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}} 
-\#define \hyperlink{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}{P\+L\+A\+Y\+\_\+\+A\+U\+T\+O\+M\+A\+T\+IC}~0
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}{PLAY\+\_\+\+AUTOMATIC}}~0
 \begin{DoxyCompactList}\small\item\em Specifies that the sequence of notes will play with no further action required by the user. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}\label{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}} 
-\#define \hyperlink{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}{P\+L\+A\+Y\+\_\+\+C\+H\+E\+CK}~1
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}{PLAY\+\_\+\+CHECK}}~1
 \begin{DoxyCompactList}\small\item\em Specified that the user will need to call {\ttfamily play\+Check()} regularly. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ Note Macros}\par
 {\em \label{_pololu_buzzer_8h_note_macros}%
@@ -22,68 +20,282 @@ class \hyperlink{class_pololu_buzzer}{Pololu\+Buzzer}
 
 {\itshape x} specifies the octave of the note }\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}\label{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+C}(x)~( 0 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}{NOTE\+\_\+C}}(x)~( 0 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}\label{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+C\+\_\+\+S\+H\+A\+RP}(x)~( 1 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}{NOTE\+\_\+\+C\+\_\+\+SHARP}}(x)~( 1 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}\label{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+D\+\_\+\+F\+L\+AT}(x)~( 1 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}{NOTE\+\_\+\+D\+\_\+\+FLAT}}(x)~( 1 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}\label{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+D}(x)~( 2 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}{NOTE\+\_\+D}}(x)~( 2 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}\label{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+D\+\_\+\+S\+H\+A\+RP}(x)~( 3 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}{NOTE\+\_\+\+D\+\_\+\+SHARP}}(x)~( 3 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}\label{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+E\+\_\+\+F\+L\+AT}(x)~( 3 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}{NOTE\+\_\+\+E\+\_\+\+FLAT}}(x)~( 3 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}\label{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+E}(x)~( 4 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}{NOTE\+\_\+E}}(x)~( 4 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}\label{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+F}(x)~( 5 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}{NOTE\+\_\+F}}(x)~( 5 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}\label{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+F\+\_\+\+S\+H\+A\+RP}(x)~( 6 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}{NOTE\+\_\+\+F\+\_\+\+SHARP}}(x)~( 6 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}\label{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+G\+\_\+\+F\+L\+AT}(x)~( 6 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}{NOTE\+\_\+\+G\+\_\+\+FLAT}}(x)~( 6 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}\label{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+G}(x)~( 7 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}{NOTE\+\_\+G}}(x)~( 7 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}\label{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+G\+\_\+\+S\+H\+A\+RP}(x)~( 8 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}{NOTE\+\_\+\+G\+\_\+\+SHARP}}(x)~( 8 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}\label{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+A\+\_\+\+F\+L\+AT}(x)~( 8 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}{NOTE\+\_\+\+A\+\_\+\+FLAT}}(x)~( 8 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}\label{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+A}(x)~( 9 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}{NOTE\+\_\+A}}(x)~( 9 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}\label{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+A\+\_\+\+S\+H\+A\+RP}(x)~(10 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}{NOTE\+\_\+\+A\+\_\+\+SHARP}}(x)~(10 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}\label{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+\+B\+\_\+\+F\+L\+AT}(x)~(10 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}{NOTE\+\_\+\+B\+\_\+\+FLAT}}(x)~(10 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}\label{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}} 
-\#define {\bfseries N\+O\+T\+E\+\_\+B}(x)~(11 + (x)$\ast$12)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}{NOTE\+\_\+B}}(x)~(11 + (x)$\ast$12)
 \item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}\label{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}} 
-\#define \hyperlink{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}{S\+I\+L\+E\+N\+T\+\_\+\+N\+O\+TE}~0x\+FF
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}{SILENT\+\_\+\+NOTE}}~0x\+FF
 \begin{DoxyCompactList}\small\item\em silences buzzer for the note duration \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}\label{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}} 
-\#define \hyperlink{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}{D\+I\+V\+\_\+\+B\+Y\+\_\+10}~(1 $<$$<$ 15)
+\#define \mbox{\hyperlink{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}{DIV\+\_\+\+BY\+\_\+10}}~(1 $<$$<$ 15)
 \begin{DoxyCompactList}\small\item\em frequency bit that indicates Hz/10~\newline
- e.\+g. {\itshape frequency} = {\ttfamily (445 $\vert$ D\+I\+V\+\_\+\+B\+Y\+\_\+10)} gives a frequency of 44.\+5 Hz \end{DoxyCompactList}\end{DoxyCompactItemize}
+ e.\+g. {\itshape frequency} = {\ttfamily (445 $\vert$ DIV\+\_\+\+BY\+\_\+10)} gives a frequency of 44.\+5 Hz \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 
-\subsection{Detailed Description}
-See the \hyperlink{class_pololu_buzzer}{Pololu\+Buzzer} class reference for more information about this library.
+\doxysubsection{Detailed Description}
+See the \mbox{\hyperlink{class_pololu_buzzer}{Pololu\+Buzzer}} class reference for more information about this library.
 
-The main repository for this library is \href{https://github.com/pololu/pololu-buzzer-arduino,}{\tt https\+://github.\+com/pololu/pololu-\/buzzer-\/arduino,} though copies of this library also exist in other repositories. 
+The main repository for this library is \href{https://github.com/pololu/pololu-buzzer-arduino}{\texttt{ https\+://github.\+com/pololu/pololu-\/buzzer-\/arduino}}, though copies of this library also exist in other repositories. 
+
+Definition in file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}\label{_pololu_buzzer_8h_a8548d3f2b6d5fa2bcc350fad4a2c72a8}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!DIV\_BY\_10@{DIV\_BY\_10}}
+\index{DIV\_BY\_10@{DIV\_BY\_10}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{DIV\_BY\_10}{DIV\_BY\_10}}
+{\footnotesize\ttfamily \#define DIV\+\_\+\+BY\+\_\+10~(1 $<$$<$ 15)}
+
+
+
+frequency bit that indicates Hz/10~\newline
+ e.\+g. {\itshape frequency} = {\ttfamily (445 $\vert$ DIV\+\_\+\+BY\+\_\+10)} gives a frequency of 44.\+5 Hz 
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00086}{86}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}\label{_pololu_buzzer_8h_a235f95f62fba0fc937a9491ba02abe0f}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_A@{NOTE\_A}}
+\index{NOTE\_A@{NOTE\_A}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_A}{NOTE\_A}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+A(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 9 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00075}{75}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}\label{_pololu_buzzer_8h_a774eb428d9ae7f030192e74a0ff2ef44}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_A\_FLAT@{NOTE\_A\_FLAT}}
+\index{NOTE\_A\_FLAT@{NOTE\_A\_FLAT}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_A\_FLAT}{NOTE\_A\_FLAT}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+A\+\_\+\+FLAT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 8 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00074}{74}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}\label{_pololu_buzzer_8h_a34fcfd8381128ceb4ac3c8f09e1d4e19}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_A\_SHARP@{NOTE\_A\_SHARP}}
+\index{NOTE\_A\_SHARP@{NOTE\_A\_SHARP}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_A\_SHARP}{NOTE\_A\_SHARP}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+A\+\_\+\+SHARP(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(10 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00076}{76}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}\label{_pololu_buzzer_8h_a8a7e22b3976a50b93a15f057908d59dd}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_B@{NOTE\_B}}
+\index{NOTE\_B@{NOTE\_B}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_B}{NOTE\_B}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+B(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(11 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00078}{78}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}\label{_pololu_buzzer_8h_a45328a3392757787d83f0b850c000197}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_B\_FLAT@{NOTE\_B\_FLAT}}
+\index{NOTE\_B\_FLAT@{NOTE\_B\_FLAT}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_B\_FLAT}{NOTE\_B\_FLAT}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+B\+\_\+\+FLAT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(10 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00077}{77}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}\label{_pololu_buzzer_8h_afe05d34c0aa72561371e5e691639b154}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_C@{NOTE\_C}}
+\index{NOTE\_C@{NOTE\_C}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_C}{NOTE\_C}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+C(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 0 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00062}{62}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}\label{_pololu_buzzer_8h_a8adae98d97f9e21a207b94bb98d6d195}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_C\_SHARP@{NOTE\_C\_SHARP}}
+\index{NOTE\_C\_SHARP@{NOTE\_C\_SHARP}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_C\_SHARP}{NOTE\_C\_SHARP}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+C\+\_\+\+SHARP(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 1 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00063}{63}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}\label{_pololu_buzzer_8h_ab4804780eec5b27ba514307bbb607ea0}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_D@{NOTE\_D}}
+\index{NOTE\_D@{NOTE\_D}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_D}{NOTE\_D}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+D(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 2 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00065}{65}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}\label{_pololu_buzzer_8h_a8971686e47e8f7a2b5a7cd8a4bcdd8ba}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_D\_FLAT@{NOTE\_D\_FLAT}}
+\index{NOTE\_D\_FLAT@{NOTE\_D\_FLAT}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_D\_FLAT}{NOTE\_D\_FLAT}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+D\+\_\+\+FLAT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 1 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00064}{64}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}\label{_pololu_buzzer_8h_ac97aeeeb8a09ddea7ea7d822a5f19165}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_D\_SHARP@{NOTE\_D\_SHARP}}
+\index{NOTE\_D\_SHARP@{NOTE\_D\_SHARP}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_D\_SHARP}{NOTE\_D\_SHARP}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+D\+\_\+\+SHARP(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 3 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00066}{66}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}\label{_pololu_buzzer_8h_a0f79f886203e49bf1b4548983ec6fad2}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_E@{NOTE\_E}}
+\index{NOTE\_E@{NOTE\_E}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_E}{NOTE\_E}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+E(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 4 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00068}{68}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}\label{_pololu_buzzer_8h_a8c36767813d969ba9336ad517335016c}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_E\_FLAT@{NOTE\_E\_FLAT}}
+\index{NOTE\_E\_FLAT@{NOTE\_E\_FLAT}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_E\_FLAT}{NOTE\_E\_FLAT}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+E\+\_\+\+FLAT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 3 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00067}{67}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}\label{_pololu_buzzer_8h_a925930e02a2c737828470fc7a9e1fbd8}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_F@{NOTE\_F}}
+\index{NOTE\_F@{NOTE\_F}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_F}{NOTE\_F}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+F(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 5 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00069}{69}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}\label{_pololu_buzzer_8h_a1a084bfaf45df982af05a5cda5eb8ce6}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_F\_SHARP@{NOTE\_F\_SHARP}}
+\index{NOTE\_F\_SHARP@{NOTE\_F\_SHARP}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_F\_SHARP}{NOTE\_F\_SHARP}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+F\+\_\+\+SHARP(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 6 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00070}{70}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}\label{_pololu_buzzer_8h_a9df839f56f9d0939a9cee3cd82373ab7}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_G@{NOTE\_G}}
+\index{NOTE\_G@{NOTE\_G}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_G}{NOTE\_G}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+G(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 7 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00072}{72}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}\label{_pololu_buzzer_8h_ab30a1d4ce13ca7efbfaa1538e5ed7681}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_G\_FLAT@{NOTE\_G\_FLAT}}
+\index{NOTE\_G\_FLAT@{NOTE\_G\_FLAT}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_G\_FLAT}{NOTE\_G\_FLAT}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+G\+\_\+\+FLAT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 6 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00071}{71}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}\label{_pololu_buzzer_8h_a89ed0525b5d3555debfa60ae355bb8eb}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!NOTE\_G\_SHARP@{NOTE\_G\_SHARP}}
+\index{NOTE\_G\_SHARP@{NOTE\_G\_SHARP}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{NOTE\_G\_SHARP}{NOTE\_G\_SHARP}}
+{\footnotesize\ttfamily \#define NOTE\+\_\+\+G\+\_\+\+SHARP(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~( 8 + (x)$\ast$12)}
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00073}{73}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}\label{_pololu_buzzer_8h_ab21c3d36aba0b8a690dce836c4e8dfcc}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!PLAY\_AUTOMATIC@{PLAY\_AUTOMATIC}}
+\index{PLAY\_AUTOMATIC@{PLAY\_AUTOMATIC}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{PLAY\_AUTOMATIC}{PLAY\_AUTOMATIC}}
+{\footnotesize\ttfamily \#define PLAY\+\_\+\+AUTOMATIC~0}
+
+
+
+Specifies that the sequence of notes will play with no further action required by the user. 
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00042}{42}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}\label{_pololu_buzzer_8h_a2f6511ed23e48635f2f8cbdf8d8e340e}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!PLAY\_CHECK@{PLAY\_CHECK}}
+\index{PLAY\_CHECK@{PLAY\_CHECK}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{PLAY\_CHECK}{PLAY\_CHECK}}
+{\footnotesize\ttfamily \#define PLAY\+\_\+\+CHECK~1}
+
+
+
+Specified that the user will need to call {\ttfamily play\+Check()} regularly. 
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00046}{46}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+
+\mbox{\Hypertarget{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}\label{_pololu_buzzer_8h_adfaff86f4fd545173453d147f349e84a}} 
+\index{PololuBuzzer.h@{PololuBuzzer.h}!SILENT\_NOTE@{SILENT\_NOTE}}
+\index{SILENT\_NOTE@{SILENT\_NOTE}!PololuBuzzer.h@{PololuBuzzer.h}}
+\doxysubsubsection{\texorpdfstring{SILENT\_NOTE}{SILENT\_NOTE}}
+{\footnotesize\ttfamily \#define SILENT\+\_\+\+NOTE~0x\+FF}
+
+
+
+silences buzzer for the note duration 
+
+
+
+Definition at line \mbox{\hyperlink{_pololu_buzzer_8h_source_l00081}{81}} of file \mbox{\hyperlink{_pololu_buzzer_8h_source}{Pololu\+Buzzer.\+h}}.
+

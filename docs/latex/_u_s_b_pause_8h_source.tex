@@ -1,0 +1,52 @@
+\hypertarget{_u_s_b_pause_8h_source}{}\doxysection{USBPause.\+h}
+\mbox{\hyperlink{_u_s_b_pause_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00001}00001 \textcolor{comment}{// Copyright Pololu Corporation.  For more information, see https://www.pololu.com/}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00011}00011 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <avr/io.h>}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00026}\mbox{\hyperlink{class_u_s_b_pause}{00026}} \textcolor{keyword}{class }\mbox{\hyperlink{class_u_s_b_pause}{USBPause}}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00027}00027 \{}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00029}00029     uint8\_t savedUDIEN;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00032}00032     uint8\_t savedUENUM;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00035}00035     uint8\_t savedUEIENX0;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00037}00037 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00039}00039     \mbox{\hyperlink{class_u_s_b_pause}{USBPause}}()}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00041}00041         \textcolor{comment}{// Disable the general USB interrupt.  This must be done}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00042}00042         \textcolor{comment}{// first, because the general USB interrupt might change the}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00043}00043         \textcolor{comment}{// state of the EP0 interrupt, but not the other way around.}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00044}00044         savedUDIEN = UDIEN;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00045}00045         UDIEN = 0;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00047}00047         \textcolor{comment}{// Select endpoint 0.}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00048}00048         savedUENUM = UENUM;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00049}00049         UENUM = 0;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00051}00051         \textcolor{comment}{// Disable endpoint 0 interrupts.}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00052}00052         savedUEIENX0 = UEIENX;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00053}00053         UEIENX = 0;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00056}00056     \mbox{\hyperlink{class_u_s_b_pause}{\string~USBPause}}()}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00057}00057     \{}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00058}00058         \textcolor{comment}{// Restore endpoint 0 interrupts.}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00059}00059         UENUM = 0;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00060}00060         UEIENX = savedUEIENX0;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00062}00062         \textcolor{comment}{// Restore endpoint selection.}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00063}00063         UENUM = savedUENUM;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00065}00065         \textcolor{comment}{// Restore general device interrupt.}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00066}00066         UDIEN = savedUDIEN;}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_u_s_b_pause_8h_source_l00069}00069 \};}
+
+\end{DoxyCode}

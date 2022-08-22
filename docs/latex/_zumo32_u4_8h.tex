@@ -1,117 +1,134 @@
-\hypertarget{_zumo32_u4_8h}{}\section{Zumo32\+U4.\+h File Reference}
-\label{_zumo32_u4_8h}\index{Zumo32\+U4.\+h@{Zumo32\+U4.\+h}}
+\hypertarget{_zumo32_u4_8h}{}\doxysection{Zumo32\+U4.\+h File Reference}
+\label{_zumo32_u4_8h}\index{Zumo32U4.h@{Zumo32U4.h}}
 
 
 Main header file for the Zumo32\+U4 library.  
 
 
-{\ttfamily \#include $<$Fast\+G\+P\+I\+O.\+h$>$}\newline
-{\ttfamily \#include $<$L\+S\+M303.\+h$>$}\newline
+{\ttfamily \#include $<$Fast\+GPIO.\+h$>$}\newline
+{\ttfamily \#include $<$LSM303.\+h$>$}\newline
 {\ttfamily \#include $<$L3\+G.\+h$>$}\newline
 {\ttfamily \#include $<$Zumo32\+U4\+Buttons.\+h$>$}\newline
 {\ttfamily \#include $<$Zumo32\+U4\+Buzzer.\+h$>$}\newline
 {\ttfamily \#include $<$Zumo32\+U4\+Encoders.\+h$>$}\newline
-{\ttfamily \#include $<$Zumo32\+U4\+I\+M\+U.\+h$>$}\newline
-{\ttfamily \#include $<$Zumo32\+U4\+I\+R\+Pulses.\+h$>$}\newline
-{\ttfamily \#include $<$Zumo32\+U4\+L\+C\+D.\+h$>$}\newline
+{\ttfamily \#include $<$Zumo32\+U4\+IMU.\+h$>$}\newline
+{\ttfamily \#include $<$Zumo32\+U4\+IRPulses.\+h$>$}\newline
+{\ttfamily \#include $<$Zumo32\+U4\+LCD.\+h$>$}\newline
 {\ttfamily \#include $<$Zumo32\+U4\+Line\+Sensors.\+h$>$}\newline
 {\ttfamily \#include $<$Zumo32\+U4\+Motors.\+h$>$}\newline
 {\ttfamily \#include $<$Zumo32\+U4\+Proximity\+Sensors.\+h$>$}\newline
-\subsection*{Functions}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}{led\+Red} (bool on)
-\begin{DoxyCompactList}\small\item\em Turns the red user L\+ED (RX) on or off. \end{DoxyCompactList}\item 
-void \hyperlink{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}{led\+Yellow} (bool on)
-\begin{DoxyCompactList}\small\item\em Turns the yellow user L\+ED on pin 13 on or off. \end{DoxyCompactList}\item 
-void \hyperlink{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}{led\+Green} (bool on)
-\begin{DoxyCompactList}\small\item\em Turns the green user L\+ED (TX) on or off. \end{DoxyCompactList}\item 
-bool \hyperlink{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}{usb\+Power\+Present} ()
-\begin{DoxyCompactList}\small\item\em Returns true if U\+SB power is detected. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}\label{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}} 
-uint16\+\_\+t \hyperlink{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}{read\+Battery\+Millivolts} ()
+void \mbox{\hyperlink{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}{led\+Red}} (bool on)
+\begin{DoxyCompactList}\small\item\em Turns the red user LED (RX) on or off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}{led\+Yellow}} (bool on)
+\begin{DoxyCompactList}\small\item\em Turns the yellow user LED on pin 13 on or off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}{led\+Green}} (bool on)
+\begin{DoxyCompactList}\small\item\em Turns the green user LED (TX) on or off. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}{usb\+Power\+Present}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if USB power is detected. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}{read\+Battery\+Millivolts}} ()
 \begin{DoxyCompactList}\small\item\em Reads the battery voltage and returns it in millivolts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Main header file for the Zumo32\+U4 library. 
 
 This file includes all the other headers files provided by the library. 
 
-\subsection{Function Documentation}
+Definition in file \mbox{\hyperlink{_zumo32_u4_8h_source}{Zumo32\+U4.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}\label{_zumo32_u4_8h_a22e68694b618fe149ed42d76e96597ca}} 
-\index{Zumo32\+U4.\+h@{Zumo32\+U4.\+h}!led\+Green@{led\+Green}}
-\index{led\+Green@{led\+Green}!Zumo32\+U4.\+h@{Zumo32\+U4.\+h}}
-\subsubsection{\texorpdfstring{led\+Green()}{ledGreen()}}
+\index{Zumo32U4.h@{Zumo32U4.h}!ledGreen@{ledGreen}}
+\index{ledGreen@{ledGreen}!Zumo32U4.h@{Zumo32U4.h}}
+\doxysubsubsection{\texorpdfstring{ledGreen()}{ledGreen()}}
 {\footnotesize\ttfamily void led\+Green (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Turns the green user L\+ED (TX) on or off. 
+Turns the green user LED (TX) on or off. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em on} & 1 to turn on the L\+ED, 0 to turn it off.\\
+{\em on} & 1 to turn on the LED, 0 to turn it off.\\
 \hline
 \end{DoxyParams}
-The green user L\+ED is pin P\+D5, which is also known as T\+X\+L\+ED. The Arduino core code uses this L\+ED to indicate when it receives data over U\+SB, so it might be hard to control this L\+ED when U\+SB is connected. 
+The green user LED is pin PD5, which is also known as TXLED. The Arduino core code uses this LED to indicate when it receives data over USB, so it might be hard to control this LED when USB is connected. 
 
-Definition at line 58 of file Zumo32\+U4.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_8h_source_l00058}{58}} of file \mbox{\hyperlink{_zumo32_u4_8h_source}{Zumo32\+U4.\+h}}.
 
 \mbox{\Hypertarget{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}\label{_zumo32_u4_8h_ae6ec5117b26ffaaa1b81c8c8b34426e1}} 
-\index{Zumo32\+U4.\+h@{Zumo32\+U4.\+h}!led\+Red@{led\+Red}}
-\index{led\+Red@{led\+Red}!Zumo32\+U4.\+h@{Zumo32\+U4.\+h}}
-\subsubsection{\texorpdfstring{led\+Red()}{ledRed()}}
+\index{Zumo32U4.h@{Zumo32U4.h}!ledRed@{ledRed}}
+\index{ledRed@{ledRed}!Zumo32U4.h@{Zumo32U4.h}}
+\doxysubsubsection{\texorpdfstring{ledRed()}{ledRed()}}
 {\footnotesize\ttfamily void led\+Red (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Turns the red user L\+ED (RX) on or off. 
+Turns the red user LED (RX) on or off. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em on} & 1 to turn on the L\+ED, 0 to turn it off.\\
+{\em on} & 1 to turn on the LED, 0 to turn it off.\\
 \hline
 \end{DoxyParams}
-The red user L\+ED is on pin 17, which is also known as P\+B0, SS, and R\+X\+L\+ED. The Arduino core code uses this L\+ED to indicate when it receives data over U\+SB, so it might be hard to control this L\+ED when U\+SB is connected. 
+The red user LED is on pin 17, which is also known as PB0, SS, and RXLED. The Arduino core code uses this LED to indicate when it receives data over USB, so it might be hard to control this LED when USB is connected. 
 
-Definition at line 38 of file Zumo32\+U4.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_8h_source_l00038}{38}} of file \mbox{\hyperlink{_zumo32_u4_8h_source}{Zumo32\+U4.\+h}}.
 
 \mbox{\Hypertarget{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}\label{_zumo32_u4_8h_a7528cb14b314ccde63c94049402d01c6}} 
-\index{Zumo32\+U4.\+h@{Zumo32\+U4.\+h}!led\+Yellow@{led\+Yellow}}
-\index{led\+Yellow@{led\+Yellow}!Zumo32\+U4.\+h@{Zumo32\+U4.\+h}}
-\subsubsection{\texorpdfstring{led\+Yellow()}{ledYellow()}}
+\index{Zumo32U4.h@{Zumo32U4.h}!ledYellow@{ledYellow}}
+\index{ledYellow@{ledYellow}!Zumo32U4.h@{Zumo32U4.h}}
+\doxysubsubsection{\texorpdfstring{ledYellow()}{ledYellow()}}
 {\footnotesize\ttfamily void led\+Yellow (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Turns the yellow user L\+ED on pin 13 on or off. 
+Turns the yellow user LED on pin 13 on or off. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em on} & 1 to turn on the L\+ED, 0 to turn it off. \\
+{\em on} & 1 to turn on the LED, 0 to turn it off. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 46 of file Zumo32\+U4.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_8h_source_l00046}{46}} of file \mbox{\hyperlink{_zumo32_u4_8h_source}{Zumo32\+U4.\+h}}.
+
+\mbox{\Hypertarget{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}\label{_zumo32_u4_8h_a9391e187045f8f5a48546b34b6c6db25}} 
+\index{Zumo32U4.h@{Zumo32U4.h}!readBatteryMillivolts@{readBatteryMillivolts}}
+\index{readBatteryMillivolts@{readBatteryMillivolts}!Zumo32U4.h@{Zumo32U4.h}}
+\doxysubsubsection{\texorpdfstring{readBatteryMillivolts()}{readBatteryMillivolts()}}
+{\footnotesize\ttfamily uint16\+\_\+t read\+Battery\+Millivolts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads the battery voltage and returns it in millivolts. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_8h_source_l00077}{77}} of file \mbox{\hyperlink{_zumo32_u4_8h_source}{Zumo32\+U4.\+h}}.
 
 \mbox{\Hypertarget{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}\label{_zumo32_u4_8h_acf21c49681fe010784b631551ab921f3}} 
-\index{Zumo32\+U4.\+h@{Zumo32\+U4.\+h}!usb\+Power\+Present@{usb\+Power\+Present}}
-\index{usb\+Power\+Present@{usb\+Power\+Present}!Zumo32\+U4.\+h@{Zumo32\+U4.\+h}}
-\subsubsection{\texorpdfstring{usb\+Power\+Present()}{usbPowerPresent()}}
+\index{Zumo32U4.h@{Zumo32U4.h}!usbPowerPresent@{usbPowerPresent}}
+\index{usbPowerPresent@{usbPowerPresent}!Zumo32U4.h@{Zumo32U4.h}}
+\doxysubsubsection{\texorpdfstring{usbPowerPresent()}{usbPowerPresent()}}
 {\footnotesize\ttfamily bool usb\+Power\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Returns true if U\+SB power is detected. 
+Returns true if USB power is detected. 
 
-This function returns true if power is detected on the board\textquotesingle{}s U\+SB port and returns false otherwise. It uses the A\+Tmega32\+U4\textquotesingle{}s V\+B\+US line, which is directly connected to the power pin of the U\+SB connector.
+This function returns true if power is detected on the board\textquotesingle{}s USB port and returns false otherwise. It uses the ATmega32\+U4\textquotesingle{}s VBUS line, which is directly connected to the power pin of the USB connector.
 
 \begin{DoxySeeAlso}{See also}
-A method for detecting whether the board\textquotesingle{}s virtual C\+OM port is open\+: \href{http://arduino.cc/en/Serial/IfSerial}{\tt http\+://arduino.\+cc/en/\+Serial/\+If\+Serial} 
+A method for detecting whether the board\textquotesingle{}s virtual COM port is open\+: \href{http://arduino.cc/en/Serial/IfSerial}{\texttt{ http\+://arduino.\+cc/en/\+Serial/\+If\+Serial}} 
 \end{DoxySeeAlso}
 
 
-Definition at line 71 of file Zumo32\+U4.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_8h_source_l00071}{71}} of file \mbox{\hyperlink{_zumo32_u4_8h_source}{Zumo32\+U4.\+h}}.
 

@@ -1,4 +1,4 @@
-\hypertarget{class_pushbutton}{}\section{Pushbutton Class Reference}
+\hypertarget{class_pushbutton}{}\doxysection{Pushbutton Class Reference}
 \label{class_pushbutton}\index{Pushbutton@{Pushbutton}}
 
 
@@ -15,65 +15,65 @@ Inheritance diagram for Pushbutton\+:\begin{figure}[H]
 \includegraphics[height=3.000000cm]{class_pushbutton}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}{Pushbutton} (uint8\+\_\+t pin, uint8\+\_\+t pull\+Up=\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED}, uint8\+\_\+t default\+State=\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH})
+\mbox{\hyperlink{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}{Pushbutton}} (uint8\+\_\+t pin, uint8\+\_\+t pull\+Up=\mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\+\_\+\+UP\+\_\+\+ENABLED}}, uint8\+\_\+t default\+State=\mbox{\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{DEFAULT\+\_\+\+STATE\+\_\+\+HIGH}})
 \item 
-virtual bool \hyperlink{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}{is\+Pressed} ()
+virtual bool \mbox{\hyperlink{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}{is\+Pressed}} ()
 \begin{DoxyCompactList}\small\item\em indicates whether button is currently pressed without any debouncing. \end{DoxyCompactList}\item 
-void \hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press} ()
+void \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press}} ()
 \begin{DoxyCompactList}\small\item\em Waits until the button is pressed and takes care of debouncing. \end{DoxyCompactList}\item 
-void \hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release} ()
+void \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release}} ()
 \begin{DoxyCompactList}\small\item\em Waits until the button is released and takes care of debouncing. \end{DoxyCompactList}\item 
-void \hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{wait\+For\+Button} ()
+void \mbox{\hyperlink{class_pushbutton_base_ab755065c930be0649597220316213e8a}{wait\+For\+Button}} ()
 \begin{DoxyCompactList}\small\item\em Waits until the button is pressed and then waits until the button is released, taking care of debouncing. \end{DoxyCompactList}\item 
-bool \hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press} ()
+bool \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press}} ()
 \begin{DoxyCompactList}\small\item\em Uses a state machine to return true once after each time it detects the button moving from the released state to the pressed state. \end{DoxyCompactList}\item 
-bool \hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release} ()
+bool \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release}} ()
 \begin{DoxyCompactList}\small\item\em Uses a state machine to return true once after each time it detects the button moving from the pressed state to the released state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Main class for interfacing with pushbuttons. 
 
 This class can interface with any pushbutton whose state can be read with the {\ttfamily digital\+Read} function, which is part of the Arduino core.
 
-See \href{https://github.com/pololu/pushbutton-arduino}{\tt https\+://github.\+com/pololu/pushbutton-\/arduino} for an overview of the different ways to use this class. 
+See \href{https://github.com/pololu/pushbutton-arduino}{\texttt{ https\+://github.\+com/pololu/pushbutton-\/arduino}} for an overview of the different ways to use this class. 
 
-Definition at line 137 of file Pushbutton.\+h.
+Definition at line \mbox{\hyperlink{_pushbutton_8h_source_l00137}{137}} of file \mbox{\hyperlink{_pushbutton_8h_source}{Pushbutton.\+h}}.
 
 
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}\label{class_pushbutton_a73d08312ffb3502580485d3d2051e19f}} 
 \index{Pushbutton@{Pushbutton}!Pushbutton@{Pushbutton}}
 \index{Pushbutton@{Pushbutton}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{Pushbutton()}{Pushbutton()}}
-{\footnotesize\ttfamily Pushbutton\+::\+Pushbutton (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{pull\+Up = {\ttfamily \hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED}},  }\item[{uint8\+\_\+t}]{default\+State = {\ttfamily \hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH}} }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Pushbutton()}{Pushbutton()}}
+{\footnotesize\ttfamily Pushbutton\+::\+Pushbutton (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{pull\+Up = {\ttfamily \mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\+\_\+\+UP\+\_\+\+ENABLED}}},  }\item[{uint8\+\_\+t}]{default\+State = {\ttfamily \mbox{\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{DEFAULT\+\_\+\+STATE\+\_\+\+HIGH}}} }\end{DoxyParamCaption})}
 
-Constructs a new instance of \hyperlink{class_pushbutton}{Pushbutton}.
+Constructs a new instance of \mbox{\hyperlink{class_pushbutton}{Pushbutton}}.
 
 
 \begin{DoxyParams}{Parameters}
 {\em pin} & The pin number of the pin. This is used as an argument to {\ttfamily pin\+Mode} and {\ttfamily digital\+Read}.\\
 \hline
-{\em pull\+Up} & Specifies whether the pin\textquotesingle{}s internal pull-\/up resistor should be enabled. This should be either \hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+E\+N\+A\+B\+L\+ED} (which is the default if the argument is omitted) or \hyperlink{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}{P\+U\+L\+L\+\_\+\+U\+P\+\_\+\+D\+I\+S\+A\+B\+L\+ED}.\\
+{\em pull\+Up} & Specifies whether the pin\textquotesingle{}s internal pull-\/up resistor should be enabled. This should be either \mbox{\hyperlink{_pushbutton_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\+\_\+\+UP\+\_\+\+ENABLED}} (which is the default if the argument is omitted) or \mbox{\hyperlink{_pushbutton_8h_aa2df433ea6e6c6cd49babd945e27315e}{PULL\+\_\+\+UP\+\_\+\+DISABLED}}.\\
 \hline
-{\em default\+State} & Specifies the voltage level that corresponds to the button\textquotesingle{}s default (released) state. This should be either \hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+I\+GH} (which is the default if this argument is omitted) or \hyperlink{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+OW}. \\
+{\em default\+State} & Specifies the voltage level that corresponds to the button\textquotesingle{}s default (released) state. This should be either \mbox{\hyperlink{_pushbutton_8h_ad0c2918a36a770522d44451389d22f34}{DEFAULT\+\_\+\+STATE\+\_\+\+HIGH}} (which is the default if this argument is omitted) or \mbox{\hyperlink{_pushbutton_8h_ad1f5e860e74b4340ad61eb6b7f7d5406}{DEFAULT\+\_\+\+STATE\+\_\+\+LOW}}. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 120 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}\label{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}} 
-\index{Pushbutton@{Pushbutton}!get\+Single\+Debounced\+Press@{get\+Single\+Debounced\+Press}}
-\index{get\+Single\+Debounced\+Press@{get\+Single\+Debounced\+Press}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{get\+Single\+Debounced\+Press()}{getSingleDebouncedPress()}}
+\index{Pushbutton@{Pushbutton}!getSingleDebouncedPress@{getSingleDebouncedPress}}
+\index{getSingleDebouncedPress@{getSingleDebouncedPress}!Pushbutton@{Pushbutton}}
+\doxysubsubsection{\texorpdfstring{getSingleDebouncedPress()}{getSingleDebouncedPress()}}
 {\footnotesize\ttfamily bool Pushbutton\+Base\+::get\+Single\+Debounced\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
@@ -82,28 +82,28 @@ Uses a state machine to return true once after each time it detects the button m
 
 This is a non-\/blocking function that is meant to be called repeatedly in a loop. Each time it is called, it updates a state machine that monitors the state of the button. When it detects the button changing from the released state to the pressed state, with debouncing, it returns true. 
 
-Definition at line 110 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 \mbox{\Hypertarget{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}\label{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}} 
-\index{Pushbutton@{Pushbutton}!get\+Single\+Debounced\+Release@{get\+Single\+Debounced\+Release}}
-\index{get\+Single\+Debounced\+Release@{get\+Single\+Debounced\+Release}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{get\+Single\+Debounced\+Release()}{getSingleDebouncedRelease()}}
+\index{Pushbutton@{Pushbutton}!getSingleDebouncedRelease@{getSingleDebouncedRelease}}
+\index{getSingleDebouncedRelease@{getSingleDebouncedRelease}!Pushbutton@{Pushbutton}}
+\doxysubsubsection{\texorpdfstring{getSingleDebouncedRelease()}{getSingleDebouncedRelease()}}
 {\footnotesize\ttfamily bool Pushbutton\+Base\+::get\+Single\+Debounced\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
 
 Uses a state machine to return true once after each time it detects the button moving from the pressed state to the released state. 
 
-This is just like \hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()} except it has a separate state machine and it watches for when the button goes from the pressed state to the released state.
+This is just like \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()}} except it has a separate state machine and it watches for when the button goes from the pressed state to the released state.
 
-There is no strict guarantee that every debounced button press event returned by \hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()} will have a corresponding button release event returned by \hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release()}; the two functions use independent state machines and sample the button at different times. 
+There is no strict guarantee that every debounced button press event returned by \mbox{\hyperlink{class_pushbutton_base_a93953875c8b1c5f69dec3984774de296}{get\+Single\+Debounced\+Press()}} will have a corresponding button release event returned by \mbox{\hyperlink{class_pushbutton_base_ae568f5db0e8804247e0dcab72a311d42}{get\+Single\+Debounced\+Release()}}; the two functions use independent state machines and sample the button at different times. 
 
-Definition at line 115 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 \mbox{\Hypertarget{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}\label{class_pushbutton_a4990786220489fb5b6cf3af19b601a24}} 
-\index{Pushbutton@{Pushbutton}!is\+Pressed@{is\+Pressed}}
-\index{is\+Pressed@{is\+Pressed}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{is\+Pressed()}{isPressed()}}
+\index{Pushbutton@{Pushbutton}!isPressed@{isPressed}}
+\index{isPressed@{isPressed}!Pushbutton@{Pushbutton}}
+\doxysubsubsection{\texorpdfstring{isPressed()}{isPressed()}}
 {\footnotesize\ttfamily bool Pushbutton\+::is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -113,32 +113,32 @@ indicates whether button is currently pressed without any debouncing.
 \begin{DoxyReturn}{Returns}
 1 if the button is pressed right now, 0 if it is not.
 \end{DoxyReturn}
-This function must be implemented in a subclass of \hyperlink{class_pushbutton_base}{Pushbutton\+Base}, such as \hyperlink{class_pushbutton}{Pushbutton}. 
+This function must be implemented in a subclass of \mbox{\hyperlink{class_pushbutton_base}{Pushbutton\+Base}}, such as \mbox{\hyperlink{class_pushbutton}{Pushbutton}}. 
 
-Implements \hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{Pushbutton\+Base}.
+Implements \mbox{\hyperlink{class_pushbutton_base_a5b11851f15413140b75e4574e773b6ae}{Pushbutton\+Base}}.
 
 
 
-Definition at line 142 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00142}{142}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 \mbox{\Hypertarget{class_pushbutton_base_ab755065c930be0649597220316213e8a}\label{class_pushbutton_base_ab755065c930be0649597220316213e8a}} 
-\index{Pushbutton@{Pushbutton}!wait\+For\+Button@{wait\+For\+Button}}
-\index{wait\+For\+Button@{wait\+For\+Button}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{wait\+For\+Button()}{waitForButton()}}
+\index{Pushbutton@{Pushbutton}!waitForButton@{waitForButton}}
+\index{waitForButton@{waitForButton}!Pushbutton@{Pushbutton}}
+\doxysubsubsection{\texorpdfstring{waitForButton()}{waitForButton()}}
 {\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
 
 Waits until the button is pressed and then waits until the button is released, taking care of debouncing. 
 
-This is equivalent to calling \hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press()} and then \hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release()}. 
+This is equivalent to calling \mbox{\hyperlink{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}{wait\+For\+Press()}} and then \mbox{\hyperlink{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}{wait\+For\+Release()}}. 
 
-Definition at line 104 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 \mbox{\Hypertarget{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}\label{class_pushbutton_base_a2e2787595c82ee0913ecf4c1eea4a2c8}} 
-\index{Pushbutton@{Pushbutton}!wait\+For\+Press@{wait\+For\+Press}}
-\index{wait\+For\+Press@{wait\+For\+Press}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{wait\+For\+Press()}{waitForPress()}}
+\index{Pushbutton@{Pushbutton}!waitForPress@{waitForPress}}
+\index{waitForPress@{waitForPress}!Pushbutton@{Pushbutton}}
+\doxysubsubsection{\texorpdfstring{waitForPress()}{waitForPress()}}
 {\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
@@ -147,12 +147,12 @@ Waits until the button is pressed and takes care of debouncing.
 
 This function waits until the button is in the pressed state and then returns. Note that if the button is already pressed when you call this function, it will return quickly (in 10 ms). 
 
-Definition at line 84 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 \mbox{\Hypertarget{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}\label{class_pushbutton_base_ae5fff34b3e1ebd62fd02b99edd6bf13a}} 
-\index{Pushbutton@{Pushbutton}!wait\+For\+Release@{wait\+For\+Release}}
-\index{wait\+For\+Release@{wait\+For\+Release}!Pushbutton@{Pushbutton}}
-\subsubsection{\texorpdfstring{wait\+For\+Release()}{waitForRelease()}}
+\index{Pushbutton@{Pushbutton}!waitForRelease@{waitForRelease}}
+\index{waitForRelease@{waitForRelease}!Pushbutton@{Pushbutton}}
+\doxysubsubsection{\texorpdfstring{waitForRelease()}{waitForRelease()}}
 {\footnotesize\ttfamily void Pushbutton\+Base\+::wait\+For\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
 
 
@@ -161,11 +161,11 @@ Waits until the button is released and takes care of debouncing.
 
 This function waits until the button is in the released state and then returns. Note that if the button is already released when you call this function, it will return quickly (in 10 ms). 
 
-Definition at line 94 of file Pushbutton.\+cpp.
+Definition at line \mbox{\hyperlink{_pushbutton_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{_pushbutton_8cpp_source}{Pushbutton.\+cpp}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_pushbutton_8h}{Pushbutton.\+h}\item 
+\mbox{\hyperlink{_pushbutton_8h}{Pushbutton.\+h}}\item 
 Pushbutton.\+cpp\end{DoxyCompactItemize}

@@ -1,79 +1,79 @@
-\hypertarget{class_zumo32_u4_i_r_pulses}{}\section{Zumo32\+U4\+I\+R\+Pulses Class Reference}
-\label{class_zumo32_u4_i_r_pulses}\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}
+\hypertarget{class_zumo32_u4_i_r_pulses}{}\doxysection{Zumo32\+U4\+IRPulses Class Reference}
+\label{class_zumo32_u4_i_r_pulses}\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}}
 
 
-Emits pulses of infrared (IR) light using the IR L\+E\+Ds on the Zumo 32\+U4 Main Board.  
+Emits pulses of infrared (IR) light using the IR LEDs on the Zumo 32U4 Main Board.  
 
 
 
 
-{\ttfamily \#include $<$Zumo32\+U4\+I\+R\+Pulses.\+h$>$}
+{\ttfamily \#include $<$Zumo32\+U4\+IRPulses.\+h$>$}
 
-\subsection*{Public Types}
+\doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Direction} \{ \hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}{Left} = 0, 
-\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}{Right} = 1
+enum \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Direction}} \{ \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}{Left}} = 0
+, \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}{Right}} = 1
  \}
 \end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_zumo32_u4_i_r_pulses_abef1e5f17a173505c6acc0f8c0d917d9}{start} (\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Direction} direction, uint16\+\_\+t brightness, uint16\+\_\+t period=\hyperlink{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}{default\+Period})
+static void \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_abef1e5f17a173505c6acc0f8c0d917d9}{start}} (\mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Direction}} direction, uint16\+\_\+t brightness, uint16\+\_\+t period=\mbox{\hyperlink{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}{default\+Period}})
 \begin{DoxyCompactList}\small\item\em Starts emitting IR pulses. \end{DoxyCompactList}\item 
-static void \hyperlink{class_zumo32_u4_i_r_pulses_a99f222656413341fc07bd8fed823027b}{stop} ()
+static void \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a99f222656413341fc07bd8fed823027b}{stop}} ()
 \begin{DoxyCompactList}\small\item\em Stops emitting IR pulses. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
+\doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static const uint16\+\_\+t \hyperlink{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}{default\+Period} = 420
+static const uint16\+\_\+t \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}{default\+Period}} = 420
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-Emits pulses of infrared (IR) light using the IR L\+E\+Ds on the Zumo 32\+U4 Main Board. 
+\doxysubsection{Detailed Description}
+Emits pulses of infrared (IR) light using the IR LEDs on the Zumo 32U4 Main Board. 
 
-Timer 3 is used to generate a P\+WM signal, so this library might conflict with other libraries that use Timer 3. When the pulses are stopped, Timer 3 can be used for other purposes.
+Timer 3 is used to generate a PWM signal, so this library might conflict with other libraries that use Timer 3. When the pulses are stopped, Timer 3 can be used for other purposes.
 
-Pin A1 (P\+F6) is used to select which set of L\+E\+Ds to turn on\+: the left-\/side L\+E\+Ds or the right-\/side L\+E\+Ds.
+Pin A1 (PF6) is used to select which set of LEDs to turn on\+: the left-\/side LEDs or the right-\/side LEDs.
 
-Pin 5 (P\+C6/\+O\+C3A) is used as a P\+WM output to turn the L\+E\+Ds on and off.
+Pin 5 (PC6/\+OC3A) is used as a PWM output to turn the LEDs on and off.
 
-This class does not do anything with the IR L\+E\+Ds or detectors on the Zumo 32\+U4 Front Sensor Array. 
+This class does not do anything with the IR LEDs or detectors on the Zumo 32U4 Front Sensor Array. 
 
-Definition at line 24 of file Zumo32\+U4\+I\+R\+Pulses.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h_source_l00024}{24}} of file \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h_source}{Zumo32\+U4\+IRPulses.\+h}}.
 
 
 
-\subsection{Member Enumeration Documentation}
+\doxysubsection{Member Enumeration Documentation}
 \mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}\label{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}} 
-\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}!Direction@{Direction}}
-\index{Direction@{Direction}!Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}
-\subsubsection{\texorpdfstring{Direction}{Direction}}
-{\footnotesize\ttfamily enum \hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Zumo32\+U4\+I\+R\+Pulses\+::\+Direction}}
+\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}!Direction@{Direction}}
+\index{Direction@{Direction}!Zumo32U4IRPulses@{Zumo32U4IRPulses}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Zumo32\+U4\+IRPulses\+::\+Direction}}}
 
-This enum defines the two different sets of L\+E\+Ds that can be used to emit pulses. \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}!Left@{Left}}}\mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}\label{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}} 
-Left&The L\+E\+Ds on the left side of the robot. \\
+This enum defines the two different sets of LEDs that can be used to emit pulses. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!Zumo32U4IRPulses@{Zumo32U4IRPulses}}\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}!Left@{Left}}}\mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}\label{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616a2283d2a79677f38342a09416734ad9e7}} 
+Left&The LEDs on the left side of the robot. \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}!Right@{Right}}}\mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}\label{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}} 
-Right&The L\+E\+Ds on the right side of the robot. \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!Zumo32U4IRPulses@{Zumo32U4IRPulses}}\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}!Right@{Right}}}\mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}\label{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616abc5bb22fe2cce8d4c31f297de25d5852}} 
+Right&The LEDs on the right side of the robot. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line 30 of file Zumo32\+U4\+I\+R\+Pulses.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h_source_l00030}{30}} of file \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h_source}{Zumo32\+U4\+IRPulses.\+h}}.
 
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_abef1e5f17a173505c6acc0f8c0d917d9}\label{class_zumo32_u4_i_r_pulses_abef1e5f17a173505c6acc0f8c0d917d9}} 
-\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}!start@{start}}
-\index{start@{start}!Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}
-\subsubsection{\texorpdfstring{start()}{start()}}
-{\footnotesize\ttfamily void Zumo32\+U4\+I\+R\+Pulses\+::start (\begin{DoxyParamCaption}\item[{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Direction}}]{direction,  }\item[{uint16\+\_\+t}]{brightness,  }\item[{uint16\+\_\+t}]{period = {\ttfamily \hyperlink{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}{default\+Period}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}!start@{start}}
+\index{start@{start}!Zumo32U4IRPulses@{Zumo32U4IRPulses}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IRPulses\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_zumo32_u4_i_r_pulses_a5252acaa381240e6b8ca499eaf304616}{Direction}}}]{direction,  }\item[{uint16\+\_\+t}]{brightness,  }\item[{uint16\+\_\+t}]{period = {\ttfamily \mbox{\hyperlink{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}{default\+Period}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -81,22 +81,22 @@ Starts emitting IR pulses.
 
 
 \begin{DoxyParams}{Parameters}
-{\em direction} & Specifies which set of L\+E\+Ds to turn on. \\
+{\em direction} & Specifies which set of LEDs to turn on. \\
 \hline
-{\em brightness} & A number that specifies how long each pulse is. The pulse length will be (1 + brightness) / (16 M\+Hz). If {\ttfamily brightness} is greater than or equal to {\ttfamily period}, then the L\+E\+Ds will just be on constantly. \\
+{\em brightness} & A number that specifies how long each pulse is. The pulse length will be (1 + brightness) / (16 MHz). If {\ttfamily brightness} is greater than or equal to {\ttfamily period}, then the LEDs will just be on constantly. \\
 \hline
-{\em period} & A number that specifies the frequency of the pulses. The interval between consecutive the rising edges of pulses will be (1 + period) / (16 M\+Hz). The default value is 420, which results in a period very close to 38 k\+Hz. \\
+{\em period} & A number that specifies the frequency of the pulses. The interval between consecutive the rising edges of pulses will be (1 + period) / (16 MHz). The default value is 420, which results in a period very close to 38 k\+Hz. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 7 of file Zumo32\+U4\+I\+R\+Pulses.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8cpp_source}{Zumo32\+U4\+IRPulses.\+cpp}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_a99f222656413341fc07bd8fed823027b}\label{class_zumo32_u4_i_r_pulses_a99f222656413341fc07bd8fed823027b}} 
-\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}!stop@{stop}}
-\index{stop@{stop}!Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}
-\subsubsection{\texorpdfstring{stop()}{stop()}}
-{\footnotesize\ttfamily void Zumo32\+U4\+I\+R\+Pulses\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}!stop@{stop}}
+\index{stop@{stop}!Zumo32U4IRPulses@{Zumo32U4IRPulses}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IRPulses\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -104,24 +104,24 @@ Stops emitting IR pulses.
 
 Timer 3 can be used for other purposes after calling this function. 
 
-Definition at line 74 of file Zumo32\+U4\+I\+R\+Pulses.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8cpp_source}{Zumo32\+U4\+IRPulses.\+cpp}}.
 
 
 
-\subsection{Member Data Documentation}
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}\label{class_zumo32_u4_i_r_pulses_ae72ab04d5b682b3170a1542344cb3f75}} 
-\index{Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}!default\+Period@{default\+Period}}
-\index{default\+Period@{default\+Period}!Zumo32\+U4\+I\+R\+Pulses@{Zumo32\+U4\+I\+R\+Pulses}}
-\subsubsection{\texorpdfstring{default\+Period}{defaultPeriod}}
-{\footnotesize\ttfamily const uint16\+\_\+t Zumo32\+U4\+I\+R\+Pulses\+::default\+Period = 420\hspace{0.3cm}{\ttfamily [static]}}
+\index{Zumo32U4IRPulses@{Zumo32U4IRPulses}!defaultPeriod@{defaultPeriod}}
+\index{defaultPeriod@{defaultPeriod}!Zumo32U4IRPulses@{Zumo32U4IRPulses}}
+\doxysubsubsection{\texorpdfstring{defaultPeriod}{defaultPeriod}}
+{\footnotesize\ttfamily const uint16\+\_\+t Zumo32\+U4\+IRPulses\+::default\+Period = 420\hspace{0.3cm}{\ttfamily [static]}}
 
 The default frequency is 16000000 / (420 + 1) = 38.\+005 k\+Hz 
 
-Definition at line 40 of file Zumo32\+U4\+I\+R\+Pulses.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h_source_l00040}{40}} of file \mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h_source}{Zumo32\+U4\+IRPulses.\+h}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_zumo32_u4_i_r_pulses_8h}{Zumo32\+U4\+I\+R\+Pulses.\+h}\item 
-Zumo32\+U4\+I\+R\+Pulses.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_zumo32_u4_i_r_pulses_8h}{Zumo32\+U4\+IRPulses.\+h}}\item 
+Zumo32\+U4\+IRPulses.\+cpp\end{DoxyCompactItemize}

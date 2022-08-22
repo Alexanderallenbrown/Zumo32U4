@@ -1,94 +1,82 @@
-\hypertarget{class_zumo32_u4_i_m_u}{}\section{Zumo32\+U4\+I\+MU Class Reference}
-\label{class_zumo32_u4_i_m_u}\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
+\hypertarget{class_zumo32_u4_i_m_u}{}\doxysection{Zumo32\+U4\+IMU Class Reference}
+\label{class_zumo32_u4_i_m_u}\index{Zumo32U4IMU@{Zumo32U4IMU}}
 
 
-Interfaces with the inertial sensors on the Zumo 32\+U4.  
+Interfaces with the inertial sensors on the Zumo 32U4.  
 
 
 
 
-{\ttfamily \#include $<$Zumo32\+U4\+I\+M\+U.\+h$>$}
+{\ttfamily \#include $<$Zumo32\+U4\+IMU.\+h$>$}
 
-\subsection*{Classes}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}
+struct \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}
 \begin{DoxyCompactList}\small\item\em Represents a 3-\/dimensional vector with x, y, and z components. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}\label{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}} 
-uint8\+\_\+t \hyperlink{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}{get\+Last\+Error} ()
-\begin{DoxyCompactList}\small\item\em Returns 0 if the last I2C communication with the I\+MU was successful, or a non-\/zero status code if there was an error. \end{DoxyCompactList}\item 
-bool \hyperlink{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}{init} ()
+uint8\+\_\+t \mbox{\hyperlink{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}{get\+Last\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Returns 0 if the last I2C communication with the IMU was successful, or a non-\/zero status code if there was an error. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}{init}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the inertial sensors and detects their type. \end{DoxyCompactList}\item 
-\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+I\+M\+U\+Type} \hyperlink{class_zumo32_u4_i_m_u_a936427abfbed839c5669746d274427bd}{get\+Type} ()
-\begin{DoxyCompactList}\small\item\em Returns the type of the inertial sensors on the Zumo 32\+U4. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}\label{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}} 
-void \hyperlink{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}{enable\+Default} ()
+\mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+IMUType}} \mbox{\hyperlink{class_zumo32_u4_i_m_u_a936427abfbed839c5669746d274427bd}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the type of the inertial sensors on the Zumo 32U4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}{enable\+Default}} ()
 \begin{DoxyCompactList}\small\item\em Enables all of the inertial sensors with a default configuration. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}\label{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}} 
-void \hyperlink{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}{configure\+For\+Turn\+Sensing} ()
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}{configure\+For\+Turn\+Sensing}} ()
 \begin{DoxyCompactList}\small\item\em Configures the sensors with settings optimized for turn sensing. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}\label{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}} 
-void \hyperlink{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}{configure\+For\+Balancing} ()
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}{configure\+For\+Balancing}} ()
 \begin{DoxyCompactList}\small\item\em Configures the sensors with settings optimized for balancing. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}\label{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}} 
-void \hyperlink{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}{configure\+For\+Face\+Uphill} ()
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}{configure\+For\+Face\+Uphill}} ()
 \begin{DoxyCompactList}\small\item\em Configures the sensors with settings optimized for the Face\+Uphill example program. \end{DoxyCompactList}\item 
-void \hyperlink{class_zumo32_u4_i_m_u_ab5cb0c1c2342386c13afe36f7064d1e8}{write\+Reg} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_ab5cb0c1c2342386c13afe36f7064d1e8}{write\+Reg}} (uint8\+\_\+t addr, uint8\+\_\+t reg, uint8\+\_\+t value)
 \begin{DoxyCompactList}\small\item\em Writes an 8-\/bit sensor register. \end{DoxyCompactList}\item 
-uint8\+\_\+t \hyperlink{class_zumo32_u4_i_m_u_a8bc90dccbd0259a97a5f0bd1e8f0316a}{read\+Reg} (uint8\+\_\+t addr, uint8\+\_\+t reg)
+uint8\+\_\+t \mbox{\hyperlink{class_zumo32_u4_i_m_u_a8bc90dccbd0259a97a5f0bd1e8f0316a}{read\+Reg}} (uint8\+\_\+t addr, uint8\+\_\+t reg)
 \begin{DoxyCompactList}\small\item\em Reads an 8-\/bit sensor register. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}\label{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}} 
-void \hyperlink{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}{read\+Acc} ()
-\begin{DoxyCompactList}\small\item\em Takes a reading from the accelerometer and makes the measurements available in \hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{a}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}\label{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}} 
-void \hyperlink{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}{read\+Gyro} ()
-\begin{DoxyCompactList}\small\item\em Takes a reading from the gyro and makes the measurements available in \hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{g}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}\label{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}} 
-void \hyperlink{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}{read\+Mag} ()
-\begin{DoxyCompactList}\small\item\em Takes a reading from the magnetometer and makes the measurements available in \hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{m}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}\label{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}} 
-void \hyperlink{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}{read} ()
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}{read\+Acc}} ()
+\begin{DoxyCompactList}\small\item\em Takes a reading from the accelerometer and makes the measurements available in \mbox{\hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{a}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}{read\+Gyro}} ()
+\begin{DoxyCompactList}\small\item\em Takes a reading from the gyro and makes the measurements available in \mbox{\hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{g}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}{read\+Mag}} ()
+\begin{DoxyCompactList}\small\item\em Takes a reading from the magnetometer and makes the measurements available in \mbox{\hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{m}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}{read}} ()
 \begin{DoxyCompactList}\small\item\em Takes a reading from all three sensors (accelerometer, gyro, and magnetometer) and makes their measurements available in the respective vectors. \end{DoxyCompactList}\item 
-bool \hyperlink{class_zumo32_u4_i_m_u_a75735024206bd09d0905f28455f0a368}{acc\+Data\+Ready} ()
+bool \mbox{\hyperlink{class_zumo32_u4_i_m_u_a75735024206bd09d0905f28455f0a368}{acc\+Data\+Ready}} ()
 \begin{DoxyCompactList}\small\item\em Indicates whether the accelerometer has new measurement data ready. \end{DoxyCompactList}\item 
-bool \hyperlink{class_zumo32_u4_i_m_u_a82a4b99d45afb0b5008e32213fa2e0cc}{gyro\+Data\+Ready} ()
+bool \mbox{\hyperlink{class_zumo32_u4_i_m_u_a82a4b99d45afb0b5008e32213fa2e0cc}{gyro\+Data\+Ready}} ()
 \begin{DoxyCompactList}\small\item\em Indicates whether the gyro has new measurement data ready. \end{DoxyCompactList}\item 
-bool \hyperlink{class_zumo32_u4_i_m_u_ad9a7bde2fa435b4ceb6929e73acef4b6}{mag\+Data\+Ready} ()
+bool \mbox{\hyperlink{class_zumo32_u4_i_m_u_ad9a7bde2fa435b4ceb6929e73acef4b6}{mag\+Data\+Ready}} ()
 \begin{DoxyCompactList}\small\item\em Indicates whether the magnetometer has new measurement data ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}\label{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}} 
-\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}$<$ int16\+\_\+t $>$ \hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{a} = \{0, 0, 0\}
+\mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}$<$ int16\+\_\+t $>$ \mbox{\hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{a}} = \{0, 0, 0\}
 \begin{DoxyCompactList}\small\item\em Raw accelerometer readings. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}\label{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}} 
-\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}$<$ int16\+\_\+t $>$ \hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{g} = \{0, 0, 0\}
+\mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}$<$ int16\+\_\+t $>$ \mbox{\hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{g}} = \{0, 0, 0\}
 \begin{DoxyCompactList}\small\item\em Raw gyro readings. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}\label{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}} 
-\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}$<$ int16\+\_\+t $>$ \hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{m} = \{0, 0, 0\}
+\mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}$<$ int16\+\_\+t $>$ \mbox{\hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{m}} = \{0, 0, 0\}
 \begin{DoxyCompactList}\small\item\em Raw magnetometer readings. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-Interfaces with the inertial sensors on the Zumo 32\+U4. 
+\doxysubsection{Detailed Description}
+Interfaces with the inertial sensors on the Zumo 32U4. 
 
-This class allows you to configure and get readings from the I2C sensors that make up the Zumo 32\+U4\textquotesingle{}s inertial measurement unit (I\+MU)\+: gyro, accelerometer, and magnetometer.
+This class allows you to configure and get readings from the I2C sensors that make up the Zumo 32U4\textquotesingle{}s inertial measurement unit (IMU)\+: gyro, accelerometer, and magnetometer.
 
 You must call {\ttfamily Wire.\+start()} before using any of this library\textquotesingle{}s functions that access the sensors. 
 
-Definition at line 75 of file Zumo32\+U4\+I\+M\+U.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00075}{75}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
 
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_a75735024206bd09d0905f28455f0a368}\label{class_zumo32_u4_i_m_u_a75735024206bd09d0905f28455f0a368}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!acc\+Data\+Ready@{acc\+Data\+Ready}}
-\index{acc\+Data\+Ready@{acc\+Data\+Ready}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{acc\+Data\+Ready()}{accDataReady()}}
-{\footnotesize\ttfamily bool Zumo32\+U4\+I\+M\+U\+::acc\+Data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!accDataReady@{accDataReady}}
+\index{accDataReady@{accDataReady}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{accDataReady()}{accDataReady()}}
+{\footnotesize\ttfamily bool Zumo32\+U4\+IMU\+::acc\+Data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -99,30 +87,100 @@ True if there is new accelerometer data available; false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 307 of file Zumo32\+U4\+I\+M\+U.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00307}{307}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}\label{class_zumo32_u4_i_m_u_a78786abfc220e14ebb603b72dce8f4ca}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!configureForBalancing@{configureForBalancing}}
+\index{configureForBalancing@{configureForBalancing}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{configureForBalancing()}{configureForBalancing()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::configure\+For\+Balancing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configures the sensors with settings optimized for balancing. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}\label{class_zumo32_u4_i_m_u_af9992e0ff9c372edc8d3a5d165411263}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!configureForFaceUphill@{configureForFaceUphill}}
+\index{configureForFaceUphill@{configureForFaceUphill}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{configureForFaceUphill()}{configureForFaceUphill()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::configure\+For\+Face\+Uphill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configures the sensors with settings optimized for the Face\+Uphill example program. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00197}{197}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}\label{class_zumo32_u4_i_m_u_ad166edc8fb6304c2f5329ebc490f21ad}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!configureForTurnSensing@{configureForTurnSensing}}
+\index{configureForTurnSensing@{configureForTurnSensing}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{configureForTurnSensing()}{configureForTurnSensing()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::configure\+For\+Turn\+Sensing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configures the sensors with settings optimized for turn sensing. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}\label{class_zumo32_u4_i_m_u_acfb1ce51ff908de9635ccbc3652a3fbb}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!enableDefault@{enableDefault}}
+\index{enableDefault@{enableDefault}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{enableDefault()}{enableDefault()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::enable\+Default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables all of the inertial sensors with a default configuration. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}\label{class_zumo32_u4_i_m_u_ad00f3ac13787ecb7cc0c3b7d4428fd5b}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily uint8\+\_\+t Zumo32\+U4\+IMU\+::get\+Last\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns 0 if the last I2C communication with the IMU was successful, or a non-\/zero status code if there was an error. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00097}{97}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_a936427abfbed839c5669746d274427bd}\label{class_zumo32_u4_i_m_u_a936427abfbed839c5669746d274427bd}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!get\+Type@{get\+Type}}
-\index{get\+Type@{get\+Type}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
-{\footnotesize\ttfamily \hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+I\+M\+U\+Type} Zumo32\+U4\+I\+M\+U\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!getType@{getType}}
+\index{getType@{getType}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452}{Zumo32\+U4\+IMUType}} Zumo32\+U4\+IMU\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Returns the type of the inertial sensors on the Zumo 32\+U4. 
+Returns the type of the inertial sensors on the Zumo 32U4. 
 
 \begin{DoxyReturn}{Returns}
-The sensor type as a member of the Zumo32\+U4\+I\+M\+U\+Type enum. If the type is not known (e.\+g. if \hyperlink{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}{init()} has not been called yet), this will be \hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}{Zumo32\+U4\+I\+M\+U\+Type\+::\+Unknown}. 
+The sensor type as a member of the Zumo32\+U4\+IMUType enum. If the type is not known (e.\+g. if \mbox{\hyperlink{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}{init()}} has not been called yet), this will be \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_a2be3e50a86f638af5bb120cc740f3452a88183b946cc5f0e8c96b2e66e1c74a7e}{Zumo32\+U4\+IMUType\+::\+Unknown}}. 
 \end{DoxyReturn}
 
 
-Definition at line 110 of file Zumo32\+U4\+I\+M\+U.\+h.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00110}{110}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_a82a4b99d45afb0b5008e32213fa2e0cc}\label{class_zumo32_u4_i_m_u_a82a4b99d45afb0b5008e32213fa2e0cc}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!gyro\+Data\+Ready@{gyro\+Data\+Ready}}
-\index{gyro\+Data\+Ready@{gyro\+Data\+Ready}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{gyro\+Data\+Ready()}{gyroDataReady()}}
-{\footnotesize\ttfamily bool Zumo32\+U4\+I\+M\+U\+::gyro\+Data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!gyroDataReady@{gyroDataReady}}
+\index{gyroDataReady@{gyroDataReady}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{gyroDataReady()}{gyroDataReady()}}
+{\footnotesize\ttfamily bool Zumo32\+U4\+IMU\+::gyro\+Data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -133,13 +191,13 @@ True if there is new gyro data available; false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 320 of file Zumo32\+U4\+I\+M\+U.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00320}{320}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}\label{class_zumo32_u4_i_m_u_aca2ae4fe4989453c2e4f73e9dc7439d2}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!init@{init}}
-\index{init@{init}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily bool Zumo32\+U4\+I\+M\+U\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!init@{init}}
+\index{init@{init}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Zumo32\+U4\+IMU\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -150,13 +208,13 @@ True if the sensor type was detected succesfully; false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 11 of file Zumo32\+U4\+I\+M\+U.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_ad9a7bde2fa435b4ceb6929e73acef4b6}\label{class_zumo32_u4_i_m_u_ad9a7bde2fa435b4ceb6929e73acef4b6}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!mag\+Data\+Ready@{mag\+Data\+Ready}}
-\index{mag\+Data\+Ready@{mag\+Data\+Ready}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{mag\+Data\+Ready()}{magDataReady()}}
-{\footnotesize\ttfamily bool Zumo32\+U4\+I\+M\+U\+::mag\+Data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!magDataReady@{magDataReady}}
+\index{magDataReady@{magDataReady}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{magDataReady()}{magDataReady()}}
+{\footnotesize\ttfamily bool Zumo32\+U4\+IMU\+::mag\+Data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -167,13 +225,69 @@ True if there is new magnetometer data available; false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 333 of file Zumo32\+U4\+I\+M\+U.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00333}{333}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}\label{class_zumo32_u4_i_m_u_aad16780f526df9f77614f47427c658ed}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!read@{read}}
+\index{read@{read}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Takes a reading from all three sensors (accelerometer, gyro, and magnetometer) and makes their measurements available in the respective vectors. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00298}{298}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}\label{class_zumo32_u4_i_m_u_a034c243ac0be1892af67c71759aa577c}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!readAcc@{readAcc}}
+\index{readAcc@{readAcc}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{readAcc()}{readAcc()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::read\+Acc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Takes a reading from the accelerometer and makes the measurements available in \mbox{\hyperlink{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}{a}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00246}{246}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}\label{class_zumo32_u4_i_m_u_a1c460bf87ffc7d671b398bf9ef4951d6}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!readGyro@{readGyro}}
+\index{readGyro@{readGyro}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{readGyro()}{readGyro()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::read\+Gyro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Takes a reading from the gyro and makes the measurements available in \mbox{\hyperlink{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}{g}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00263}{263}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}\label{class_zumo32_u4_i_m_u_a83f3ef3030e781ea7cee727190f3bd2d}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!readMag@{readMag}}
+\index{readMag@{readMag}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{readMag()}{readMag()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::read\+Mag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Takes a reading from the magnetometer and makes the measurements available in \mbox{\hyperlink{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}{m}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00280}{280}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_a8bc90dccbd0259a97a5f0bd1e8f0316a}\label{class_zumo32_u4_i_m_u_a8bc90dccbd0259a97a5f0bd1e8f0316a}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!read\+Reg@{read\+Reg}}
-\index{read\+Reg@{read\+Reg}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{read\+Reg()}{readReg()}}
-{\footnotesize\ttfamily uint8\+\_\+t Zumo32\+U4\+I\+M\+U\+::read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!readReg@{readReg}}
+\index{readReg@{readReg}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{readReg()}{readReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t Zumo32\+U4\+IMU\+::read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
 
 
 
@@ -191,13 +305,13 @@ Reads an 8-\/bit sensor register.
 \end{DoxyReturn}
 
 
-Definition at line 229 of file Zumo32\+U4\+I\+M\+U.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00229}{229}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
 
 \mbox{\Hypertarget{class_zumo32_u4_i_m_u_ab5cb0c1c2342386c13afe36f7064d1e8}\label{class_zumo32_u4_i_m_u_ab5cb0c1c2342386c13afe36f7064d1e8}} 
-\index{Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}!write\+Reg@{write\+Reg}}
-\index{write\+Reg@{write\+Reg}!Zumo32\+U4\+I\+MU@{Zumo32\+U4\+I\+MU}}
-\subsubsection{\texorpdfstring{write\+Reg()}{writeReg()}}
-{\footnotesize\ttfamily void Zumo32\+U4\+I\+M\+U\+::write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+\index{Zumo32U4IMU@{Zumo32U4IMU}!writeReg@{writeReg}}
+\index{writeReg@{writeReg}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{writeReg()}{writeReg()}}
+{\footnotesize\ttfamily void Zumo32\+U4\+IMU\+::write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -214,11 +328,56 @@ Writes an 8-\/bit sensor register.
 \end{DoxyParams}
 
 
-Definition at line 221 of file Zumo32\+U4\+I\+M\+U.\+cpp.
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source_l00221}{221}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8cpp_source}{Zumo32\+U4\+IMU.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}\label{class_zumo32_u4_i_m_u_a386b34407b744844d403e5e0041dc475}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!a@{a}}
+\index{a@{a}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}$<$int16\+\_\+t$>$ Zumo32\+U4\+IMU\+::a = \{0, 0, 0\}}
+
+
+
+Raw accelerometer readings. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00087}{87}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}\label{class_zumo32_u4_i_m_u_a6870acdcde72d4f3ec2bd70088641e4e}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!g@{g}}
+\index{g@{g}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}$<$int16\+\_\+t$>$ Zumo32\+U4\+IMU\+::g = \{0, 0, 0\}}
+
+
+
+Raw gyro readings. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00090}{90}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
+
+\mbox{\Hypertarget{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}\label{class_zumo32_u4_i_m_u_a667705e0bbee3b4b5ec3a49b2fc72662}} 
+\index{Zumo32U4IMU@{Zumo32U4IMU}!m@{m}}
+\index{m@{m}!Zumo32U4IMU@{Zumo32U4IMU}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_zumo32_u4_i_m_u_1_1vector}{vector}}$<$int16\+\_\+t$>$ Zumo32\+U4\+IMU\+::m = \{0, 0, 0\}}
+
+
+
+Raw magnetometer readings. 
+
+
+
+Definition at line \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source_l00093}{93}} of file \mbox{\hyperlink{_zumo32_u4_i_m_u_8h_source}{Zumo32\+U4\+IMU.\+h}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_zumo32_u4_i_m_u_8h}{Zumo32\+U4\+I\+M\+U.\+h}\item 
-Zumo32\+U4\+I\+M\+U.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_zumo32_u4_i_m_u_8h}{Zumo32\+U4\+IMU.\+h}}\item 
+Zumo32\+U4\+IMU.\+cpp\end{DoxyCompactItemize}

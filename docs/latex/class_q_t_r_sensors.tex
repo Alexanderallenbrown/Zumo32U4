@@ -1,84 +1,266 @@
-\hypertarget{class_q_t_r_sensors}{}\section{Q\+T\+R\+Sensors Class Reference}
-\label{class_q_t_r_sensors}\index{Q\+T\+R\+Sensors@{Q\+T\+R\+Sensors}}
-Inheritance diagram for Q\+T\+R\+Sensors\+:\begin{figure}[H]
+\hypertarget{class_q_t_r_sensors}{}\doxysection{QTRSensors Class Reference}
+\label{class_q_t_r_sensors}\index{QTRSensors@{QTRSensors}}
+Inheritance diagram for QTRSensors\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_q_t_r_sensors}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}\label{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}} 
-void {\bfseries read} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON)
+void \mbox{\hyperlink{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}{read}} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
 \item 
-\mbox{\Hypertarget{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}\label{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}} 
-void {\bfseries emitters\+Off} ()
+void \mbox{\hyperlink{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}{emitters\+Off}} ()
 \item 
-\mbox{\Hypertarget{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}\label{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}} 
-void {\bfseries emitters\+On} ()
+void \mbox{\hyperlink{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}{emitters\+On}} ()
 \item 
+void \mbox{\hyperlink{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}{calibrate}} (unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+\item 
+void \mbox{\hyperlink{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}{reset\+Calibration}} ()
+\item 
+void \mbox{\hyperlink{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}{read\+Calibrated}} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON)
+\item 
+int \mbox{\hyperlink{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}{read\+Line}} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=QTR\+\_\+\+EMITTERS\+\_\+\+ON, unsigned char white\+\_\+line=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}{calibrated\+Minimum\+On}}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}{calibrated\+Maximum\+On}}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}{calibrated\+Minimum\+Off}}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}{calibrated\+Maximum\+Off}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}{init}} (unsigned char $\ast$pins, unsigned char num\+Sensors, unsigned char emitter\+Pin)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}{\+\_\+pins}}
+\item 
+unsigned char \mbox{\hyperlink{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}{\+\_\+num\+Sensors}}
+\item 
+unsigned char \mbox{\hyperlink{class_q_t_r_sensors_a116880e22fe5e5c474e021b91e04e2ac}{\+\_\+emitter\+Pin}}
+\item 
+unsigned int \mbox{\hyperlink{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}{\+\_\+max\+Value}}
+\item 
+int \mbox{\hyperlink{class_q_t_r_sensors_a9c3c8b7ac645020c77ff8198145b46b6}{\+\_\+last\+Value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00048}{48}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_t_r_sensors_a2e4867e3b89ec1387a97a7ba13bf9216}\label{class_q_t_r_sensors_a2e4867e3b89ec1387a97a7ba13bf9216}} 
+\index{QTRSensors@{QTRSensors}!````~QTRSensors@{$\sim$QTRSensors}}
+\index{````~QTRSensors@{$\sim$QTRSensors}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{$\sim$QTRSensors()}{~QTRSensors()}}
+{\footnotesize\ttfamily QTRSensors\+::$\sim$\+QTRSensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00552}{552}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_af0c8e47e146955ef6711b8fc1e6cbac4}\label{class_q_t_r_sensors_af0c8e47e146955ef6711b8fc1e6cbac4}} 
+\index{QTRSensors@{QTRSensors}!QTRSensors@{QTRSensors}}
+\index{QTRSensors@{QTRSensors}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{QTRSensors()}{QTRSensors()}}
+{\footnotesize\ttfamily QTRSensors\+::\+QTRSensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00133}{133}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}\label{class_q_t_r_sensors_ac9840e2429c7a962977057ba154c77da}} 
-void {\bfseries calibrate} (unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON)
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}\label{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}} 
-void {\bfseries reset\+Calibration} ()
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}\label{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}} 
-void {\bfseries read\+Calibrated} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON)
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}\label{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}} 
-int {\bfseries read\+Line} (unsigned int $\ast$sensor\+\_\+values, unsigned char read\+Mode=Q\+T\+R\+\_\+\+E\+M\+I\+T\+T\+E\+R\+S\+\_\+\+ON, unsigned char white\+\_\+line=0)
-\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}\label{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}} 
-unsigned int $\ast$ {\bfseries calibrated\+Minimum\+On}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}\label{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}} 
-unsigned int $\ast$ {\bfseries calibrated\+Maximum\+On}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}\label{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}} 
-unsigned int $\ast$ {\bfseries calibrated\+Minimum\+Off}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}\label{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}} 
-unsigned int $\ast$ {\bfseries calibrated\+Maximum\+Off}
-\end{DoxyCompactItemize}
-\subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
+\index{QTRSensors@{QTRSensors}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily void QTRSensors\+::calibrate (\begin{DoxyParamCaption}\item[{unsigned char}]{read\+Mode = {\ttfamily QTR\+\_\+EMITTERS\+\_\+ON} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}\label{class_q_t_r_sensors_a576f1fe1e9f2d3d2097baf79a9655134}} 
+\index{QTRSensors@{QTRSensors}!emittersOff@{emittersOff}}
+\index{emittersOff@{emittersOff}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{emittersOff()}{emittersOff()}}
+{\footnotesize\ttfamily void QTRSensors\+::emitters\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}\label{class_q_t_r_sensors_a79f5380ecdb324a7800a045c3506975f}} 
+\index{QTRSensors@{QTRSensors}!emittersOn@{emittersOn}}
+\index{emittersOn@{emittersOn}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{emittersOn()}{emittersOn()}}
+{\footnotesize\ttfamily void QTRSensors\+::emitters\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
 \mbox{\Hypertarget{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}\label{class_q_t_r_sensors_ae1d5eb9479d4dee1977109b17aece70e}} 
-void {\bfseries init} (unsigned char $\ast$pins, unsigned char num\+Sensors, unsigned char emitter\+Pin)
-\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}\label{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}} 
-unsigned char $\ast$ {\bfseries \+\_\+pins}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}\label{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}} 
-unsigned char {\bfseries \+\_\+num\+Sensors}
-\item 
+\index{QTRSensors@{QTRSensors}!init@{init}}
+\index{init@{init}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void QTRSensors\+::init (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{pins,  }\item[{unsigned char}]{num\+Sensors,  }\item[{unsigned char}]{emitter\+Pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}\label{class_q_t_r_sensors_afc47e6c2608293a610e1a3acce93628b}} 
+\index{QTRSensors@{QTRSensors}!read@{read}}
+\index{read@{read}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void QTRSensors\+::read (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{sensor\+\_\+values,  }\item[{unsigned char}]{read\+Mode = {\ttfamily QTR\+\_\+EMITTERS\+\_\+ON} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}\label{class_q_t_r_sensors_aa32a448ac03cd2a45d1f14f96ac4b739}} 
+\index{QTRSensors@{QTRSensors}!readCalibrated@{readCalibrated}}
+\index{readCalibrated@{readCalibrated}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{readCalibrated()}{readCalibrated()}}
+{\footnotesize\ttfamily void QTRSensors\+::read\+Calibrated (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{sensor\+\_\+values,  }\item[{unsigned char}]{read\+Mode = {\ttfamily QTR\+\_\+EMITTERS\+\_\+ON} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00235}{235}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}\label{class_q_t_r_sensors_ac84f0b98bceae0b59d687ae82eb92718}} 
+\index{QTRSensors@{QTRSensors}!readLine@{readLine}}
+\index{readLine@{readLine}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{readLine()}{readLine()}}
+{\footnotesize\ttfamily int QTRSensors\+::read\+Line (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{sensor\+\_\+values,  }\item[{unsigned char}]{read\+Mode = {\ttfamily QTR\+\_\+EMITTERS\+\_\+ON},  }\item[{unsigned char}]{white\+\_\+line = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00315}{315}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}\label{class_q_t_r_sensors_aa840b6ef17562d41edf21ddd08e0672e}} 
+\index{QTRSensors@{QTRSensors}!resetCalibration@{resetCalibration}}
+\index{resetCalibration@{resetCalibration}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{resetCalibration()}{resetCalibration()}}
+{\footnotesize\ttfamily void QTRSensors\+::reset\+Calibration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{_q_t_r_sensors_8cpp_source}{QTRSensors.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_q_t_r_sensors_a116880e22fe5e5c474e021b91e04e2ac}\label{class_q_t_r_sensors_a116880e22fe5e5c474e021b91e04e2ac}} 
-unsigned char {\bfseries \+\_\+emitter\+Pin}
-\item 
-\mbox{\Hypertarget{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}\label{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}} 
-unsigned int {\bfseries \+\_\+max\+Value}
-\item 
+\index{QTRSensors@{QTRSensors}!\_emitterPin@{\_emitterPin}}
+\index{\_emitterPin@{\_emitterPin}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{\_emitterPin}{\_emitterPin}}
+{\footnotesize\ttfamily unsigned char QTRSensors\+::\+\_\+emitter\+Pin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00142}{142}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
 \mbox{\Hypertarget{class_q_t_r_sensors_a9c3c8b7ac645020c77ff8198145b46b6}\label{class_q_t_r_sensors_a9c3c8b7ac645020c77ff8198145b46b6}} 
-int {\bfseries \+\_\+last\+Value}
-\end{DoxyCompactItemize}
+\index{QTRSensors@{QTRSensors}!\_lastValue@{\_lastValue}}
+\index{\_lastValue@{\_lastValue}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{\_lastValue}{\_lastValue}}
+{\footnotesize\ttfamily int QTRSensors\+::\+\_\+last\+Value\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-\subsection{Detailed Description}
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00144}{144}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}\label{class_q_t_r_sensors_a88657f1405aa7dc840f2025b53e1a4b3}} 
+\index{QTRSensors@{QTRSensors}!\_maxValue@{\_maxValue}}
+\index{\_maxValue@{\_maxValue}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{\_maxValue}{\_maxValue}}
+{\footnotesize\ttfamily unsigned int QTRSensors\+::\+\_\+max\+Value\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Definition at line 48 of file Q\+T\+R\+Sensors.\+h.
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00143}{143}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}\label{class_q_t_r_sensors_af4e3b5b4b9fd7acb0914a9f345e446f0}} 
+\index{QTRSensors@{QTRSensors}!\_numSensors@{\_numSensors}}
+\index{\_numSensors@{\_numSensors}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{\_numSensors}{\_numSensors}}
+{\footnotesize\ttfamily unsigned char QTRSensors\+::\+\_\+num\+Sensors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00141}{141}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}\label{class_q_t_r_sensors_ad22b7f2b4778133efa1967d683e5cb46}} 
+\index{QTRSensors@{QTRSensors}!\_pins@{\_pins}}
+\index{\_pins@{\_pins}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{\_pins}{\_pins}}
+{\footnotesize\ttfamily unsigned char$\ast$ QTRSensors\+::\+\_\+pins\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00140}{140}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}\label{class_q_t_r_sensors_a75af08628235c3ec5d4414a6032a016c}} 
+\index{QTRSensors@{QTRSensors}!calibratedMaximumOff@{calibratedMaximumOff}}
+\index{calibratedMaximumOff@{calibratedMaximumOff}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{calibratedMaximumOff}{calibratedMaximumOff}}
+{\footnotesize\ttfamily unsigned int$\ast$ QTRSensors\+::calibrated\+Maximum\+Off}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00127}{127}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}\label{class_q_t_r_sensors_ab7a739d5bb85b17e94e825454cc63195}} 
+\index{QTRSensors@{QTRSensors}!calibratedMaximumOn@{calibratedMaximumOn}}
+\index{calibratedMaximumOn@{calibratedMaximumOn}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{calibratedMaximumOn}{calibratedMaximumOn}}
+{\footnotesize\ttfamily unsigned int$\ast$ QTRSensors\+::calibrated\+Maximum\+On}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00125}{125}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}\label{class_q_t_r_sensors_af299d7e4a7900f4f3d5e567a10f4ab16}} 
+\index{QTRSensors@{QTRSensors}!calibratedMinimumOff@{calibratedMinimumOff}}
+\index{calibratedMinimumOff@{calibratedMinimumOff}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{calibratedMinimumOff}{calibratedMinimumOff}}
+{\footnotesize\ttfamily unsigned int$\ast$ QTRSensors\+::calibrated\+Minimum\+Off}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00126}{126}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
+
+\mbox{\Hypertarget{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}\label{class_q_t_r_sensors_a9308c21df0015965dceb9dd1f570f78d}} 
+\index{QTRSensors@{QTRSensors}!calibratedMinimumOn@{calibratedMinimumOn}}
+\index{calibratedMinimumOn@{calibratedMinimumOn}!QTRSensors@{QTRSensors}}
+\doxysubsubsection{\texorpdfstring{calibratedMinimumOn}{calibratedMinimumOn}}
+{\footnotesize\ttfamily unsigned int$\ast$ QTRSensors\+::calibrated\+Minimum\+On}
+
+
+
+Definition at line \mbox{\hyperlink{_q_t_r_sensors_8h_source_l00124}{124}} of file \mbox{\hyperlink{_q_t_r_sensors_8h_source}{QTRSensors.\+h}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Q\+T\+R\+Sensors.\+h\item 
-Q\+T\+R\+Sensors.\+cpp\end{DoxyCompactItemize}
+QTRSensors.\+h\item 
+QTRSensors.\+cpp\end{DoxyCompactItemize}
